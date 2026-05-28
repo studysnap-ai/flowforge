@@ -491,98 +491,7 @@
       font-style: italic;
     }
 
-    /* PRICING */
-    .slc-pkg-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      align-items: start;
-    }
-    .slc-pkg-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      position: relative;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .slc-pkg-card:hover {
-      border-color: var(--border-h);
-      transform: translateY(-4px);
-    }
-    .slc-pkg-card.featured {
-      border-color: rgba(56,189,248,0.4);
-      background: linear-gradient(160deg, rgba(56,189,248,0.05), rgba(168,85,247,0.06));
-    }
-    .slc-pkg-badge {
-      position: absolute;
-      top: -12px; left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--gradient);
-      color: #fff;
-      padding: 4px 14px;
-      border-radius: 100px;
-      white-space: nowrap;
-    }
-    .pkg-icon { font-size: 1.8rem; }
-    .pkg-name {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--text);
-    }
-    .pkg-tagline {
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-style: italic;
-      line-height: 1.5;
-    }
-    .pkg-for-block {
-      padding: 10px 14px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-    }
-    .pkg-for-label {
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-    .pkg-for-text {
-      font-size: 0.83rem;
-      color: var(--text);
-      line-height: 1.5;
-    }
-    .pkg-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
-    }
-    .pkg-features li {
-      font-size: 0.88rem;
-      color: var(--muted);
-      padding-left: 20px;
-      position: relative;
-      line-height: 1.5;
-    }
-    .pkg-features li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 700;
-    }
+
 
     /* WHY FLOWFORGE */
     .why-grid {
@@ -685,28 +594,445 @@
       line-height: 1.8;
     }
 
+    /* ── FLAGSHIP OFFER CARDS ── */
+    .flagship-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .flagship-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .flagship-card:hover {
+      border-color: rgba(56,189,248,0.3);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(56,189,248,0.08);
+    }
+    .flagship-card.flagship-featured {
+      border-color: rgba(56,189,248,0.45);
+      background: linear-gradient(160deg, rgba(56,189,248,0.06), rgba(168,85,247,0.07));
+    }
+    .flagship-card.flagship-featured:hover {
+      box-shadow: 0 20px 56px rgba(56,189,248,0.14);
+    }
+    .flagship-top-badge {
+      position: absolute;
+      top: -13px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--gradient);
+      color: #fff;
+      padding: 4px 16px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .flagship-niche-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      width: fit-content;
+    }
+    .tag-contractor {
+      background: rgba(251,146,60,0.1);
+      border: 1px solid rgba(251,146,60,0.25);
+      color: #fb923c;
+    }
+    .tag-fitness {
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.25);
+      color: var(--blue);
+    }
+    .tag-latino {
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.25);
+      color: var(--purple);
+    }
+    .flagship-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .flagship-name {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .flagship-price {
+      font-size: 1.05rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-align: right;
+      line-height: 1.3;
+    }
+    .flagship-price span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: block;
+      opacity: 0.7;
+    }
+    .flagship-promise {
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-style: italic;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.03);
+      border-left: 2px solid var(--blue);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .flagship-for {
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.6;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .flagship-for-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+    .flagship-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .flagship-features li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .flagship-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 800;
+    }
+    .flagship-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 4px;
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+    .flagship-micro {
+      font-size: 0.75rem;
+      color: rgba(148,163,184,0.5);
+      text-align: center;
+    }
+    .flagship-upsell {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 28px;
+      background: rgba(56,189,248,0.04);
+      border: 1px solid rgba(56,189,248,0.15);
+      border-radius: var(--radius);
+      flex-wrap: wrap;
+    }
+    .flagship-upsell-icon {
+      font-size: 1.4rem;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+    .flagship-upsell p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      min-width: 200px;
+    }
+    .flagship-upsell p strong { color: var(--text); }
+
+    /* ── AUTOPILOT TEASER ── */
+    .autopilot-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .autopilot-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      padding: 56px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.04), rgba(168,85,247,0.05));
+      border: 1px solid rgba(56,189,248,0.2);
+      border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+    .autopilot-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(168,85,247,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .autopilot-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple);
+      background: rgba(168,85,247,0.1);
+      border: 1px solid rgba(168,85,247,0.25);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+    .autopilot-dot {
+      width: 6px; height: 6px;
+      background: var(--purple);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--purple);
+      animation: pulse-dot 1.5s ease infinite;
+      flex-shrink: 0;
+    }
+    .autopilot-left h2 { margin-bottom: 16px; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+    .autopilot-left p  { margin-bottom: 24px; font-size: 0.97rem; line-height: 1.72; }
+    .autopilot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+    .autopilot-list li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .autopilot-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--purple);
+      font-weight: 800;
+    }
+    .autopilot-price-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+    .autopilot-price {
+      font-size: 2.2rem;
+      font-weight: 900;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .autopilot-price span {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .autopilot-vs {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.55;
+      flex: 1;
+    }
+    .autopilot-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .autopilot-note {
+      font-size: 0.75rem;
+      color: rgba(148,163,184,0.5);
+    }
+
+    /* AutoPilot preview card */
+    .autopilot-preview {
+      background: rgba(13,13,26,0.9);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .ap-preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+    }
+    .ap-preview-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.03em;
+    }
+    .ap-preview-date {
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+    .ap-preview-body { padding: 18px; }
+    .ap-stat-row {
+      display: flex;
+      justify-content: space-around;
+      padding: 14px 0;
+      margin-bottom: 16px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+    }
+    .ap-stat { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .ap-stat-num {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ap-stat-label {
+      font-size: 0.62rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .ap-activity { display: flex; flex-direction: column; gap: 9px; }
+    .ap-activity-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(148,163,184,0.45);
+      margin-bottom: 4px;
+    }
+    .ap-activity-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 8px;
+    }
+    .ap-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .ap-dot-green  { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.5); }
+    .ap-dot-blue   { background: #38bdf8; box-shadow: 0 0 6px rgba(56,189,248,0.5); }
+    .ap-dot-purple { background: #a855f7; box-shadow: 0 0 6px rgba(168,85,247,0.5); }
+    .ap-preview-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+      margin-top: 4px;
+    }
+    .ap-footer-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(168,85,247,0.6);
+      letter-spacing: 0.06em;
+    }
+    .ap-footer-lang {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: rgba(56,189,248,0.6);
+      letter-spacing: 0.1em;
+    }
+
+    /* AutoPilot responsive */
+    @media (max-width: 900px) {
+      .autopilot-card {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 36px 28px;
+      }
+    }
+    @media (max-width: 560px) {
+      .autopilot-card { padding: 24px 20px; }
+      .autopilot-price-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .autopilot-cta-row { flex-direction: column; align-items: flex-start; }
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       .niche-grid       { grid-template-columns: 1fr; }
-      .slc-pkg-grid     { grid-template-columns: 1fr 1fr; }
+      .flagship-grid    { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .deliverables-grid { grid-template-columns: 1fr; }
       .why-grid          { grid-template-columns: 1fr; }
       .case-grid         { grid-template-columns: 1fr 1fr; }
       .testi-grid        { grid-template-columns: 1fr 1fr; }
+      .flagship-grid     { grid-template-columns: 1fr; }
     }
     @media (max-width: 560px) {
       .niche-grid        { grid-template-columns: 1fr; }
       .case-grid         { grid-template-columns: 1fr; }
       .testi-grid        { grid-template-columns: 1fr; }
-      .slc-pkg-grid      { grid-template-columns: 1fr; }
+      .flagship-grid     { grid-template-columns: 1fr; }
       .trust-inner       { gap: 16px; }
       .trust-div         { display: none; }
       .final-cta-btns    { flex-direction: column; align-items: center; }
       .final-cta-btns .btn-primary,
       .final-cta-btns .btn-ghost { width: 100%; justify-content: center; }
       .logo-placeholder-row { gap: 16px; }
+      .flagship-header   { flex-direction: column; align-items: flex-start; }
+      .flagship-price    { text-align: left; }
+      .flagship-upsell   { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
@@ -1147,84 +1473,112 @@
 
 
   <!-- ══════════════════════════════════════
-       SECTION 7 — PRICING PREVIEW
+       SECTION 7 — FLAGSHIP OFFERS (niche-specific)
   ══════════════════════════════════════ -->
   <section id="pricing" class="section">
     <div class="container">
 
       <div class="section-header reveal">
-        <span class="label">Investment</span>
-        <h2>Transparent from day one.</h2>
-        <p>Every project is scoped on a free call. These are the packages most SLC service businesses end up in.</p>
+        <span class="label">Offers built for your business</span>
+        <h2>One package per niche.<br>Built around your actual problem.</h2>
+        <p>We don't sell one-size-fits-all plans. Here's what we recommend for each type of business — and why.</p>
       </div>
 
-      <div class="slc-pkg-grid">
+      <!-- ── FLAGSHIP CARDS ── -->
+      <div class="flagship-grid">
 
-        <!-- Launch -->
-        <div class="slc-pkg-card reveal">
-          <div class="pkg-icon">🚀</div>
-          <div class="pkg-name">Launch</div>
-          <p class="pkg-tagline">"I need to exist online and look legit."</p>
-          <div class="pkg-for-block">
-            <div class="pkg-for-label">Best for</div>
-            <div class="pkg-for-text">New businesses or businesses with an embarrassing current site that's losing you customers.</div>
+        <!-- ── CONTRACTOR ── -->
+        <div class="flagship-card reveal">
+          <div class="flagship-niche-tag tag-contractor">🔧 Contractors</div>
+          <div class="flagship-header">
+            <div class="flagship-name">Contractor Growth</div>
+            <div class="flagship-price">$350 – $500<span>/mo</span></div>
           </div>
-          <ul class="pkg-features">
-            <li>Mobile-first website (5 pages)</li>
-            <li>Contact &amp; quote request forms</li>
-            <li>Google Business Profile setup</li>
-            <li>Fast load times + basic SEO</li>
-            <li>Full ownership on delivery</li>
+          <p class="flagship-promise">"A website that gets you found on Google + automated follow-up so no lead goes cold."</p>
+          <div class="flagship-for">
+            <div class="flagship-for-label">Best for</div>
+            Contractors already getting some jobs but losing leads because nobody follows up fast enough — or they have no clue how many leads they're even getting.
+          </div>
+          <ul class="flagship-features">
+            <li>Mobile-first site — quote request in under 60 seconds</li>
+            <li>New lead → SMS to you within 60 seconds</li>
+            <li>Auto-reply to prospect: "We'll call you within the hour"</li>
+            <li>3-step follow-up if no response (day 1, 3, 7)</li>
+            <li>Google review request after every job — automatic</li>
+            <li>Weekly report: leads in, sources, follow-up status</li>
+            <li>1 site update/month included</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a Launch quote</a>
+          <div class="flagship-cta-wrap">
+            <a href="#contact" class="btn-primary">Get a Contractor quote</a>
+            <span class="flagship-micro">Free audit included. No commitment.</span>
+          </div>
         </div>
 
-        <!-- Growth — featured -->
-        <div class="slc-pkg-card featured reveal reveal-delay-1">
-          <div class="slc-pkg-badge">⭐ Most Popular</div>
-          <div class="pkg-icon">📈</div>
-          <div class="pkg-name">Growth</div>
-          <p class="pkg-tagline">"I'm getting traffic. Now let's turn it into leads."</p>
-          <div class="pkg-for-block">
-            <div class="pkg-for-label">Best for</div>
-            <div class="pkg-for-text">Established businesses ready to stop leaving money on the table.</div>
+        <!-- ── FITNESS — featured ── -->
+        <div class="flagship-card flagship-featured reveal reveal-delay-1">
+          <div class="flagship-top-badge">⭐ Recommended first step</div>
+          <div class="flagship-niche-tag tag-fitness">💪 Gyms &amp; Trainers</div>
+          <div class="flagship-header">
+            <div class="flagship-name">Fitness Launch</div>
+            <div class="flagship-price">$1,000 – $1,400<span> one-time</span></div>
           </div>
-          <ul class="pkg-features">
-            <li>Everything in Launch</li>
-            <li>Lead capture + automation follow-ups</li>
-            <li>SMS/email notifications on new leads</li>
-            <li>Weekly lead summary report</li>
-            <li>WhatsApp integration (optional)</li>
-            <li>30-day post-launch support</li>
+          <p class="flagship-promise">"A website with a built-in booking flow that converts visitors into trial signups."</p>
+          <div class="flagship-for">
+            <div class="flagship-for-label">Best for</div>
+            Trainers and gym owners running on Instagram and word-of-mouth with no real website — or one that has no way to actually book someone.
+          </div>
+          <ul class="flagship-features">
+            <li>6-page mobile-first site</li>
+            <li>Trial offer / free consult CTA on every page</li>
+            <li>Booking form or Calendly integration</li>
+            <li>Class schedule section built in</li>
+            <li>Transformation photo gallery</li>
+            <li>Email capture for free offer (free week, free consult)</li>
+            <li>Testimonials + social proof section</li>
+            <li>Full ownership — yours forever</li>
           </ul>
-          <a href="#contact" class="btn-primary">Get a Growth quote</a>
+          <div class="flagship-cta-wrap">
+            <a href="#contact" class="btn-primary">Get a Fitness quote</a>
+            <span class="flagship-micro">Free audit included. No commitment.</span>
+          </div>
         </div>
 
-        <!-- Dominate -->
-        <div class="slc-pkg-card reveal reveal-delay-2">
-          <div class="pkg-icon">🏆</div>
-          <div class="pkg-name">Dominate</div>
-          <p class="pkg-tagline">"I want to own my local market."</p>
-          <div class="pkg-for-block">
-            <div class="pkg-for-label">Best for</div>
-            <div class="pkg-for-text">Businesses ready to invest in their #1 sales asset and leave competitors behind.</div>
+        <!-- ── LATINO ── -->
+        <div class="flagship-card reveal reveal-delay-2">
+          <div class="flagship-niche-tag tag-latino">🌎 Latino-Owned</div>
+          <div class="flagship-header">
+            <div class="flagship-name">Latino Launch</div>
+            <div class="flagship-price">$1,100 – $1,500<span> one-time</span></div>
           </div>
-          <ul class="pkg-features">
-            <li>Everything in Growth</li>
-            <li>Full local SEO setup</li>
-            <li>Multi-page site (8+ pages)</li>
-            <li>Bilingual content (EN + ES)</li>
-            <li>Advanced automations</li>
-            <li>Competitor analysis included</li>
+          <p class="flagship-promise">"A bilingual website — English + Spanish — that represents your business the right way and brings in customers from both communities."</p>
+          <div class="flagship-for">
+            <div class="flagship-for-label">Best for</div>
+            Latino-owned businesses with no site, an English-only site, or a site that doesn't represent the quality of their business to their community.
+          </div>
+          <ul class="flagship-features">
+            <li>Full bilingual site — English + Spanish, every page</li>
+            <li>Language toggle built in (EN / ES)</li>
+            <li>5–7 pages depending on business type</li>
+            <li>WhatsApp contact button (floating + in footer)</li>
+            <li>Photo gallery: food, services, team, space</li>
+            <li>Google Business Profile bilingual setup</li>
+            <li>Basic local SEO in both languages</li>
+            <li>Full ownership — yours forever</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a Dominate quote</a>
+          <div class="flagship-cta-wrap">
+            <a href="#contact" class="btn-primary">Hablemos / Get a quote</a>
+            <span class="flagship-micro">Auditoría gratis · Free audit included.</span>
+          </div>
         </div>
 
-      </div><!-- /slc-pkg-grid -->
+      </div><!-- /flagship-grid -->
 
-      <p style="text-align:center; margin-top:32px; font-size:0.88rem;" class="reveal">
-        Exact pricing on the call. Starting points listed on our <a href="/#pricing" style="color:var(--blue); text-decoration:none;">main pricing page →</a>
-      </p>
+      <!-- upsell note -->
+      <div class="flagship-upsell reveal">
+        <span class="flagship-upsell-icon">↑</span>
+        <p>Every Launch package can grow into a <strong>Growth</strong> or <strong>Dominate</strong> monthly plan once your site is live — when you're ready for automations, SEO, and a full lead pipeline.</p>
+        <a href="#contact" style="color:var(--blue); font-size:0.85rem; font-weight:600; text-decoration:none;">Ask about full package options →</a>
+      </div>
 
     </div>
   </section>
@@ -1325,7 +1679,145 @@
 
 
   <!-- ══════════════════════════════════════
-       SECTION 10 — FINAL CTA
+       SECTION 10 — FAQ
+  ══════════════════════════════════════ -->
+  <section class="section faq-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="label">Common questions</span>
+        <h2>Before you reach out.</h2>
+        <p>The questions every SLC business owner asks — answered straight.</p>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item reveal">
+          <div class="faq-q">Can't I just use an AI marketing tool instead?</div>
+          <div class="faq-a">You can — and some of them are decent at scheduling social posts and writing generic captions. But here's what they can't do: build you a website that actually converts visitors into calls. Fix a Google Business Profile sending people to the wrong address. Write content in real Spanish that sounds like a human, not a translator. Or pick up the phone when something breaks.<br><br>AI tools sit on top of whatever you already have. If what you already have is broken or missing — they just automate the problem. We fix the foundation first. Then we automate on top of something that works.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">How long does a project take?</div>
+          <div class="faq-a">A Launch website is typically done in 2–3 weeks from the day you approve the plan. We move fast because we keep the process simple — one point of contact, no committees, no waiting. You'll see progress every few days, not once a month.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-q">Do I have to pay everything upfront?</div>
+          <div class="faq-a">No. It's 50% to start, 50% when we deliver. That protects both sides and keeps things moving. We accept bank transfer, PayPal, and Stripe. Monthly plans start after the site is live.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-3">
+          <div class="faq-q">What if I already have a website?</div>
+          <div class="faq-a">We'll look at it on the free audit call and tell you honestly: fix what you have, or start fresh. Sometimes a few targeted changes are enough. If your current site is too slow, too old, or built on a platform that limits you, we'll tell you that too — and explain why.</div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q">Do you actually write in Spanish, or just translate?</div>
+          <div class="faq-a">We write it. There's a real difference between translated corporate Spanish and copy that sounds natural to a Spanish-speaking community in Utah. We're bilingual — we know the difference, and your customers will too.</div>
+        </div>
+
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-q">What do I own at the end?</div>
+          <div class="faq-a">Everything. Code, domain, hosting account, Google Business Profile access — all handed over to you on delivery. No lock-in, no monthly platform fee, no "you can only edit it through us." It's yours. Full stop.</div>
+        </div>
+
+      </div><!-- /faq-grid -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       AUTOPILOT TEASER SECTION
+  ══════════════════════════════════════ -->
+  <section class="section autopilot-section">
+    <div class="container">
+      <div class="autopilot-card reveal">
+
+        <div class="autopilot-left">
+          <div class="autopilot-badge">
+            <span class="autopilot-dot"></span>
+            New · FlowForge AutoPilot
+          </div>
+          <h2>Your marketing on autopilot.<br>Less than $6 a day.</h2>
+          <p>Once your site is live, add AutoPilot and your marketing runs itself — social posts, lead follow-ups, Google updates, review requests, and a Monday morning report. All done for you, every week, in English and Spanish.</p>
+          <ul class="autopilot-list">
+            <li>5 social posts/week — Instagram + Facebook, bilingual</li>
+            <li>New lead → SMS to you in 60 seconds + auto-reply to prospect</li>
+            <li>Google Business Profile updated weekly</li>
+            <li>Review requests sent automatically after every job</li>
+            <li>Weekly report every Monday morning</li>
+            <li>Website chat agent — captures leads 24/7</li>
+          </ul>
+          <div class="autopilot-price-row">
+            <div class="autopilot-price">$179<span>/mo</span></div>
+            <div class="autopilot-vs">vs $249–399/mo for generic AI tools with no Spanish and no local knowledge</div>
+          </div>
+          <div class="autopilot-cta-row">
+            <a href="#contact" class="btn-primary">Ask about AutoPilot →</a>
+            <span class="autopilot-note">Add-on for FlowForge website clients only.</span>
+          </div>
+        </div>
+
+        <div class="autopilot-right">
+          <div class="autopilot-preview">
+            <div class="ap-preview-header">
+              <span class="ap-preview-title">AutoPilot · Weekly Summary</span>
+              <span class="ap-preview-date">Monday, 9:00 AM</span>
+            </div>
+            <div class="ap-preview-body">
+              <div class="ap-stat-row">
+                <div class="ap-stat">
+                  <span class="ap-stat-num">12</span>
+                  <span class="ap-stat-label">New Leads</span>
+                </div>
+                <div class="ap-stat">
+                  <span class="ap-stat-num">5</span>
+                  <span class="ap-stat-label">Posts Published</span>
+                </div>
+                <div class="ap-stat">
+                  <span class="ap-stat-num">3</span>
+                  <span class="ap-stat-label">New Reviews</span>
+                </div>
+              </div>
+              <div class="ap-activity">
+                <div class="ap-activity-title">This week</div>
+                <div class="ap-activity-item">
+                  <span class="ap-dot ap-dot-green"></span>
+                  <span>Lead from Google — quote request sent</span>
+                </div>
+                <div class="ap-activity-item">
+                  <span class="ap-dot ap-dot-blue"></span>
+                  <span>Instagram post published (EN + ES)</span>
+                </div>
+                <div class="ap-activity-item">
+                  <span class="ap-dot ap-dot-green"></span>
+                  <span>Google Business Profile updated</span>
+                </div>
+                <div class="ap-activity-item">
+                  <span class="ap-dot ap-dot-purple"></span>
+                  <span>Review request sent · 1 new ★★★★★</span>
+                </div>
+                <div class="ap-activity-item">
+                  <span class="ap-dot ap-dot-blue"></span>
+                  <span>Follow-up sent to 2 cold leads</span>
+                </div>
+              </div>
+            </div>
+            <div class="ap-preview-footer">
+              <span class="ap-footer-tag">Powered by FlowForge AutoPilot</span>
+              <span class="ap-footer-lang">EN · ES</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /autopilot-card -->
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       SECTION 11 — FINAL CTA
   ══════════════════════════════════════ -->
   <section id="contact" class="section final-cta">
     <div class="final-cta-glow"></div>
