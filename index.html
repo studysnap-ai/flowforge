@@ -26,10 +26,16 @@
     <div class="container nav-inner">
       <a href="#" class="logo">Flow<span>Forge</span></a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Work</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact" class="btn-nav">Get a Quote</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#portfolio" data-i18n="nav.work">Work</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+        <li><a href="#contact" class="btn-nav" data-i18n="nav.cta">Get a Quote</a></li>
+        <li>
+          <div class="lang-toggle">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+          </div>
+        </li>
         <li>
           <div class="theme-toggle" id="theme-toggle">
             <button class="theme-btn active" data-theme-val="auto" title="Auto">Auto</button>
@@ -55,23 +61,23 @@
       <div class="hero-text">
         <div class="badge reveal">
           <span class="badge-dot"></span>
-          Utah-based &nbsp;·&nbsp; Globally delivered
+          <span data-i18n="hero.badge">Utah-based · Globally delivered</span>
         </div>
         <div class="urgency-badge reveal">
           <span class="urgency-dot"></span>
-          Currently accepting <strong>3 new projects</strong> — slots filling fast
+          <span data-i18n-html="hero.urgency">Currently accepting <strong>3 new projects</strong> — slots filling fast</span>
         </div>
-        <h1 class="reveal reveal-delay-1">
+        <h1 class="reveal reveal-delay-1" data-i18n-html="hero.h1">
           We <span class="gradient-text">forge</span> AI tools,<br>
           automations &amp;<br>
           digital experiences.
         </h1>
-        <p class="hero-sub reveal reveal-delay-2">
+        <p class="hero-sub reveal reveal-delay-2" data-i18n="hero.sub">
           FlowForge builds the software infrastructure modern businesses need — custom AI integrations, browser extensions, automation workflows, and web design that actually converts.
         </p>
         <div class="hero-ctas reveal reveal-delay-3">
-          <a href="#contact" class="btn-primary">Start a Project</a>
-          <a href="#portfolio" class="btn-ghost">See Our Work →</a>
+          <a href="#contact" class="btn-primary" data-i18n="hero.cta1">Start a Project</a>
+          <a href="#portfolio" class="btn-ghost" data-i18n="hero.cta2">See Our Work →</a>
         </div>
       </div>
 
@@ -147,22 +153,22 @@
     <div class="container stats-inner">
       <div class="stat reveal">
         <span class="stat-num">10<span class="stat-plus">+</span></span>
-        <span class="stat-label">Projects Shipped</span>
+        <span class="stat-label" data-i18n="stats.shipped">Projects Shipped</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal reveal-delay-1">
         <span class="stat-num">6</span>
-        <span class="stat-label">Core Services</span>
+        <span class="stat-label" data-i18n="stats.services">Core Services</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal reveal-delay-2">
         <span class="stat-num">24<span class="stat-plus">h</span></span>
-        <span class="stat-label">Response Time</span>
+        <span class="stat-label" data-i18n="stats.response">Response Time</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat reveal reveal-delay-3">
         <span class="stat-num">100<span class="stat-plus">%</span></span>
-        <span class="stat-label">Ownership Handover</span>
+        <span class="stat-label" data-i18n="stats.ownership">Ownership Handover</span>
       </div>
     </div>
   </section>
@@ -171,100 +177,76 @@
   <section id="services" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">What we build</span>
-        <h2>Services</h2>
-        <p>End-to-end digital solutions — from idea to deployment.</p>
+        <span class="label" data-i18n="services.label">What we build</span>
+        <h2 data-i18n="services.h2">Services</h2>
+        <p data-i18n="services.sub">End-to-end digital solutions — from idea to deployment.</p>
       </div>
       <div class="services-grid">
 
         <div class="service-card reveal">
-          <div class="service-icon-wrap">
-            <span class="service-icon">⚡</span>
-          </div>
-          <h3>AI Integration</h3>
-          <p>Connect Claude, GPT, and other AI models to your existing tools. Chatbots, smart search, document analysis, and custom AI workflows.</p>
-          <div class="service-tags">
-            <span>Claude API</span><span>OpenAI</span><span>Custom Models</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">⚡</span></div>
+          <h3 data-i18n="svc.ai.title">AI Integration</h3>
+          <p data-i18n="svc.ai.desc">Connect Claude, GPT, and other AI models to your existing tools. Chatbots, smart search, document analysis, and custom AI workflows.</p>
+          <div class="service-tags"><span>Claude API</span><span>OpenAI</span><span>Custom Models</span></div>
           <div class="service-footer">
-            <span class="service-price">From $800</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.ai.price">From $800</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.ai.cta">Get started →</a>
           </div>
         </div>
 
         <div class="service-card featured reveal reveal-delay-1">
           <div class="featured-label">Most Requested</div>
-          <div class="service-icon-wrap">
-            <span class="service-icon">🔄</span>
-          </div>
-          <h3>Automation Workflows</h3>
-          <p>Eliminate repetitive tasks with custom automation pipelines. We connect your apps and let the machines do the work so your team doesn't have to.</p>
-          <div class="service-tags">
-            <span>Make</span><span>n8n</span><span>Zapier</span><span>Custom API</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">🔄</span></div>
+          <h3 data-i18n="svc.auto.title">Automation Workflows</h3>
+          <p data-i18n="svc.auto.desc">Eliminate repetitive tasks with custom automation pipelines. We connect your apps and let the machines do the work so your team doesn't have to.</p>
+          <div class="service-tags"><span>Make</span><span>n8n</span><span>Zapier</span><span>Custom API</span></div>
           <div class="service-footer">
-            <span class="service-price">From $400</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.auto.price">From $400</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.auto.cta">Get started →</a>
           </div>
         </div>
 
         <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon-wrap">
-            <span class="service-icon">🧩</span>
-          </div>
-          <h3>Chrome Extensions</h3>
-          <p>Custom browser extensions for internal teams or public markets. Productivity tools, AI overlays, data tools — built to Chrome's latest standards.</p>
-          <div class="service-tags">
-            <span>Manifest V3</span><span>AI-powered</span><span>Cross-browser</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">🧩</span></div>
+          <h3 data-i18n="svc.chrome.title">Chrome Extensions</h3>
+          <p data-i18n="svc.chrome.desc">Custom browser extensions for internal teams or public markets. Productivity tools, AI overlays, data tools — built to Chrome's latest standards.</p>
+          <div class="service-tags"><span>Manifest V3</span><span>AI-powered</span><span>Cross-browser</span></div>
           <div class="service-footer">
-            <span class="service-price">From $600</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.chrome.price">From $600</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.chrome.cta">Get started →</a>
           </div>
         </div>
 
         <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon-wrap">
-            <span class="service-icon">🎨</span>
-          </div>
-          <h3>Web Design &amp; Dev</h3>
-          <p>Fast, modern websites that look great and convert. Landing pages to full business sites — built clean, mobile-first, and shipped fast.</p>
-          <div class="service-tags">
-            <span>Landing Pages</span><span>Business Sites</span><span>CMS</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">🎨</span></div>
+          <h3 data-i18n="svc.web.title">Web Design &amp; Dev</h3>
+          <p data-i18n="svc.web.desc">Fast, modern websites that look great and convert. Landing pages to full business sites — built clean, mobile-first, and shipped fast.</p>
+          <div class="service-tags"><span>Landing Pages</span><span>Business Sites</span><span>CMS</span></div>
           <div class="service-footer">
-            <span class="service-price">From $500</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.web.price">From $500</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.web.cta">Get started →</a>
           </div>
         </div>
 
         <div class="service-card reveal">
-          <div class="service-icon-wrap">
-            <span class="service-icon">📱</span>
-          </div>
-          <h3>Social Media Automation</h3>
-          <p>Auto-posting, scheduling, cross-platform pipelines and DM automation. We wire up your social presence so it runs itself while you focus on the business.</p>
-          <div class="service-tags">
-            <span>Auto-posting</span><span>DM Bots</span><span>Analytics</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">📱</span></div>
+          <h3 data-i18n="svc.social.title">Social Media Automation</h3>
+          <p data-i18n="svc.social.desc">Auto-posting, scheduling, cross-platform pipelines and DM automation. We wire up your social presence so it runs itself while you focus on the business.</p>
+          <div class="service-tags"><span>Auto-posting</span><span>DM Bots</span><span>Analytics</span></div>
           <div class="service-footer">
-            <span class="service-price">From $350</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.social.price">From $350</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.social.cta">Get started →</a>
           </div>
         </div>
 
         <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon-wrap">
-            <span class="service-icon">🤖</span>
-          </div>
-          <h3>AI Chatbots &amp; Assistants</h3>
-          <p>Custom AI assistants for WhatsApp, Instagram, websites, and internal tools. Answer questions, qualify leads, and support customers 24/7 automatically.</p>
-          <div class="service-tags">
-            <span>WhatsApp</span><span>Instagram</span><span>Web Chat</span>
-          </div>
+          <div class="service-icon-wrap"><span class="service-icon">🤖</span></div>
+          <h3 data-i18n="svc.chatbot.title">AI Chatbots &amp; Assistants</h3>
+          <p data-i18n="svc.chatbot.desc">Custom AI assistants for WhatsApp, Instagram, websites, and internal tools. Answer questions, qualify leads, and support customers 24/7 automatically.</p>
+          <div class="service-tags"><span>WhatsApp</span><span>Instagram</span><span>Web Chat</span></div>
           <div class="service-footer">
-            <span class="service-price">From $600</span>
-            <a href="#contact" class="service-cta">Get started →</a>
+            <span class="service-price" data-i18n="svc.chatbot.price">From $600</span>
+            <a href="#contact" class="service-cta" data-i18n="svc.chatbot.cta">Get started →</a>
           </div>
         </div>
 
@@ -276,26 +258,26 @@
   <section class="section process-section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">How we work</span>
-        <h2>Simple process, real results</h2>
+        <span class="label" data-i18n="process.label">How we work</span>
+        <h2 data-i18n="process.h2">Simple process, real results</h2>
       </div>
       <div class="steps">
         <div class="step reveal">
           <div class="step-num">01</div>
-          <h3>Discovery</h3>
-          <p>We learn your business, your problem, and your goals. One free call — no jargon, just a clear picture of what you need and what it'll cost.</p>
+          <h3 data-i18n="step1.title">Discovery</h3>
+          <p data-i18n="step1.desc">We learn your business, your problem, and your goals. One free call — no jargon, just a clear picture of what you need and what it'll cost.</p>
         </div>
         <div class="step-connector reveal reveal-delay-1"></div>
         <div class="step reveal reveal-delay-1">
           <div class="step-num">02</div>
-          <h3>Build</h3>
-          <p>We design, develop, and test. You get progress updates and can give feedback at every step. No surprises, no scope creep.</p>
+          <h3 data-i18n="step2.title">Build</h3>
+          <p data-i18n="step2.desc">We design, develop, and test. You get progress updates and can give feedback at every step. No surprises, no scope creep.</p>
         </div>
         <div class="step-connector reveal reveal-delay-2"></div>
         <div class="step reveal reveal-delay-2">
           <div class="step-num">03</div>
-          <h3>Launch</h3>
-          <p>We ship, hand over full ownership, and support you post-launch. Your success is the only metric we care about.</p>
+          <h3 data-i18n="step3.title">Launch</h3>
+          <p data-i18n="step3.desc">We ship, hand over full ownership, and support you post-launch. Your success is the only metric we care about.</p>
         </div>
       </div>
     </div>
@@ -305,9 +287,9 @@
   <section id="portfolio" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Our work</span>
-        <h2>Recent Projects</h2>
-        <p>Real products, shipped and working.</p>
+        <span class="label" data-i18n="portfolio.label">Our work</span>
+        <h2 data-i18n="portfolio.h2">Recent Projects</h2>
+        <p data-i18n="portfolio.sub">Real products, shipped and working.</p>
       </div>
       <div class="portfolio-grid">
 
@@ -317,14 +299,10 @@
             <div class="portfolio-thumb-glow"></div>
           </div>
           <div class="portfolio-info">
-            <div class="portfolio-tags">
-              <span>Chrome Extension</span><span>AI Vision</span>
-            </div>
-            <h3>StudySnap</h3>
-            <p>AI-powered Chrome extension that captures any on-screen question and delivers instant answers with explanations and a confidence score — powered by Claude Vision API.</p>
-            <div class="portfolio-tech">
-              <span>Claude API</span><span>Manifest V3</span><span>JavaScript</span>
-            </div>
+            <div class="portfolio-tags"><span>Chrome Extension</span><span>AI Vision</span></div>
+            <h3 data-i18n="proj.studysnap.title">StudySnap</h3>
+            <p data-i18n="proj.studysnap.desc">AI-powered Chrome extension that captures any on-screen question and delivers instant answers with explanations and a confidence score — powered by Claude Vision API.</p>
+            <div class="portfolio-tech"><span>Claude API</span><span>Manifest V3</span><span>JavaScript</span></div>
           </div>
         </div>
 
@@ -334,14 +312,10 @@
             <div class="portfolio-thumb-glow glow-purple"></div>
           </div>
           <div class="portfolio-info">
-            <div class="portfolio-tags">
-              <span>Chrome Extension</span><span>Dark Patterns</span>
-            </div>
-            <h3>Clarity Extension</h3>
-            <p>Browser extension that detects and highlights dark patterns on websites in real time — protecting users from manipulative UX tricks while browsing.</p>
-            <div class="portfolio-tech">
-              <span>Manifest V3</span><span>Content Scripts</span><span>JavaScript</span>
-            </div>
+            <div class="portfolio-tags"><span>Chrome Extension</span><span>Dark Patterns</span></div>
+            <h3 data-i18n="proj.clarity.title">Clarity Extension</h3>
+            <p data-i18n="proj.clarity.desc">Browser extension that detects and highlights dark patterns on websites in real time — protecting users from manipulative UX tricks while browsing.</p>
+            <div class="portfolio-tech"><span>Manifest V3</span><span>Content Scripts</span><span>JavaScript</span></div>
           </div>
         </div>
 
@@ -351,28 +325,20 @@
             <div class="portfolio-thumb-glow glow-orange"></div>
           </div>
           <div class="portfolio-info">
-            <div class="portfolio-tags">
-              <span>Web Design</span><span>Business Site</span>
-            </div>
-            <h3>FotoExpress Peru</h3>
-            <p>Full business website for a photography services company in Peru — modern design, service showcase, and contact flow built for local and international clients.</p>
-            <div class="portfolio-tech">
-              <span>HTML/CSS</span><span>JavaScript</span><span>Vercel</span>
-            </div>
+            <div class="portfolio-tags"><span>Web Design</span><span>Business Site</span></div>
+            <h3 data-i18n="proj.foto.title">FotoExpress Peru</h3>
+            <p data-i18n="proj.foto.desc">Full business website for a photography services company in Peru — modern design, service showcase, and contact flow built for local and international clients.</p>
+            <div class="portfolio-tech"><span>HTML/CSS</span><span>JavaScript</span><span>Vercel</span></div>
           </div>
         </div>
 
         <div class="portfolio-card placeholder-card reveal reveal-delay-3">
-          <div class="portfolio-thumb placeholder-thumb">
-            <span>+</span>
-          </div>
+          <div class="portfolio-thumb placeholder-thumb"><span>+</span></div>
           <div class="portfolio-info">
-            <div class="portfolio-tags">
-              <span>Your Project</span>
-            </div>
-            <h3>Could be yours</h3>
-            <p>We're actively taking new projects. Your solution could be featured here next. Let's build something that makes a difference.</p>
-            <a href="#contact" class="btn-small">Start a conversation →</a>
+            <div class="portfolio-tags"><span>Your Project</span></div>
+            <h3 data-i18n="proj.yours.title">Could be yours</h3>
+            <p data-i18n="proj.yours.desc">We're actively taking new projects. Your solution could be featured here next. Let's build something that makes a difference.</p>
+            <a href="#contact" class="btn-small" data-i18n="proj.yours.cta">Start a conversation →</a>
           </div>
         </div>
 
@@ -384,89 +350,89 @@
   <section id="pricing" class="section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Investment</span>
-        <h2>Transparent Pricing</h2>
-        <p>Every project is scoped and quoted individually. These are starting points — complex work is quoted after a free discovery call.</p>
+        <span class="label" data-i18n="pricing.label">Investment</span>
+        <h2 data-i18n="pricing.h2">Transparent Pricing</h2>
+        <p data-i18n="pricing.sub">Every project is scoped and quoted individually. These are starting points — complex work is quoted after a free discovery call.</p>
       </div>
       <div class="pricing-grid">
 
         <div class="pricing-card reveal">
           <div class="pricing-icon">🎨</div>
-          <h3>Web Design</h3>
+          <h3 data-i18n="price.web.title">Web Design</h3>
           <div class="price">From <strong>$500</strong></div>
           <ul class="pricing-list">
-            <li>Landing page</li>
-            <li>Mobile responsive</li>
-            <li>SEO ready</li>
-            <li>Full business site from $1,200</li>
+            <li data-i18n="price.web.li1">Landing page</li>
+            <li data-i18n="price.web.li2">Mobile responsive</li>
+            <li data-i18n="price.web.li3">SEO ready</li>
+            <li data-i18n="price.web.li4">Full business site from $1,200</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a quote</a>
+          <a href="#contact" class="btn-outline" data-i18n="price.web.btn">Get a quote</a>
         </div>
 
         <div class="pricing-card reveal reveal-delay-1">
           <div class="pricing-icon">🔄</div>
-          <h3>Automation</h3>
+          <h3 data-i18n="price.auto.title">Automation</h3>
           <div class="price">From <strong>$400</strong></div>
           <ul class="pricing-list">
-            <li>App-to-app automation</li>
-            <li>Trigger + action flows</li>
-            <li>Testing &amp; documentation</li>
-            <li>Complex n8n from $1,200</li>
+            <li data-i18n="price.auto.li1">App-to-app automation</li>
+            <li data-i18n="price.auto.li2">Trigger + action flows</li>
+            <li data-i18n="price.auto.li3">Testing &amp; documentation</li>
+            <li data-i18n="price.auto.li4">Complex n8n from $1,200</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a quote</a>
+          <a href="#contact" class="btn-outline" data-i18n="price.auto.btn">Get a quote</a>
         </div>
 
         <div class="pricing-card featured-pricing reveal reveal-delay-2">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-icon">⚡</div>
-          <h3>AI Integration</h3>
+          <h3 data-i18n="price.ai.title">AI Integration</h3>
           <div class="price">From <strong>$800</strong></div>
           <ul class="pricing-list">
-            <li>AI API connection</li>
-            <li>Custom prompting &amp; logic</li>
-            <li>Testing &amp; deployment</li>
-            <li>Full AI systems from $2,500</li>
+            <li data-i18n="price.ai.li1">AI API connection</li>
+            <li data-i18n="price.ai.li2">Custom prompting &amp; logic</li>
+            <li data-i18n="price.ai.li3">Testing &amp; deployment</li>
+            <li data-i18n="price.ai.li4">Full AI systems from $2,500</li>
           </ul>
-          <a href="#contact" class="btn-primary">Get a quote</a>
+          <a href="#contact" class="btn-primary" data-i18n="price.ai.btn">Get a quote</a>
         </div>
 
         <div class="pricing-card reveal reveal-delay-3">
           <div class="pricing-icon">🧩</div>
-          <h3>Chrome Extension</h3>
+          <h3 data-i18n="price.chrome.title">Chrome Extension</h3>
           <div class="price">From <strong>$600</strong></div>
           <ul class="pricing-list">
-            <li>Manifest V3 compliant</li>
-            <li>Popup + content scripts</li>
-            <li>API integration ready</li>
-            <li>AI-powered from $1,500</li>
+            <li data-i18n="price.chrome.li1">Manifest V3 compliant</li>
+            <li data-i18n="price.chrome.li2">Popup + content scripts</li>
+            <li data-i18n="price.chrome.li3">API integration ready</li>
+            <li data-i18n="price.chrome.li4">AI-powered from $1,500</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a quote</a>
+          <a href="#contact" class="btn-outline" data-i18n="price.chrome.btn">Get a quote</a>
         </div>
 
         <div class="pricing-card reveal">
           <div class="pricing-icon">📱</div>
-          <h3>Social Automation</h3>
+          <h3 data-i18n="price.social.title">Social Automation</h3>
           <div class="price">From <strong>$350</strong></div>
           <ul class="pricing-list">
-            <li>Auto-posting pipelines</li>
-            <li>DM automation</li>
-            <li>Cross-platform scheduling</li>
-            <li>Analytics dashboards from $800</li>
+            <li data-i18n="price.social.li1">Auto-posting pipelines</li>
+            <li data-i18n="price.social.li2">DM automation</li>
+            <li data-i18n="price.social.li3">Cross-platform scheduling</li>
+            <li data-i18n="price.social.li4">Analytics dashboards from $800</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a quote</a>
+          <a href="#contact" class="btn-outline" data-i18n="price.social.btn">Get a quote</a>
         </div>
 
         <div class="pricing-card reveal reveal-delay-1">
           <div class="pricing-icon">🤖</div>
-          <h3>AI Chatbot</h3>
+          <h3 data-i18n="price.chatbot.title">AI Chatbot</h3>
           <div class="price">From <strong>$600</strong></div>
           <ul class="pricing-list">
-            <li>WhatsApp / Instagram / Web</li>
-            <li>Custom knowledge base</li>
-            <li>Lead qualification logic</li>
-            <li>Multi-platform from $1,500</li>
+            <li data-i18n="price.chatbot.li1">WhatsApp / Instagram / Web</li>
+            <li data-i18n="price.chatbot.li2">Custom knowledge base</li>
+            <li data-i18n="price.chatbot.li3">Lead qualification logic</li>
+            <li data-i18n="price.chatbot.li4">Multi-platform from $1,500</li>
           </ul>
-          <a href="#contact" class="btn-outline">Get a quote</a>
+          <a href="#contact" class="btn-outline" data-i18n="price.chatbot.btn">Get a quote</a>
         </div>
 
       </div>
@@ -477,34 +443,34 @@
   <section class="section faq-section">
     <div class="container">
       <div class="section-header reveal">
-        <span class="label">Common questions</span>
-        <h2>Before you reach out</h2>
-        <p>The questions every client asks — answered upfront.</p>
+        <span class="label" data-i18n="faq.label">Common questions</span>
+        <h2 data-i18n="faq.h2">Before you reach out</h2>
+        <p data-i18n="faq.sub">The questions every client asks — answered upfront.</p>
       </div>
       <div class="faq-grid">
         <div class="faq-item reveal">
-          <div class="faq-q">How long does a project take?</div>
-          <div class="faq-a">Depends on scope. A landing page takes 3–5 days. A Chrome extension 1–2 weeks. An AI integration 1–3 weeks. We give you a clear timeline before we start — no surprises.</div>
+          <div class="faq-q" data-i18n="faq.q1">How long does a project take?</div>
+          <div class="faq-a" data-i18n="faq.a1">Depends on scope. A landing page takes 3–5 days. A Chrome extension 1–2 weeks. An AI integration 1–3 weeks. We give you a clear timeline before we start — no surprises.</div>
         </div>
         <div class="faq-item reveal reveal-delay-1">
-          <div class="faq-q">Do you require a deposit?</div>
-          <div class="faq-a">Yes — 50% upfront to start, 50% on delivery. This protects both sides and keeps the project moving. We accept bank transfer, PayPal, and Stripe.</div>
+          <div class="faq-q" data-i18n="faq.q2">Do you require a deposit?</div>
+          <div class="faq-a" data-i18n="faq.a2">Yes — 50% upfront to start, 50% on delivery. This protects both sides and keeps the project moving. We accept bank transfer, PayPal, and Stripe.</div>
         </div>
         <div class="faq-item reveal reveal-delay-2">
-          <div class="faq-q">What if I'm not happy with the result?</div>
-          <div class="faq-a">We include revision rounds in every project and work with you until it's right. We don't close a project until you're satisfied — that's our standard, not a policy.</div>
+          <div class="faq-q" data-i18n="faq.q3">What if I'm not happy with the result?</div>
+          <div class="faq-a" data-i18n="faq.a3">We include revision rounds in every project and work with you until it's right. We don't close a project until you're satisfied — that's our standard, not a policy.</div>
         </div>
         <div class="faq-item reveal reveal-delay-3">
-          <div class="faq-q">Can you work with a small budget?</div>
-          <div class="faq-a">Yes. Our starting prices reflect real, lean work — no bloated agency overhead. If your budget is tight, tell us and we'll scope something that fits. We'd rather start small than not work together at all.</div>
+          <div class="faq-q" data-i18n="faq.q4">Can you work with a small budget?</div>
+          <div class="faq-a" data-i18n="faq.a4">Yes. Our starting prices reflect real, lean work — no bloated agency overhead. If your budget is tight, tell us and we'll scope something that fits. We'd rather start small than not work together at all.</div>
         </div>
         <div class="faq-item reveal">
-          <div class="faq-q">Do I own everything after delivery?</div>
-          <div class="faq-a">100%. All code, assets, and accounts are handed over to you at the end of every project. No lock-in, no monthly fees unless you want ongoing support.</div>
+          <div class="faq-q" data-i18n="faq.q5">Do I own everything after delivery?</div>
+          <div class="faq-a" data-i18n="faq.a5">100%. All code, assets, and accounts are handed over to you at the end of every project. No lock-in, no monthly fees unless you want ongoing support.</div>
         </div>
         <div class="faq-item reveal reveal-delay-1">
-          <div class="faq-q">Do you work with clients outside the US?</div>
-          <div class="faq-a">Absolutely — most of our clients are international. We work across time zones, communicate in English and Spanish, and handle remote projects end to end.</div>
+          <div class="faq-q" data-i18n="faq.q6">Do you work with clients outside the US?</div>
+          <div class="faq-a" data-i18n="faq.a6">Absolutely — most of our clients are international. We work across time zones, communicate in English and Spanish, and handle remote projects end to end.</div>
         </div>
       </div>
     </div>
@@ -516,25 +482,25 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-left reveal">
-          <span class="label">Let's talk</span>
-          <h2>Start a project<br>with us</h2>
-          <p>Tell us what you're building or what problem you need solved. We'll respond within 24 hours with a clear path forward — no commitment required.</p>
+          <span class="label" data-i18n="contact.label">Let's talk</span>
+          <h2 data-i18n-html="contact.h2">Start a project<br>with us</h2>
+          <p data-i18n="contact.p">Tell us what you're building or what problem you need solved. We'll respond within 24 hours with a clear path forward — no commitment required.</p>
           <div class="contact-details">
             <div class="contact-detail">
               <span class="detail-icon">📍</span>
-              <span>Utah, USA</span>
+              <span data-i18n="contact.loc">Utah, USA</span>
             </div>
             <div class="contact-detail">
               <span class="detail-icon">🌎</span>
-              <span>Available worldwide</span>
+              <span data-i18n="contact.world">Available worldwide</span>
             </div>
             <div class="contact-detail">
               <span class="detail-icon">⏱</span>
-              <span>Response within 24 hours</span>
+              <span data-i18n="contact.time">Response within 24 hours</span>
             </div>
             <div class="contact-detail">
               <span class="detail-icon">📞</span>
-              <span>Free discovery call included</span>
+              <span data-i18n="contact.call">Free discovery call included</span>
             </div>
           </div>
         </div>
@@ -542,18 +508,18 @@
           <form class="contact-form" id="contact-form" action="https://formspree.io/f/xnjrggzb" method="POST">
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <label for="name" data-i18n="contact.name.label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" data-i18n-ph="contact.name.ph" required>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" data-i18n="contact.email.label">Email</label>
                 <input type="email" id="email" name="email" placeholder="your@email.com" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="service">Service</label>
+              <label for="service" data-i18n="contact.svc.label">Service</label>
               <select id="service" name="service">
-                <option value="">Select a service</option>
+                <option value="" data-i18n="contact.svc.ph">Select a service</option>
                 <option>AI Integration</option>
                 <option>Automation Workflow</option>
                 <option>Chrome Extension</option>
@@ -564,9 +530,9 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="budget">Estimated budget</label>
+              <label for="budget" data-i18n="contact.budget.label">Estimated budget</label>
               <select id="budget" name="budget">
-                <option value="">Select a range</option>
+                <option value="" data-i18n="contact.budget.ph">Select a range</option>
                 <option>Under $500</option>
                 <option>$500 – $1,000</option>
                 <option>$1,000 – $3,000</option>
@@ -574,13 +540,13 @@
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Tell us about your project</label>
-              <textarea id="message" name="message" rows="5" placeholder="What are you trying to build or automate?" required></textarea>
+              <label for="message" data-i18n="contact.msg.label">Tell us about your project</label>
+              <textarea id="message" name="message" rows="5" placeholder="What are you trying to build or automate?" data-i18n-ph="contact.msg.ph" required></textarea>
             </div>
-            <button type="submit" class="btn-primary full" id="submit-btn">
+            <button type="submit" class="btn-primary full" id="submit-btn" data-i18n="contact.btn">
               Send Message →
             </button>
-            <div class="form-success" id="form-success">
+            <div class="form-success" id="form-success" data-i18n="contact.success">
               ✓ Message sent! We'll be in touch within 24 hours.
             </div>
           </form>
@@ -593,7 +559,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="#" class="logo">Flow<span>Forge</span></a>
-      <p class="footer-copy">© 2025 FlowForge · Utah, USA · Globally delivered.</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 FlowForge · Utah, USA · Globally delivered.</p>
       <div class="footer-links">
         <a href="#services">Services</a>
         <a href="#portfolio">Work</a>
@@ -612,6 +578,7 @@
   </a>
 
   <script src="script.js"></script>
+  <script src="lang.js"></script>
   <script>
     (function() {
       const saved = localStorage.getItem('ff-theme') || 'auto';
