@@ -178,14 +178,16 @@
   overflow: visible !important;
 }
 .hv-badge-1 { color: #22c55e !important; border-color: rgba(34,197,94,0.35) !important; }
-[data-theme="light"] .hv-badge,
-[data-theme="auto"] .hv-badge {
+
+/* Light theme only — explicit light choice */
+[data-theme="light"] .hv-badge {
   background: rgba(255,255,255,0.97) !important;
   color: var(--text) !important;
   border-color: rgba(0,0,0,0.12) !important;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
 }
-@media (prefers-color-scheme:light) {
+/* Auto + system is light — only then white */
+@media (prefers-color-scheme: light) {
   [data-theme="auto"] .hv-badge {
     background: rgba(255,255,255,0.97) !important;
     color: var(--text) !important;
@@ -193,6 +195,7 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
   }
 }
+/* Auto + system is dark — keep dark (no rule needed, default wins) */
 
 /* ── SLC LEADS CARD ── */
 .slc-card{background:rgba(13,13,26,0.88);border:1px solid rgba(255,255,255,0.09);border-radius:16px;backdrop-filter:blur(24px);width:100%;max-width:400px;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(56,189,248,0.06);overflow:hidden;}
@@ -590,25 +593,31 @@
   /* Nav bar stays on top of everything */
   .nav { z-index: 300 !important; }
 
-  /* Overlay: covers full screen, sits below nav bar, above all content */
+  /* Overlay: explicitly pinned to all 4 edges — works on Android + iOS */
   .nav-links {
     display: none !important;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    right: 0;
+    bottom: 0;
+    /* dvh = dynamic viewport height (accounts for Android address bar) */
+    height: 100dvh;
+    /* fallback for older Android */
+    height: 100vh;
+    min-height: -webkit-fill-available;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
+    gap: 36px;
     background: var(--bg);
     z-index: 200;
-    overflow-y: auto;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
-    padding: 100px 24px 60px;
   }
-  .nav-links.open { display: flex !important; }
+  .nav-links.open {
+    display: flex !important;
+  }
   .nav-links a {
     font-size: 1.2rem;
     font-weight: 600;
@@ -1740,31 +1749,38 @@ const T = {
   }
 };
 
-// ═══ HAMBURGER — override script.js with iOS-safe scroll lock ═══
+// ═══ HAMBURGER — iOS/Android safe scroll lock ═══
 (function() {
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('nav-links');
   if (!hamburger || !navLinks) return;
 
-  // Remove any listeners added by script.js by cloning
-  const newHamburger = hamburger.cloneNode(true);
-  hamburger.parentNode.replaceChild(newHamburger, hamburger);
+  function openMenu() {
+    navLinks.classList.add('open');
+    hamburger.classList.add('open');
+    // Lock scroll — both html + body needed for iOS Safari
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    // Android: lock position so page doesn't jump
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+  }
 
-  newHamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    newHamburger.classList.toggle('open', isOpen);
-    // Lock scroll on both html + body — fixes iOS Safari scroll-through
-    document.documentElement.style.overflow = isOpen ? 'hidden' : '';
-    document.body.style.overflow            = isOpen ? 'hidden' : '';
+  function closeMenu() {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      newHamburger.classList.remove('open');
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow            = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
 })();
 
