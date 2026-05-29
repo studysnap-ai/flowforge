@@ -50,22 +50,35 @@
   }
 }
 
-/* ── NAV LANG TOGGLE (sticky) ── */
+/* ── NAV UTILS (right corner group) ── */
+.nav-utils {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+#nav-lang-desktop,
+#theme-seg { /* desktop only */ }
+.nav-lang-mobile,
+.theme-seg-mobile { display: none; } /* hidden on desktop */
+#theme-seg .theme-seg-btn { padding: 5px 9px; font-size: 0.8rem; }
+
+/* ── NAV LANG TOGGLE ── */
 .nav-lang-toggle {
   display: inline-flex;
   align-items: center;
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border-h);
   border-radius: 100px;
-  padding: 3px;
+  padding: 4px;
   gap: 2px;
 }
 .nav-lang-btn {
-  padding: 4px 13px;
+  padding: 7px 20px;
   border-radius: 100px;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -73,39 +86,38 @@
   font-family: inherit;
   transition: background 0.2s, color 0.2s;
   line-height: 1;
+  text-transform: uppercase;
 }
-.nav-lang-btn.active {
-  background: var(--gradient);
-  color: #fff;
-}
-/* Hide mobile lang by default, show on mobile */
-.nav-lang-mobile { display: none; }
+.nav-lang-btn.active { background: var(--gradient); color: #fff; }
+
+/* Mobile: swap desktop→mobile controls */
 @media (max-width: 768px) {
+  #nav-lang-desktop { display: none; }
+  #theme-seg { display: none; }
   .nav-lang-mobile { display: inline-flex; }
+  .theme-seg-mobile { display: inline-flex; }
+  .nav-lang-mobile .nav-lang-btn { padding: 5px 13px; font-size: 0.74rem; }
 }
 
-/* ── FIX: hv-badge in light/auto mode ── */
+/* ── FIX: hv-badge corners in all modes ── */
 .hv-badge {
-  background: var(--surface) !important;
-  border-color: var(--border-h) !important;
-  color: var(--text);
   border-radius: 100px !important;
   overflow: visible !important;
 }
-/* Keep the live dot badge green text */
 .hv-badge-1 { color: #22c55e !important; border-color: rgba(34,197,94,0.35) !important; }
-/* Force radius to clip properly */
 [data-theme="light"] .hv-badge,
 [data-theme="auto"] .hv-badge {
   background: rgba(255,255,255,0.97) !important;
+  color: var(--text) !important;
+  border-color: rgba(0,0,0,0.12) !important;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
-  border-color: rgba(0,0,0,0.1) !important;
 }
 @media (prefers-color-scheme:light) {
   [data-theme="auto"] .hv-badge {
     background: rgba(255,255,255,0.97) !important;
+    color: var(--text) !important;
+    border-color: rgba(0,0,0,0.12) !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
-    border-color: rgba(0,0,0,0.1) !important;
   }
 }
 
@@ -120,11 +132,10 @@
   gap: 2px;
 }
 .theme-seg-btn {
-  padding: 4px 10px;
+  padding: 5px 11px;
   border-radius: 100px;
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -139,35 +150,13 @@
   color: var(--text);
   border: 1px solid var(--border-h);
 }
-[data-theme="light"] .theme-seg-btn.active,
-[data-theme="auto"] .theme-seg-btn.active {
-  background: rgba(0,0,0,0.07);
-}
-/* Mobile: icon-only, smaller */
+[data-theme="light"] .theme-seg-btn.active { background: rgba(0,0,0,0.08); }
 .theme-seg-mobile { display: none; }
-.theme-seg-mobile .theme-seg-btn { padding: 4px 8px; font-size: 0.8rem; }
+.theme-seg-mobile .theme-seg-btn { padding: 5px 9px; font-size: 0.8rem; }
 @media (max-width: 768px) {
   .theme-seg-mobile { display: inline-flex; }
   .theme-seg:not(.theme-seg-mobile) { display: none; }
 }
-
-/* ── THEME TOGGLE BUTTON (legacy, keep for fallback) ── */
-.theme-toggle {
-  display:flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,0.05);border:1px solid var(--border-h);
-  border-radius:100px;padding:6px 12px;cursor:pointer;
-  font-size:0.72rem;font-weight:700;color:var(--muted);
-  font-family:inherit;transition:border-color .2s,background .2s;
-  white-space:nowrap;
-}
-.theme-toggle:hover{border-color:var(--blue);background:var(--blue-dim);color:var(--text);}
-.theme-icon{font-size:0.9rem;}
-
-/* ── LANG TOGGLE ── */
-.lang-toggle-wrap{margin-bottom:24px;}
-.lang-toggle{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.05);border:1px solid var(--border-h);border-radius:100px;padding:4px;}
-.lang-btn{padding:6px 18px;border-radius:100px;font-size:0.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border:none;cursor:pointer;transition:background .25s,color .25s;background:transparent;color:var(--muted);font-family:inherit;}
-.lang-btn.active{background:var(--gradient);color:#fff;}
 
 /* ── SLC LEADS CARD ── */
 .slc-card{background:rgba(13,13,26,0.88);border:1px solid rgba(255,255,255,0.09);border-radius:16px;backdrop-filter:blur(24px);width:100%;max-width:400px;box-shadow:0 24px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(56,189,248,0.06);overflow:hidden;}
@@ -521,41 +510,190 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .cmp-row { grid-template-columns: 1fr 140px 160px; }
-  .cmp-col-feature, .cmp-col-them, .cmp-col-us { padding: 12px 14px; }
-  .cmp-col-feature { font-size: 0.82rem; }
+  .cmp-row { grid-template-columns: 1fr 130px 150px; }
+  .cmp-col-feature, .cmp-col-them, .cmp-col-us { padding: 10px 12px; }
+  .cmp-col-feature { font-size: 0.8rem; }
   .cmp-cost-strip { grid-template-columns: 1fr 36px 1fr; }
-  .cmp-cost-block { padding: 20px 18px; }
-  .cmp-cost-price { font-size: 1.8rem; }
+  .cmp-cost-block { padding: 18px 16px; }
+  .cmp-cost-price { font-size: 1.7rem; }
 }
-@media (max-width: 560px) {
+@media (max-width: 480px) {
   .cmp-cost-strip { grid-template-columns: 1fr; }
-  .cmp-cost-vs { padding: 10px; border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .cmp-row { grid-template-columns: 1fr 100px 120px; }
-  .cmp-col-feature, .cmp-col-them, .cmp-col-us { padding: 10px 10px; font-size: 0.75rem; }
-  .cmp-col-feature { font-size: 0.75rem; }
-  .cmp-badge-bad, .cmp-badge-good, .cmp-badge-meh { font-size: 0.62rem; padding: 2px 7px; }
+  .cmp-cost-vs { padding: 8px; border: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-direction: row; justify-content: center; }
+  .cmp-row { grid-template-columns: 1fr 88px 108px; }
+  .cmp-col-feature, .cmp-col-them, .cmp-col-us { padding: 9px 8px; font-size: 0.72rem; }
+  .cmp-badge-bad, .cmp-badge-good, .cmp-badge-meh { font-size: 0.58rem; padding: 2px 6px; }
+  .cmp-us-note { display: none; }
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width:960px){.niche-grid,.flagship-grid{grid-template-columns:1fr;}}
-@media (max-width:900px){.autopilot-card{grid-template-columns:1fr;gap:40px;padding:36px 28px;}}
-@media (max-width:768px){
-  .deliverables-grid,.why-grid{grid-template-columns:1fr;}
-  .case-grid,.testi-grid{grid-template-columns:1fr 1fr;}
-  .flagship-grid{grid-template-columns:1fr;}
+/* ── FULL RESPONSIVE SYSTEM ── */
+
+/* Tablet landscape (≤1100px) */
+@media (max-width: 1100px) {
+  .flagship-grid { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width:560px){
-  .niche-grid,.case-grid,.testi-grid,.flagship-grid{grid-template-columns:1fr;}
-  .trust-inner{gap:16px;} .trust-div{display:none;}
-  .final-cta-btns{flex-direction:column;align-items:center;}
-  .final-cta-btns .btn-primary,.final-cta-btns .btn-ghost{width:100%;justify-content:center;}
-  .flagship-header{flex-direction:column;align-items:flex-start;}
-  .flagship-price{text-align:left;}
-  .flagship-upsell{flex-direction:column;gap:10px;}
-  .autopilot-card{padding:24px 20px;}
-  .autopilot-price-row{flex-direction:column;align-items:flex-start;gap:8px;}
-  .autopilot-cta-row{flex-direction:column;align-items:flex-start;}
+
+/* Tablet portrait (≤960px) */
+@media (max-width: 960px) {
+  .niche-grid { grid-template-columns: 1fr; }
+  .flagship-grid { grid-template-columns: 1fr; }
+  .hero-layout { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { padding: 0; justify-content: flex-start; }
+  .slc-card { max-width: 100%; }
+  .hv-badge-1 { top: -10px; right: 10px; }
+  .hv-badge-2 { bottom: -10px; left: 10px; }
+}
+
+/* Tablet (≤900px) */
+@media (max-width: 900px) {
+  .autopilot-card { grid-template-columns: 1fr; gap: 36px; padding: 32px 24px; }
+}
+
+/* Mobile landscape / small tablet (≤768px) */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: rgba(7,7,14,0.97);
+    backdrop-filter: blur(20px);
+    z-index: 99;
+  }
+  [data-theme="light"] .nav-links { background: rgba(248,250,252,0.97); }
+  .nav-links.open { display: flex; }
+  .nav-links a { font-size: 1.1rem; }
+  .nav-links li { width: 100%; text-align: center; display: flex; justify-content: center; }
+  .hamburger { display: flex; z-index: 100; }
+  /* Sections */
+  .section { padding: 56px 0; }
+  .section-header { margin-bottom: 36px; }
+  .container { padding: 0 18px; }
+
+  /* Hero */
+  .hero { padding: 90px 0 48px; min-height: auto; }
+  .hero-sub { font-size: 0.97rem; }
+  .hero-ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero-ctas .btn-primary, .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+  .hero-orb-1 { width: 280px; height: 280px; }
+  .hero-orb-2 { width: 220px; height: 220px; }
+
+  /* Grids */
+  .deliverables-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .testi-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .flagship-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+
+  /* Process steps */
+  .steps { flex-direction: column; align-items: center; }
+  .step-connector { width: 2px; height: 36px; margin-top: 0; }
+
+  /* Stats */
+  .stat-divider { display: none; }
+  .stats-inner { gap: 8px; flex-wrap: wrap; }
+  .stat { min-width: 120px; }
+
+  /* Trust bar */
+  .trust-inner { gap: 14px; }
+  .trust-div { display: none; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  .footer-links { justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+  /* Comparison */
+  .cmp-cost-strip { gap: 0; }
+}
+
+/* Mobile portrait (≤560px) */
+@media (max-width: 560px) {
+  .container { padding: 0 14px; }
+  .section { padding: 44px 0; }
+  .section-header { margin-bottom: 28px; }
+
+  /* Typography scale down */
+  h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
+  h2 { font-size: clamp(1.5rem, 6vw, 2rem); }
+
+  /* Hero */
+  .hero { padding: 80px 0 40px; }
+  .hero-sub { font-size: 0.92rem; }
+
+  /* All grids → single column */
+  .niche-grid, .case-grid, .testi-grid, .flagship-grid,
+  .deliverables-grid, .why-grid, .faq-grid { grid-template-columns: 1fr; }
+
+  /* Cards padding reduction */
+  .service-card, .niche-card { padding: 24px 18px; }
+  .flagship-card { padding: 28px 20px; }
+  .pricing-card, .faq-item { padding: 22px 18px; }
+  .del-block { padding: 24px 20px; }
+  .why-card { padding: 22px 18px; }
+  .testi-card { padding: 22px 18px; }
+  .contact-form { padding: 24px 16px; }
+
+  /* Flagship header stacks */
+  .flagship-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .flagship-price { text-align: left; }
+
+  /* Upsell strip */
+  .flagship-upsell { flex-direction: column; gap: 12px; padding: 18px; }
+
+  /* Final CTA */
+  .final-cta-btns { flex-direction: column; align-items: stretch; gap: 12px; }
+  .final-cta-btns .btn-primary,
+  .final-cta-btns .btn-ghost { width: 100%; justify-content: center; }
+
+  /* AutoPilot */
+  .autopilot-card { padding: 20px 16px; gap: 28px; }
+  .autopilot-price-row { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 16px; }
+  .autopilot-cta-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .autopilot-cta-row .btn-primary { width: 100%; justify-content: center; }
+
+  /* Stats grid on mobile */
+  .stats-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .stat { padding: 12px 8px; }
+  .stat-num { font-size: 2rem; }
+
+  /* SLC leads card */
+  .slc-lead-name { font-size: 0.75rem; }
+  .slc-lead-pill { font-size: 0.6rem; padding: 2px 8px; }
+
+  /* Trust bar */
+  .trust-inner { gap: 10px; justify-content: flex-start; }
+
+  /* Process steps */
+  .step { padding: 20px 14px; }
+
+  /* Case thumbs */
+  .portfolio-thumb, .case-thumb { height: 130px; }
+
+  /* Nav mobile bar */
+  .nav-lang-btn { padding: 5px 13px; font-size: 0.74rem; }
+
+  /* WhatsApp btn */
+  .whatsapp-btn { bottom: 16px; right: 16px; width: 50px; height: 50px; }
+}
+
+/* Small phones (≤380px) */
+@media (max-width: 380px) {
+  .container { padding: 0 12px; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  .flagship-card { padding: 22px 14px; }
+  .autopilot-card { padding: 16px 12px; }
+  .cmp-row { grid-template-columns: 1fr 78px 96px; }
+  .cmp-col-feature, .cmp-col-them, .cmp-col-us { padding: 8px 6px; font-size: 0.67rem; }
 }
 </style>
 </head>
@@ -569,34 +707,31 @@
       <li><a href="#niches" data-i18n="nav.who">Who We Serve</a></li>
       <li><a href="#what-we-build" data-i18n="nav.what">What We Build</a></li>
       <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-      <li>
-        <!-- EN/ES sticky toggle in nav -->
-        <div class="nav-lang-toggle">
-          <button class="nav-lang-btn active" id="nav-btn-en" onclick="setLang('en')">EN</button>
-          <button class="nav-lang-btn" id="nav-btn-es" onclick="setLang('es')">ES</button>
-        </div>
-      </li>
-      <li>
-        <!-- 3-option theme control: Light | Auto | Dark -->
-        <div class="theme-seg" id="theme-seg">
-          <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" aria-label="Light mode">☀️ Light</button>
-          <button class="theme-seg-btn active" data-theme-key="auto"  onclick="setTheme('auto')"  aria-label="Auto mode">💻 Auto</button>
-          <button class="theme-seg-btn" data-theme-key="dark"  onclick="setTheme('dark')"  aria-label="Dark mode">🌙 Dark</button>
-        </div>
-      </li>
       <li><a href="#contact" class="btn-nav" data-i18n="nav.cta">Get a Free Audit</a></li>
     </ul>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <!-- EN/ES on mobile nav bar -->
+
+    <!-- Right side: utility controls + mobile hamburger -->
+    <div class="nav-utils">
+      <!-- EN/ES desktop -->
+      <div class="nav-lang-toggle" id="nav-lang-desktop">
+        <button class="nav-lang-btn active" id="nav-btn-en" onclick="setLang('en')">EN</button>
+        <button class="nav-lang-btn" id="nav-btn-es" onclick="setLang('es')">ES</button>
+      </div>
+      <!-- Theme desktop -->
+      <div class="theme-seg" id="theme-seg">
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" aria-label="Light">☀️</button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" aria-label="Auto">💻</button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" aria-label="Dark">🌙</button>
+      </div>
+      <!-- Mobile: EN/ES + theme + hamburger -->
       <div class="nav-lang-toggle nav-lang-mobile">
         <button class="nav-lang-btn active" id="nav-btn-en-m" onclick="setLang('en')">EN</button>
         <button class="nav-lang-btn" id="nav-btn-es-m" onclick="setLang('es')">ES</button>
       </div>
-      <!-- compact theme seg for mobile -->
       <div class="theme-seg theme-seg-mobile" id="theme-seg-mobile">
         <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
-        <button class="theme-seg-btn active" data-theme-key="auto"  onclick="setTheme('auto')">💻</button>
-        <button class="theme-seg-btn" data-theme-key="dark"  onclick="setTheme('dark')">🌙</button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -612,13 +747,6 @@
   <div class="hero-grid"></div>
   <div class="container hero-layout">
     <div class="hero-text">
-      <!-- Lang toggle -->
-      <div class="lang-toggle-wrap reveal">
-        <div class="lang-toggle">
-          <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-          <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
-        </div>
-      </div>
       <div class="badge reveal"><span class="badge-dot"></span><span data-i18n="hero.badge">Utah-based · Salt Lake City</span></div>
       <div class="urgency-badge reveal"><span class="urgency-dot"></span><span data-i18n-html="hero.urgency">Accepting <strong>3 new SLC projects</strong> — slots filling fast</span></div>
       <h1 class="reveal reveal-delay-1" data-i18n-html="hero.h1">Your website should<br>be getting you <span class="gradient-text">calls.</span><br>If it isn't, we'll fix that.</h1>
@@ -1575,8 +1703,7 @@ function applyLang(lang) {
 }
 
 function setLang(lang) {
-  // Sync all EN/ES buttons (hero + nav desktop + nav mobile)
-  ['btn-en','btn-es','nav-btn-en','nav-btn-es','nav-btn-en-m','nav-btn-es-m'].forEach(id => {
+  ['nav-btn-en','nav-btn-es','nav-btn-en-m','nav-btn-es-m'].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     el.classList.toggle('active', id.includes('-en') ? lang === 'en' : lang === 'es');
@@ -1601,8 +1728,7 @@ setTheme(savedTheme);
 
 // ═══ INIT ═══
 applyLang(currentLang);
-// Sync all lang buttons to saved preference
-['btn-en','btn-es','nav-btn-en','nav-btn-es','nav-btn-en-m','nav-btn-es-m'].forEach(id => {
+['nav-btn-en','nav-btn-es','nav-btn-en-m','nav-btn-es-m'].forEach(id => {
   const el = document.getElementById(id);
   if (!el) return;
   el.classList.toggle('active', id.includes('-en') ? currentLang === 'en' : currentLang === 'es');
