@@ -57,11 +57,6 @@
   gap: 8px;
   flex-shrink: 0;
 }
-#nav-lang-desktop,
-#theme-seg { /* desktop only */ }
-.nav-lang-mobile,
-.theme-seg-mobile { display: none; } /* hidden on desktop */
-#theme-seg .theme-seg-btn { padding: 5px 9px; font-size: 0.8rem; }
 
 /* ── NAV LANG TOGGLE ── */
 .nav-lang-toggle {
@@ -90,35 +85,20 @@
 }
 .nav-lang-btn.active { background: var(--gradient); color: #fff; }
 
-/* Mobile: swap desktop→mobile controls */
-@media (max-width: 768px) {
-  #nav-lang-desktop { display: none; }
-  #theme-seg { display: none; }
-  .nav-lang-mobile { display: inline-flex; }
-  .theme-seg-mobile { display: inline-flex; }
-  .nav-lang-mobile .nav-lang-btn { padding: 5px 13px; font-size: 0.74rem; }
-}
+/* Desktop: show desktop controls, hide mobile-only ones */
+#nav-lang-desktop { display: inline-flex; }
+.nav-lang-mobile  { display: none !important; }
+#theme-seg        { display: inline-flex; }
+.theme-seg-mobile { display: none !important; }
+#theme-seg .theme-seg-btn { padding: 5px 9px; font-size: 0.8rem; }
 
-/* ── FIX: hv-badge corners in all modes ── */
-.hv-badge {
-  border-radius: 100px !important;
-  overflow: visible !important;
-}
-.hv-badge-1 { color: #22c55e !important; border-color: rgba(34,197,94,0.35) !important; }
-[data-theme="light"] .hv-badge,
-[data-theme="auto"] .hv-badge {
-  background: rgba(255,255,255,0.97) !important;
-  color: var(--text) !important;
-  border-color: rgba(0,0,0,0.12) !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
-}
-@media (prefers-color-scheme:light) {
-  [data-theme="auto"] .hv-badge {
-    background: rgba(255,255,255,0.97) !important;
-    color: var(--text) !important;
-    border-color: rgba(0,0,0,0.12) !important;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
-  }
+/* Mobile: flip visibility */
+@media (max-width: 768px) {
+  #nav-lang-desktop { display: none !important; }
+  #theme-seg        { display: none !important; }
+  .nav-lang-mobile  { display: inline-flex !important; }
+  .theme-seg-mobile { display: inline-flex !important; }
+  .nav-lang-mobile .nav-lang-btn { padding: 5px 13px; font-size: 0.74rem; }
 }
 
 /* ── THEME SEGMENTED CONTROL ── */
@@ -151,11 +131,67 @@
   border: 1px solid var(--border-h);
 }
 [data-theme="light"] .theme-seg-btn.active { background: rgba(0,0,0,0.08); }
-.theme-seg-mobile { display: none; }
-.theme-seg-mobile .theme-seg-btn { padding: 5px 9px; font-size: 0.8rem; }
+
+/* ── MOBILE NAV OVERLAY — full screen, theme-aware ── */
+.nav-links {
+  /* default desktop: horizontal flex row */
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
 @media (max-width: 768px) {
-  .theme-seg-mobile { display: inline-flex; }
-  .theme-seg:not(.theme-seg-mobile) { display: none; }
+  .nav-links {
+    display: none !important;
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 99;
+    /* Use theme vars so it matches selected mode */
+    background: var(--bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .nav-links.open {
+    display: flex !important;
+  }
+  .nav-links a {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger { display: flex !important; z-index: 100; }
+}
+
+/* ── FIX: hv-badge corners in all modes ── */
+.hv-badge {
+  border-radius: 100px !important;
+  overflow: visible !important;
+}
+.hv-badge-1 { color: #22c55e !important; border-color: rgba(34,197,94,0.35) !important; }
+[data-theme="light"] .hv-badge,
+[data-theme="auto"] .hv-badge {
+  background: rgba(255,255,255,0.97) !important;
+  color: var(--text) !important;
+  border-color: rgba(0,0,0,0.12) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+}
+@media (prefers-color-scheme:light) {
+  [data-theme="auto"] .hv-badge {
+    background: rgba(255,255,255,0.97) !important;
+    color: var(--text) !important;
+    border-color: rgba(0,0,0,0.12) !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+  }
 }
 
 /* ── SLC LEADS CARD ── */
@@ -551,24 +587,26 @@
 
 /* Mobile landscape / small tablet (≤768px) */
 @media (max-width: 768px) {
-  /* Nav */
+  /* Nav overlay — uses CSS vars so it respects Light/Auto/Dark */
   .nav-links {
     display: none;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 28px;
-    background: rgba(7,7,14,0.97);
-    backdrop-filter: blur(20px);
+    gap: 32px;
+    background: var(--bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     z-index: 99;
   }
-  [data-theme="light"] .nav-links { background: rgba(248,250,252,0.97); }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.1rem; }
+  .nav-links a { font-size: 1.15rem; font-weight: 600; color: var(--text); }
+  .nav-links .btn-nav { font-size: 1rem; }
   .nav-links li { width: 100%; text-align: center; display: flex; justify-content: center; }
-  .hamburger { display: flex; z-index: 100; }
+  .hamburger { display: flex !important; z-index: 100; }
+
   /* Sections */
   .section { padding: 56px 0; }
   .section-header { margin-bottom: 36px; }
@@ -733,7 +771,7 @@
         <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
         <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" aria-label="Menu" style="display:none;">
         <span></span><span></span><span></span>
       </button>
     </div>
