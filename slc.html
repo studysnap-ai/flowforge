@@ -28,7 +28,10 @@
   --bg:#07070e;--surface:#0d0d1a;--surface-2:#111127;
   --blue:#38bdf8;--purple:#a855f7;
   --blue-dim:rgba(56,189,248,0.15);--purple-dim:rgba(168,85,247,0.15);
-  --gradient:linear-gradient(135deg,#38bdf8,#a855f7);
+  /* SLC accent: warm blue → orange instead of blue → purple */
+  --gradient:linear-gradient(135deg,#38bdf8,#f97316);
+  --accent:   #f97316;
+  --accent-dim:rgba(249,115,22,0.15);
   --text:#f1f5f9;--muted:#94a3b8;
   --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
   --radius:14px;--radius-sm:8px;--shadow:0 4px 24px rgba(0,0,0,0.4);
@@ -38,6 +41,7 @@
   --text:#0f172a;--muted:#64748b;
   --border:rgba(0,0,0,0.08);--border-h:rgba(0,0,0,0.15);
   --blue-dim:rgba(56,189,248,0.1);--purple-dim:rgba(168,85,247,0.1);
+  --accent-dim:rgba(249,115,22,0.1);
   --shadow:0 4px 24px rgba(0,0,0,0.12);
 }
 @media (prefers-color-scheme:light) {
@@ -46,8 +50,48 @@
     --text:#0f172a;--muted:#64748b;
     --border:rgba(0,0,0,0.08);--border-h:rgba(0,0,0,0.15);
     --blue-dim:rgba(56,189,248,0.1);--purple-dim:rgba(168,85,247,0.1);
+    --accent-dim:rgba(249,115,22,0.1);
     --shadow:0 4px 24px rgba(0,0,0,0.12);
   }
+}
+
+/* ── SLC ACCENT OVERRIDES: orange instead of purple ── */
+/* urgency badge */
+.urgency-badge {
+  background: rgba(249,115,22,0.08);
+  border-color: rgba(249,115,22,0.25);
+}
+.urgency-badge strong { color: var(--accent); }
+.urgency-dot {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+}
+/* section label color (keep blue for brand, just tweak label for warmth) */
+/* btn-nav stays gradient (now blue→orange) */
+/* niche card hover glow — warm */
+.niche-card:hover {
+  box-shadow: 0 16px 48px rgba(249,115,22,0.07);
+}
+/* process step numbers */
+.step-num { color: var(--accent); }
+
+/* ── SLC HERO ORBS: warm Utah palette ── */
+.hero-orb-1 {
+  background: rgba(56,189,248,0.13) !important;   /* blue — left top */
+}
+.hero-orb-2 {
+  background: rgba(249,115,22,0.13) !important;   /* orange — right bottom */
+}
+/* add a 3rd warm mid orb for depth */
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 360px; height: 360px;
+  background: rgba(251,191,36,0.07);
+  border-radius: 50%;
+  filter: blur(90px);
+  bottom: 10%; right: 20%;
+  pointer-events: none;
 }
 
 /* ── NAV UTILS (right corner group) ── */
