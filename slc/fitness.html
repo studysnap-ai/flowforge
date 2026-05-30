@@ -146,12 +146,18 @@
   .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
   .pricing-grid{grid-template-columns:1fr !important;}
 }
-[data-theme="light"] .booking-preview{background:rgba(255,255,255,0.95);border-color:rgba(0,0,0,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.08);}
-[data-theme="light"] .booking-slot{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.06);}
-@media (prefers-color-scheme:light) {
-  [data-theme="auto"] .booking-preview{background:rgba(255,255,255,0.95);border-color:rgba(0,0,0,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.08);}
-  [data-theme="auto"] .booking-slot{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.06);}
-}
+/* Light mode overrides for fitness card */
+[data-theme="light"] #fitness-card,
+[data-theme="auto"] #fitness-card { --c-bg:#fff; --c-border:rgba(0,0,0,0.09); --c-row:rgba(0,0,0,0.03); --c-row-b:rgba(0,0,0,0.07); --c-icon:rgba(0,0,0,0.05); --c-icon-b:rgba(0,0,0,0.08); --c-name:#0f172a; --c-sub:#64748b; --c-header:rgba(0,0,0,0.02); --c-hb:rgba(0,0,0,0.07); }
+@media(prefers-color-scheme:dark){ [data-theme="auto"] #fitness-card { --c-bg:#0d0d1a; --c-border:rgba(255,255,255,0.09); --c-row:rgba(255,255,255,0.04); --c-row-b:rgba(255,255,255,0.08); --c-icon:rgba(255,255,255,0.06); --c-icon-b:rgba(255,255,255,0.08); --c-name:#f1f5f9; --c-sub:#94a3b8; --c-header:rgba(255,255,255,0.02); --c-hb:rgba(255,255,255,0.07); } }
+[data-theme="dark"] #fitness-card { --c-bg:#0d0d1a; --c-border:rgba(255,255,255,0.09); --c-row:rgba(255,255,255,0.04); --c-row-b:rgba(255,255,255,0.08); --c-icon:rgba(255,255,255,0.06); --c-icon-b:rgba(255,255,255,0.08); --c-name:#f1f5f9; --c-sub:#94a3b8; --c-header:rgba(255,255,255,0.02); --c-hb:rgba(255,255,255,0.07); }
+#fitness-card { background:var(--c-bg,#0d0d1a) !important; border-color:var(--c-border,rgba(255,255,255,0.09)) !important; box-shadow:0 24px 80px rgba(0,0,0,0.5) !important; }
+#fitness-card > div:first-child { background:var(--c-header,rgba(255,255,255,0.02)) !important; border-color:var(--c-hb,rgba(255,255,255,0.07)) !important; }
+#fitness-card > div:last-child { background:var(--c-header,rgba(255,255,255,0.02)) !important; border-color:var(--c-hb,rgba(255,255,255,0.07)) !important; }
+#fitness-card > div:nth-child(2) > div { background:var(--c-row,rgba(255,255,255,0.04)) !important; border-color:var(--c-row-b,rgba(255,255,255,0.08)) !important; }
+#fitness-card > div:nth-child(2) > div > div:first-child { background:var(--c-icon,rgba(255,255,255,0.06)) !important; border-color:var(--c-icon-b,rgba(255,255,255,0.08)) !important; }
+#fitness-card > div:nth-child(2) > div > div > div:first-child { color:var(--c-name,#f1f5f9) !important; }
+#fitness-card > div:nth-child(2) > div > div > div:last-child { color:var(--c-sub,#94a3b8) !important; }
 </style>
 </head>
 <body>

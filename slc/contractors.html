@@ -169,11 +169,18 @@
 .slc-metric{display:flex;flex-direction:column;align-items:center;gap:2px;}
 .slc-metric-num{font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .slc-metric-label{font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;}
-/* Light mode overrides for leads card via ID */
-[data-theme="light"] #leads-card{background:#fff !important;border-color:rgba(0,0,0,0.1) !important;box-shadow:0 8px 40px rgba(0,0,0,0.08),0 0 0 1px rgba(124,58,237,0.08) !important;}
-@media(prefers-color-scheme:light){
-  [data-theme="auto"] #leads-card{background:#fff !important;border-color:rgba(0,0,0,0.1) !important;box-shadow:0 8px 40px rgba(0,0,0,0.08),0 0 0 1px rgba(124,58,237,0.08) !important;}
-}
+/* Light mode overrides for leads card */
+[data-theme="light"] #leads-card,
+[data-theme="auto"] #leads-card { --card-bg:#fff; --card-border:rgba(0,0,0,0.09); --row-bg:rgba(0,0,0,0.03); --row-border:rgba(0,0,0,0.07); --icon-bg:#f1f5f9; --icon-border:#e2e8f0; --name-color:#0f172a; --sub-color:#64748b; --header-bg:rgba(0,0,0,0.02); --footer-border:rgba(0,0,0,0.07); }
+@media(prefers-color-scheme:dark){ [data-theme="auto"] #leads-card { --card-bg:#0d0d1a; --card-border:rgba(255,255,255,0.09); --row-bg:rgba(255,255,255,0.04); --row-border:rgba(255,255,255,0.08); --icon-bg:rgba(255,255,255,0.06); --icon-border:rgba(255,255,255,0.08); --name-color:#f1f5f9; --sub-color:#94a3b8; --header-bg:rgba(255,255,255,0.02); --footer-border:rgba(255,255,255,0.07); } }
+[data-theme="dark"] #leads-card { --card-bg:#0d0d1a; --card-border:rgba(255,255,255,0.09); --row-bg:rgba(255,255,255,0.04); --row-border:rgba(255,255,255,0.08); --icon-bg:rgba(255,255,255,0.06); --icon-border:rgba(255,255,255,0.08); --name-color:#f1f5f9; --sub-color:#94a3b8; --header-bg:rgba(255,255,255,0.02); --footer-border:rgba(255,255,255,0.07); }
+#leads-card { background:var(--card-bg,#0d0d1a) !important; border-color:var(--card-border,rgba(255,255,255,0.09)) !important; box-shadow:0 24px 80px rgba(0,0,0,0.5) !important; }
+#leads-card > div:first-child { background:var(--header-bg,rgba(255,255,255,0.02)) !important; border-color:var(--footer-border,rgba(255,255,255,0.07)) !important; }
+#leads-card > div:last-child { background:var(--header-bg,rgba(255,255,255,0.02)) !important; border-color:var(--footer-border,rgba(255,255,255,0.07)) !important; }
+#leads-card > div:nth-child(2) > div { background:var(--row-bg,rgba(255,255,255,0.04)) !important; border-color:var(--row-border,rgba(255,255,255,0.08)) !important; }
+#leads-card > div:nth-child(2) > div > div:first-child { background:var(--icon-bg,rgba(255,255,255,0.06)) !important; border-color:var(--icon-border,rgba(255,255,255,0.08)) !important; }
+#leads-card > div:nth-child(2) > div > div > div:first-child { color:var(--name-color,#f1f5f9) !important; }
+#leads-card > div:nth-child(2) > div > div > div:last-child { color:var(--sub-color,#94a3b8) !important; }
 </style>
 </head>
 <body>
