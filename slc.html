@@ -1018,13 +1018,46 @@
 </section>
 
 <!-- ═══════════ NICHES ═══════════ -->
-<section id="niches" class="section">
+<!-- NICHE HUB CARDS -->
+<section id="niches" class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="container">
     <div class="section-header reveal">
       <span class="label" data-i18n="niches.label">Who we work with</span>
       <h2 data-i18n-html="niches.h2">Built for the businesses<br>that keep Salt Lake City running.</h2>
-      <p data-i18n="niches.p">We're not for everyone. We work with service businesses that are serious about growth — and done with websites that do nothing.</p>
+      <p data-i18n="niches.p">Pick your industry — each page is built specifically for you, not a generic version.</p>
     </div>
+    <!-- Hub cards linking to sub-pages -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;" class="reveal">
+      <a href="/slc/contractors" style="text-decoration:none;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:2rem;">🔧</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Contractors</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Roofers, HVAC, plumbers, landscapers, electricians. A site that gets you found on Google and generates quote requests 24/7.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">See the contractor page →</div>
+        </div>
+      </a>
+      <a href="/slc/fitness" style="text-decoration:none;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:2rem;">💪</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Fitness & Gyms</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Gyms, personal trainers, yoga studios, wellness. A site with trial offers, booking flows, and class schedules that converts visitors into members.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">See the fitness page →</div>
+        </div>
+      </a>
+      <a href="/slc/latino" style="text-decoration:none;">
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
+          <div style="font-size:2rem;">🌎</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Latino-Owned Businesses</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Restaurantes, salones, servicios, retail. A fully bilingual site (EN + ES) that speaks to both communities and brings in customers from both.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">Ver la página para latinos →</div>
+        </div>
+      </a>
+    </div>
+    <div style="border-top:1px solid var(--border);margin-top:48px;padding-top:48px;">
+    <div class="section-header reveal">
+      <p data-i18n="niches.p" style="margin:0;">We're not for everyone. We work with service businesses that are serious about growth — and done with websites that do nothing.</p>
+    </div><!-- /section-header -->
+    </div><!-- /border-top wrapper -->
     <div class="niche-grid">
       <div class="niche-card reveal">
         <div class="niche-emoji">🔧</div>

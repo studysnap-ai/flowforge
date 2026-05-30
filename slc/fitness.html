@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <script>(function(){var t=localStorage.getItem('ff_theme')||'auto';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness & Gym Websites Salt Lake City — FlowForge</title>
+  <meta name="description" content="FlowForge builds fitness and gym websites in Salt Lake City with trial offers, booking flows, and class schedules that convert visitors into paying members.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+<style>
+:root {
+  --bg:#07070e;--surface:#0d0d1a;--surface-2:#111127;
+  --blue:#38bdf8;--purple:#a855f7;
+  --blue-dim:rgba(56,189,248,0.15);--purple-dim:rgba(168,85,247,0.15);
+  --gradient:linear-gradient(135deg,#7c3aed,#ec4899);
+  --accent:#7c3aed;--accent-dim:rgba(124,58,237,0.15);
+  --text:#f1f5f9;--muted:#94a3b8;
+  --border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.14);
+  --radius:14px;--radius-sm:8px;--shadow:0 4px 24px rgba(0,0,0,0.4);
+}
+[data-theme="light"] {
+  --bg:#f8fafc;--surface:#ffffff;--surface-2:#f1f5f9;
+  --text:#0f172a;--muted:#64748b;
+  --border:rgba(0,0,0,0.08);--border-h:rgba(0,0,0,0.15);
+  --accent-dim:rgba(124,58,237,0.1);--shadow:0 4px 24px rgba(0,0,0,0.12);
+  --gradient:linear-gradient(135deg,#7c3aed,#ec4899) !important;
+}
+@media (prefers-color-scheme:light) {
+  [data-theme="auto"] {
+    --bg:#f8fafc;--surface:#ffffff;--surface-2:#f1f5f9;
+    --text:#0f172a;--muted:#64748b;
+    --border:rgba(0,0,0,0.08);--border-h:rgba(0,0,0,0.15);
+    --accent-dim:rgba(124,58,237,0.1);--shadow:0 4px 24px rgba(0,0,0,0.12);
+    --gradient:linear-gradient(135deg,#7c3aed,#ec4899) !important;
+  }
+}
+@keyframes slc-gradient-shift {
+  0%,100%{background-position:0% 50%} 50%{background-position:100% 50%}
+}
+@keyframes slc-btn-glow {
+  0%,100%{box-shadow:0 0 20px rgba(124,58,237,0.4),0 4px 24px rgba(236,72,153,0.25)}
+  50%{box-shadow:0 0 32px rgba(124,58,237,0.6),0 4px 32px rgba(236,72,153,0.4)}
+}
+.gradient-text {
+  background:linear-gradient(270deg,#7c3aed,#ec4899,#7c3aed) !important;
+  background-size:300% 300% !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  background-clip:text !important;
+  animation:slc-gradient-shift 4s ease infinite !important;
+}
+.btn-primary { animation:slc-btn-glow 3s ease infinite; }
+.hero-orb-1 { background:rgba(124,58,237,0.13) !important; }
+.hero-orb-2 { background:rgba(236,72,153,0.09) !important; }
+.step-num { color:var(--accent); }
+
+.nav-utils{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.nav-lang-toggle{display:inline-flex;align-items:center;background:rgba(255,255,255,0.06);border:1px solid var(--border-h);border-radius:100px;padding:4px;gap:2px;}
+.nav-lang-btn{padding:7px 20px;border-radius:100px;font-size:.82rem;font-weight:800;letter-spacing:.08em;border:none;cursor:pointer;background:transparent;color:var(--muted);font-family:inherit;transition:background .2s,color .2s;line-height:1;text-transform:uppercase;}
+.nav-lang-btn.active{background:var(--gradient);color:#fff;}
+#nav-lang-desktop{display:inline-flex;} .nav-lang-mobile{display:none !important;}
+#theme-seg{display:inline-flex;} .theme-seg-mobile{display:none !important;}
+#theme-seg .theme-seg-btn{padding:5px 9px;font-size:.8rem;}
+.theme-seg{display:inline-flex;align-items:center;background:rgba(255,255,255,0.05);border:1px solid var(--border-h);border-radius:100px;padding:3px;gap:2px;}
+.theme-seg-btn{padding:5px 11px;border-radius:100px;font-size:.72rem;font-weight:700;border:none;cursor:pointer;background:transparent;color:var(--muted);font-family:inherit;transition:background .2s,color .2s;white-space:nowrap;line-height:1;}
+.theme-seg-btn.active{background:var(--surface-2);color:var(--text);border:1px solid var(--border-h);}
+[data-theme="light"] .theme-seg-btn.active{background:rgba(0,0,0,0.08);}
+@media (max-width:768px) {
+  #nav-lang-desktop{display:none !important;} #theme-seg{display:none !important;}
+  .nav-lang-mobile{display:inline-flex !important;} .theme-seg-mobile{display:inline-flex !important;}
+  .nav-lang-mobile .nav-lang-btn{padding:5px 13px;font-size:.74rem;}
+}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+@media (max-width:768px) {
+  .nav-links{display:none !important;position:fixed;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:32px;z-index:99;background:var(--bg);}
+  .nav-links.open{display:flex !important;}
+  .nav-links a{font-size:1.15rem;font-weight:600;color:var(--text);}
+  .nav-links li{width:100%;text-align:center;display:flex;justify-content:center;}
+  .hamburger{display:flex !important;z-index:100;}
+}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);margin-bottom:24px;}
+.breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--accent);}
+.breadcrumb span{color:var(--accent);}
+
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+.pain-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;border-left:3px solid var(--accent);}
+.pain-card h3{font-size:1rem;color:var(--text);margin-bottom:8px;}
+.pain-card p{font-size:.9rem;line-height:1.65;}
+.pain-fix{margin-top:12px;font-size:.85rem;font-weight:700;color:var(--accent);}
+
+.del-list-simple{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+.del-list-simple li{font-size:.95rem;color:var(--muted);padding-left:24px;position:relative;line-height:1.55;}
+.del-list-simple li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800;}
+
+.price-single{max-width:540px;margin:48px auto 0;background:linear-gradient(160deg,rgba(124,58,237,0.07),rgba(236,72,153,0.04));border:2px solid rgba(124,58,237,0.45);border-radius:var(--radius);padding:40px;position:relative;}
+.price-tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--gradient);color:#fff;padding:4px 14px;border-radius:100px;margin-bottom:16px;}
+.price-name{font-size:1.6rem;font-weight:900;color:var(--text);margin-bottom:8px;}
+.price-amount{font-size:2.8rem;font-weight:900;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.price-period{font-size:1rem;font-weight:600;color:var(--muted);}
+.price-desc{font-size:.95rem;color:var(--muted);line-height:1.65;margin:16px 0 24px;font-style:italic;padding:14px 16px;background:rgba(255,255,255,0.03);border-left:2px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;}
+
+.proof-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;gap:24px;align-items:flex-start;max-width:720px;margin:48px auto 0;}
+.proof-emoji{font-size:2.4rem;flex-shrink:0;}
+.proof-type{font-size:.7rem;font-weight:700;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.proof-title{font-size:1.1rem;font-weight:800;color:var(--text);margin-bottom:8px;}
+.proof-desc{font-size:.9rem;line-height:1.65;margin-bottom:12px;}
+.proof-link{font-size:.82rem;font-weight:700;color:var(--accent);text-decoration:none;}
+.proof-link:hover{text-decoration:underline;}
+
+.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;}
+.faq-q{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:10px;}
+.faq-a{font-size:.92rem;line-height:1.72;}
+
+.final-cta{text-align:center;position:relative;overflow:hidden;}
+.final-cta-glow{position:absolute;width:1000px;height:600px;background:radial-gradient(ellipse,rgba(124,58,237,0.10) 0%,rgba(236,72,153,0.05) 50%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.final-cta-inner{position:relative;z-index:1;max-width:580px;margin:0 auto;}
+.final-micro{margin-top:20px;font-size:.82rem;color:var(--muted);}
+
+/* Fitness-specific: booking visual */
+.booking-preview{background:var(--surface);border:1px solid rgba(255,255,255,0.09);border-radius:16px;backdrop-filter:blur(24px);width:100%;max-width:380px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08),0 0 0 1px rgba(124,58,237,0.06);}
+.booking-header{padding:14px 20px;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:space-between;}
+.booking-title{font-size:.75rem;color:var(--muted);font-weight:600;letter-spacing:.04em;}
+.booking-live{display:flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:#22c55e;}
+.booking-dot{width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e;animation:pulse-dot 1.5s ease infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.booking-body{padding:16px 20px;display:flex;flex-direction:column;gap:8px;}
+.booking-slot{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;}
+.booking-time{font-size:.82rem;font-weight:700;color:var(--text);}
+.booking-class{font-size:.72rem;color:var(--muted);}
+.booking-pill{font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;}
+.pill-open{background:rgba(124,58,237,0.12);color:#a78bfa;border:1px solid rgba(124,58,237,0.25);}
+.pill-full{background:rgba(236,72,153,0.12);color:#f9a8d4;border:1px solid rgba(236,72,153,0.25);}
+.pill-trial{background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.25);}
+.booking-footer{padding:14px 20px;border-top:1px solid var(--border);background:rgba(255,255,255,0.02);text-align:center;}
+.booking-cta{display:inline-block;font-size:.82rem;font-weight:800;background:var(--gradient);color:#fff;padding:10px 24px;border-radius:100px;text-decoration:none;}
+
+@media (max-width:768px) {
+  .pain-grid{grid-template-columns:1fr;}
+  .proof-card{flex-direction:column;gap:16px;}
+  .price-single{padding:28px 20px;}
+  .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
+}
+[data-theme="light"] .booking-preview{background:rgba(255,255,255,0.95);border-color:rgba(0,0,0,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.08);}
+[data-theme="light"] .booking-slot{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.06);}
+@media (prefers-color-scheme:light) {
+  [data-theme="auto"] .booking-preview{background:rgba(255,255,255,0.95);border-color:rgba(0,0,0,0.08);box-shadow:0 8px 40px rgba(0,0,0,0.08);}
+  [data-theme="auto"] .booking-slot{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.06);}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="logo">Flow<span>Forge</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/slc">← SLC Hub</a></li>
+      <li><a href="/slc/contractors">Contractors</a></li>
+      <li><a href="/slc/latino">Latino</a></li>
+      <li><a href="#contact" class="btn-nav">Get a Free Audit</a></li>
+    </ul>
+    <div class="nav-utils">
+      <div class="nav-lang-toggle" id="nav-lang-desktop">
+        <button class="nav-lang-btn active" id="nav-btn-en" onclick="setLang('en')">EN</button>
+        <button class="nav-lang-btn" id="nav-btn-es" onclick="setLang('es')">ES</button>
+      </div>
+      <div class="theme-seg" id="theme-seg">
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
+      </div>
+      <div class="nav-lang-toggle nav-lang-mobile">
+        <button class="nav-lang-btn active" id="nav-btn-en-m" onclick="setLang('en')">EN</button>
+        <button class="nav-lang-btn" id="nav-btn-es-m" onclick="setLang('es')">ES</button>
+      </div>
+      <div class="theme-seg theme-seg-mobile" id="theme-seg-mobile">
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="breadcrumb">
+        <a href="/slc">SLC</a>
+        <span>/ Fitness & Gyms</span>
+      </div>
+      <div class="badge reveal"><span class="badge-dot"></span><span>Utah-based · Salt Lake City</span></div>
+      <div class="urgency-badge reveal"><span class="urgency-dot"></span><span>Accepting <strong>2 fitness projects</strong> — slots filling fast</span></div>
+      <h1 class="reveal reveal-delay-1">Your gym deserves<br>more than an <span class="gradient-text">Instagram bio.</span></h1>
+      <p class="hero-sub reveal reveal-delay-2">We build fitness websites with trial offers, booking flows, and class schedules that turn visitors into paying members. Gyms, personal trainers, yoga studios, and wellness businesses across Salt Lake City.</p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#contact" class="btn-primary">Get a Free Fitness Audit</a>
+        <a href="#what-you-get" class="btn-ghost">See what's included →</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="booking-preview">
+        <div class="booking-header">
+          <span class="booking-title">Elevate Fitness SLC · Book a Class</span>
+          <span class="booking-live"><span class="booking-dot"></span>Live</span>
+        </div>
+        <div class="booking-body">
+          <div class="booking-slot">
+            <div>
+              <div class="booking-time">6:00 AM · Mon</div>
+              <div class="booking-class">HIIT Bootcamp</div>
+            </div>
+            <span class="booking-pill pill-open">4 spots left</span>
+          </div>
+          <div class="booking-slot">
+            <div>
+              <div class="booking-time">7:30 AM · Mon</div>
+              <div class="booking-class">Yoga Flow</div>
+            </div>
+            <span class="booking-pill pill-full">Full</span>
+          </div>
+          <div class="booking-slot">
+            <div>
+              <div class="booking-time">12:00 PM · Mon</div>
+              <div class="booking-class">Free Trial Class</div>
+            </div>
+            <span class="booking-pill pill-trial">Trial open</span>
+          </div>
+          <div class="booking-slot">
+            <div>
+              <div class="booking-time">5:30 PM · Mon</div>
+              <div class="booking-class">Strength & Conditioning</div>
+            </div>
+            <span class="booking-pill pill-open">8 spots left</span>
+          </div>
+        </div>
+        <div class="booking-footer">
+          <a href="#contact" class="booking-cta">Book Free Trial →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container trust-inner">
+    <div class="trust-item"><span class="trust-check">✓</span><span>Utah-based builder</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span>2 live sites · Growing</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span>Booking flows that convert</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span>Done in 2–3 weeks</span></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span>You own everything</span></div>
+  </div>
+</div>
+
+<!-- PAIN POINTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">The real problem</span>
+      <h2>Why Instagram alone<br>isn't growing your gym.</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <h3>📱 Your booking link is buried in a bio</h3>
+        <p>Someone sees your transformation post, clicks to your profile, finds a Linktree, clicks again, lands on a confusing page. They leave. That's a lost member.</p>
+        <div class="pain-fix">We fix: Direct booking flow on your own site</div>
+      </div>
+      <div class="pain-card reveal">
+        <h3>🕰️ Your website looks like it's from 2014</h3>
+        <p>Potential members judge you in 3 seconds. If your site looks outdated, they assume your equipment and coaching is too — even if it isn't.</p>
+        <div class="pain-fix">We fix: Modern, mobile-first design that reflects your brand</div>
+      </div>
+      <div class="pain-card reveal">
+        <h3>💸 You're not capturing leads off Instagram</h3>
+        <p>When Instagram goes down, changes its algorithm, or you take a day off posting — your lead flow stops completely. A website works 24/7 with no algorithm.</p>
+        <div class="pain-fix">We fix: Email capture + trial offer that runs on autopilot</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="section" id="what-you-get" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Deliverables</span>
+      <h2>Exactly what you get.<br>Built for fitness businesses.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:800px;margin:48px auto 0;">
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;color:var(--text);margin-bottom:4px;">🏋️ Your Fitness Website</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">Built to turn visitors into trial signups and paying members.</p>
+        <ul class="del-list-simple">
+          <li>6-page mobile-first site</li>
+          <li>Trial offer / free class CTA on every page</li>
+          <li>Booking form or Calendly integration</li>
+          <li>Class schedule section built in</li>
+          <li>Transformation photo gallery</li>
+          <li>Testimonials + social proof section</li>
+          <li>Email capture for free offer or trial</li>
+          <li>Full ownership — yours forever</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 style="font-size:1.1rem;color:var(--text);margin-bottom:4px;">⚡ What makes it convert</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;">The details that separate a good-looking site from one that actually grows your membership.</p>
+        <ul class="del-list-simple">
+          <li>Free trial prominently above the fold</li>
+          <li>One-click WhatsApp contact button</li>
+          <li>Google Maps + location page for local SEO</li>
+          <li>Loads in under 3 seconds on mobile</li>
+          <li>Connected to your Instagram feed</li>
+          <li>30 days of post-launch support</li>
+          <li>50% upfront · 50% on delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Pricing</span>
+      <h2>One flat price.<br>No recurring fees.</h2>
+      <p>A website that pays for itself the first month it brings in 2 new members.</p>
+    </div>
+    <div class="price-single reveal">
+      <div class="price-tag">💪 Fitness Package</div>
+      <div class="price-name">Fitness Launch</div>
+      <div style="margin:16px 0;">
+        <span class="price-amount">$1,500</span><span class="price-period"> one-time</span>
+      </div>
+      <div class="price-desc">"A website with a built-in booking flow that converts visitors into trial signups — and trial signups into paying members."</div>
+      <ul class="del-list-simple">
+        <li>6-page mobile-first fitness site</li>
+        <li>Trial offer + booking flow built in</li>
+        <li>Class schedule section</li>
+        <li>Transformation photo gallery</li>
+        <li>Email capture for free offer</li>
+        <li>Testimonials + social proof</li>
+        <li>Done in 2–3 weeks · 30 days of support</li>
+        <li>Full ownership from day one</li>
+      </ul>
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:12px;">
+        <a href="#contact" class="btn-primary" style="text-align:center;display:block;">Get a Free Fitness Audit</a>
+        <p style="font-size:.75rem;color:var(--muted);text-align:center;">No commitment. We'll look at your current online presence and tell you exactly what's missing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">The process</span>
+      <h2>Simple. Fast. No surprises.</h2>
+    </div>
+    <div class="process-steps" style="max-width:720px;margin:48px auto 0;">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3 class="step-title">Free Audit Call</h3>
+          <p class="step-desc">We look at your current online presence — site, Instagram, Google listing — and tell you exactly what's holding back your membership growth. No pitch, no pressure.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3 class="step-title">We Build It</h3>
+          <p class="step-desc">You approve the plan. We design, build, and test everything in 2–3 weeks. You see progress every few days and can give feedback at any point.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3 class="step-title">Members Start Booking</h3>
+          <p class="step-desc">Your site goes live. Trial signups start coming in directly — no algorithm, no link in bio. We stick around for 30 days then hand over full ownership.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Our work</span>
+      <h2>Sites we've shipped.</h2>
+    </div>
+    <div class="proof-card reveal">
+      <div class="proof-emoji">🖥️</div>
+      <div>
+        <div class="proof-type">Productivity App · Browser Extension</div>
+        <div class="proof-title">Clarity — Time & Money Tracker</div>
+        <p class="proof-desc">Full product landing page for a Chrome extension that tracks social media time and meeting costs. Clean, conversion-focused design — shows the level of craft we bring to every project.</p>
+        <a href="https://clarity-five-sable.vercel.app/" target="_blank" rel="noopener" class="proof-link">View live site →</a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;" class="reveal">
+      <p style="font-size:.95rem;color:var(--muted);margin-bottom:16px;">Want to be our first SLC fitness case study?</p>
+      <a href="#contact" class="btn-ghost">Claim your spot →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label">Common questions</span>
+      <h2>What gym owners ask us.</h2>
+    </div>
+    <div class="faq-list" style="margin-top:48px;">
+      <div class="faq-item reveal">
+        <div class="faq-q">Can't I just use Mindbody or Glofox for my website?</div>
+        <div class="faq-a">Those are booking management tools — not websites. They give you a booking widget you embed somewhere, but you still need an actual site that represents your brand, ranks on Google, and gets people to that booking step in the first place. We build that site.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">Do you integrate with my existing booking software?</div>
+        <div class="faq-a">Yes. We integrate with Calendly, Mindbody, Acuity, and most other booking tools. If you don't have one, we'll set up a simple booking form that works without any monthly software fee.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">How long does it take?</div>
+        <div class="faq-a">2–3 weeks from the day you approve the plan. One point of contact — you're talking directly to the person building it. No account managers, no waiting.</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">What if I already have a website I don't like?</div>
+        <div class="faq-a">We'll tell you honestly on the free audit call: targeted fixes, or start fresh. Sometimes a new hero section and a proper booking flow is all you need. We'll know after 20 minutes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="contact" class="section final-cta">
+  <div class="final-cta-glow"></div>
+  <div class="container">
+    <div class="final-cta-inner reveal">
+      <span class="label">Let's talk</span>
+      <h2 style="margin:16px 0 20px;">Ready to grow your<br>membership online?</h2>
+      <p style="font-size:1rem;margin-bottom:36px;">Start with a free 20-minute audit. We'll look at your current site, your Instagram, and your Google listing — and tell you exactly what's costing you signups. No strings attached.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <a href="mailto:hello@flowforge.com?subject=Free Fitness Site Audit — SLC" class="btn-primary">Book My Free Audit</a>
+        <a href="https://wa.me/16032059425?text=Hi%20FlowForge!%20I%20run%20a%20fitness%20business%20in%20SLC%20and%20I%27d%20like%20a%20free%20site%20audit." target="_blank" rel="noopener" class="btn-ghost">Message on WhatsApp →</a>
+      </div>
+      <p class="final-micro">No commitment. No sales pitch. Just a straight look at your online presence.</p>
+      <div style="margin-top:32px;padding-top:32px;border-top:1px solid var(--border);font-size:.78rem;color:rgba(148,163,184,0.4);letter-spacing:.04em;line-height:1.8;text-align:center;">
+        📍 Serving fitness businesses across Salt Lake City<br>
+        Murray · Sandy · Draper · Millcreek · South Salt Lake · West Valley City · Holladay
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="/" class="logo">Flow<span>Forge</span></a>
+    <p class="footer-copy">© 2025 FlowForge · Utah, USA</p>
+    <div class="footer-links">
+      <a href="/slc">SLC Hub</a>
+      <a href="/slc/contractors">Contractors</a>
+      <a href="/slc/latino">Latino</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/16032059425?text=Hi%20FlowForge!" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="/script.js"></script>
+<script>
+var savedTheme = localStorage.getItem('ff_theme') || 'auto';
+function setTheme(key) {
+  localStorage.setItem('ff_theme', key);
+  document.documentElement.setAttribute('data-theme', key);
+  document.querySelectorAll('.theme-seg-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.themeKey === key);
+  });
+}
+setTheme(savedTheme);
+
+var currentLang = localStorage.getItem('ff_lang') || 'en';
+function setLang(lang) {
+  localStorage.setItem('ff_lang', lang);
+  currentLang = lang;
+  ['nav-btn-en','nav-btn-en-m'].forEach(function(id) { var el=document.getElementById(id); if(el) el.classList.toggle('active', lang==='en'); });
+  ['nav-btn-es','nav-btn-es-m'].forEach(function(id) { var el=document.getElementById(id); if(el) el.classList.toggle('active', lang==='es'); });
+}
+setLang(currentLang);
+
+(function() {
+  var btn = document.querySelector('.hero-ctas .btn-primary');
+  if (!btn) return;
+  btn.addEventListener('mousemove', function(e) { var r=btn.getBoundingClientRect(); btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*0.25+'px,'+(e.clientY-r.top-r.height/2)*0.35+'px) scale(1.04)'; });
+  btn.addEventListener('mouseleave', function() { btn.style.transition='transform 0.5s cubic-bezier(0.16,1,0.3,1)'; btn.style.transform='translate(0,0) scale(1)'; });
+  btn.addEventListener('mouseenter', function() { btn.style.transition='transform 0.15s ease'; });
+})();
+
+(function() {
+  var c=document.createElement('canvas'); c.width=200; c.height=200;
+  c.style.cssText='position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:0.032;mix-blend-mode:overlay;';
+  var ctx=c.getContext('2d'), img=ctx.createImageData(200,200);
+  for(var i=0;i<img.data.length;i+=4){var v=Math.random()*255|0; img.data[i]=img.data[i+1]=img.data[i+2]=v; img.data[i+3]=255;}
+  ctx.putImageData(img,0,0); document.body.appendChild(c);
+  function shift(){c.style.transform='translate('+(Math.random()*4-2)+'px,'+(Math.random()*4-2)+'px)';requestAnimationFrame(shift);} shift();
+})();
+</script>
+</body>
+</html>
