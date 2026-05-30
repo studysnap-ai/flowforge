@@ -208,46 +208,72 @@
         <a href="#what-you-get" class="btn-ghost">See what's included →</a>
       </div>
     </div>
-    <div class="hero-visual reveal reveal-delay-2">
-      <div class="booking-preview">
-        <div class="booking-header">
-          <span class="booking-title">Elevate Fitness SLC · Book a Class</span>
-          <span class="booking-live"><span class="booking-dot"></span>Live</span>
+    <div class="hero-visual">
+      <!-- Fitness hero card — inline styles only -->
+      <div id="fitness-card" style="background:#0d0d1a;border:1px solid rgba(255,255,255,0.09);border-radius:16px;width:100%;max-width:400px;box-shadow:0 24px 80px rgba(0,0,0,0.5);overflow:hidden;font-family:inherit;">
+        <!-- header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+          <span style="font-size:.75rem;color:#64748b;font-weight:600;letter-spacing:.04em;">Elevate Fitness SLC · Schedule</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:#22c55e;">
+            <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e;display:inline-block;animation:pulse-dot 1.5s ease infinite;flex-shrink:0;"></span>Live
+          </span>
         </div>
-        <div class="booking-body">
-          <div class="booking-slot">
-            <div>
-              <div class="booking-time">6:00 AM · Mon</div>
-              <div class="booking-class">HIIT Bootcamp</div>
+        <!-- body -->
+        <div style="padding:18px 20px;display:flex;flex-direction:column;gap:10px;">
+          <!-- row 1 -->
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
+            <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🔥</div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;">HIIT Bootcamp</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">6:00 AM · Monday</div>
             </div>
-            <span class="booking-pill pill-open">4 spots left</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);">4 spots</span>
           </div>
-          <div class="booking-slot">
-            <div>
-              <div class="booking-time">7:30 AM · Mon</div>
-              <div class="booking-class">Yoga Flow</div>
+          <!-- row 2 -->
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
+            <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🧘</div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;">Yoga Flow</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">7:30 AM · Monday</div>
             </div>
-            <span class="booking-pill pill-full">Full</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(239,68,68,0.15);color:#f87171;border:1px solid rgba(239,68,68,0.3);">Full</span>
           </div>
-          <div class="booking-slot">
-            <div>
-              <div class="booking-time">12:00 PM · Mon</div>
-              <div class="booking-class">Free Trial Class</div>
+          <!-- row 3 -->
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
+            <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">⭐</div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;">Free Trial Class</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">12:00 PM · Monday</div>
             </div>
-            <span class="booking-pill pill-trial">Trial open</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(168,85,247,0.15);color:#a855f7;border:1px solid rgba(168,85,247,0.3);">Trial open</span>
           </div>
-          <div class="booking-slot">
-            <div>
-              <div class="booking-time">5:30 PM · Mon</div>
-              <div class="booking-class">Strength & Conditioning</div>
+          <!-- row 4 -->
+          <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
+            <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">💪</div>
+            <div style="flex:1;min-width:0;">
+              <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;">Strength & Conditioning</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">5:30 PM · Monday</div>
             </div>
-            <span class="booking-pill pill-open">8 spots left</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3);">8 spots</span>
           </div>
         </div>
-        <div class="booking-footer">
-          <a href="#contact" class="booking-cta">Book Free Trial →</a>
+        <!-- footer -->
+        <div style="display:flex;justify-content:space-around;padding:14px 20px;border-top:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+            <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">12</span>
+            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;">Bookings</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+            <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">3</span>
+            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;">Trials Today</span>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+            <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">100%</span>
+            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;">Owned by You</span>
+          </div>
         </div>
       </div>
+      <div class="hv-badge hv-badge-1" style="top:auto;right:auto;bottom:-16px;left:-20px;">✓ Free trial booked in 22 seconds</div>
     </div>
   </div>
 </section>
