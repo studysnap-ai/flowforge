@@ -25,7 +25,44 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FlowForge — AI Tools, Automations &amp; Web Design">
   <meta name="twitter:description" content="Custom AI tools, automations, Chrome extensions and web design. Utah-based, globally delivered.">
+  <link rel="canonical" href="https://flowforge-iota-umber.vercel.app/">
+  <meta name="theme-color" content="#07070e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "FlowForge",
+    "description": "FlowForge builds AI integrations, automation workflows, Chrome extensions, and web design for businesses worldwide. Utah-based, globally delivered.",
+    "url": "https://flowforge-iota-umber.vercel.app/",
+    "telephone": "+1-603-205-9425",
+    "priceRange": "$$",
+    "areaServed": "Worldwide",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "AI integrations",
+      "Automation workflows",
+      "Chrome extensions",
+      "Web design",
+      "Web development"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Integrations & Tools" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automation Workflows" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Chrome Extensions" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Design & Development" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -47,9 +84,9 @@
         </div>
         <!-- Desktop theme seg -->
         <div class="theme-seg" id="theme-seg">
-          <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" title="Light">☀️</button>
-          <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" title="Auto">💻</button>
-          <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" title="Dark">🌙</button>
+          <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" title="Light"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+          <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" title="Auto"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+          <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" title="Dark"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
         </div>
         <!-- Mobile lang toggle -->
         <div class="nav-lang-toggle nav-lang-mobile">
@@ -58,9 +95,9 @@
         </div>
         <!-- Mobile theme seg -->
         <div class="theme-seg theme-seg-mobile" id="theme-seg-mobile">
-          <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" title="Light">☀️</button>
-          <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" title="Auto">💻</button>
-          <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" title="Dark">🌙</button>
+          <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" title="Light"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+          <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" title="Auto"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+          <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" title="Dark"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
         </div>
         <!-- Hamburger -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -75,6 +112,7 @@
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
     <div class="hero-grid"></div>
+    <canvas class="hero-waves" aria-hidden="true"></canvas>
     <div class="container hero-layout">
 
       <!-- Left: text -->
@@ -114,7 +152,7 @@
           </div>
           <div class="hv-body">
             <div class="hv-project">
-              <div class="hv-proj-icon">🤖</div>
+              <div class="hv-proj-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
               <div class="hv-proj-info">
                 <div class="hv-proj-name">AI Chatbot Integration</div>
                 <div class="hv-proj-bar"><div class="hv-proj-fill" style="width:92%"></div></div>
@@ -122,7 +160,7 @@
               <span class="hv-proj-status hv-status-live">Live</span>
             </div>
             <div class="hv-project">
-              <div class="hv-proj-icon">⚡</div>
+              <div class="hv-proj-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
               <div class="hv-proj-info">
                 <div class="hv-proj-name">Automation Workflow</div>
                 <div class="hv-proj-bar"><div class="hv-proj-fill" style="width:75%"></div></div>
@@ -130,7 +168,7 @@
               <span class="hv-proj-status hv-status-progress">Building</span>
             </div>
             <div class="hv-project">
-              <div class="hv-proj-icon">🌐</div>
+              <div class="hv-proj-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
               <div class="hv-proj-info">
                 <div class="hv-proj-name">Web Design · E-commerce</div>
                 <div class="hv-proj-bar"><div class="hv-proj-fill hv-fill-purple" style="width:58%"></div></div>
@@ -138,7 +176,7 @@
               <span class="hv-proj-status hv-status-review">Review</span>
             </div>
             <div class="hv-project">
-              <div class="hv-proj-icon">🧩</div>
+              <div class="hv-proj-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 20.39a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 9.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg></div>
               <div class="hv-proj-info">
                 <div class="hv-proj-name">Chrome Extension</div>
                 <div class="hv-proj-bar"><div class="hv-proj-fill hv-fill-green" style="width:100%"></div></div>
@@ -204,7 +242,7 @@
       <div class="services-grid">
 
         <div class="service-card reveal">
-          <div class="service-icon-wrap"><span class="service-icon">⚡</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span></div>
           <h3 data-i18n="svc.ai.title">AI Integration</h3>
           <p data-i18n="svc.ai.desc">Connect Claude, GPT, and other AI models to your existing tools. Chatbots, smart search, document analysis, and custom AI workflows.</p>
           <div class="service-tags"><span>Claude API</span><span>OpenAI</span><span>Custom Models</span></div>
@@ -216,7 +254,7 @@
 
         <div class="service-card featured reveal reveal-delay-1">
           <div class="featured-label" data-i18n="badge.mostRequested">Most Requested</div>
-          <div class="service-icon-wrap"><span class="service-icon">🔄</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span></div>
           <h3 data-i18n="svc.auto.title">Automation Workflows</h3>
           <p data-i18n="svc.auto.desc">Eliminate repetitive tasks with custom automation pipelines. We connect your apps and let the machines do the work so your team doesn't have to.</p>
           <div class="service-tags"><span>Make</span><span>n8n</span><span>Zapier</span><span>Custom API</span></div>
@@ -227,7 +265,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon-wrap"><span class="service-icon">🧩</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 20.39a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 9.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg></span></div>
           <h3 data-i18n="svc.chrome.title">Chrome Extensions</h3>
           <p data-i18n="svc.chrome.desc">Custom browser extensions for internal teams or public markets. Productivity tools, AI overlays, data tools — built to Chrome's latest standards.</p>
           <div class="service-tags"><span>Manifest V3</span><span>AI-powered</span><span>Cross-browser</span></div>
@@ -238,7 +276,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon-wrap"><span class="service-icon">🎨</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" stroke="none"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span></div>
           <h3 data-i18n="svc.web.title">Web Design &amp; Dev</h3>
           <p data-i18n="svc.web.desc">Fast, modern websites that look great and convert. Landing pages to full business sites — built clean, mobile-first, and shipped fast.</p>
           <div class="service-tags"><span>Landing Pages</span><span>Business Sites</span><span>CMS</span></div>
@@ -249,7 +287,7 @@
         </div>
 
         <div class="service-card reveal">
-          <div class="service-icon-wrap"><span class="service-icon">📱</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span></div>
           <h3 data-i18n="svc.social.title">Social Media Automation</h3>
           <p data-i18n="svc.social.desc">Auto-posting, scheduling, cross-platform pipelines and DM automation. We wire up your social presence so it runs itself while you focus on the business.</p>
           <div class="service-tags"><span>Auto-posting</span><span>DM Bots</span><span>Analytics</span></div>
@@ -260,7 +298,7 @@
         </div>
 
         <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon-wrap"><span class="service-icon">🤖</span></div>
+          <div class="service-icon-wrap"><span class="service-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span></div>
           <h3 data-i18n="svc.chatbot.title">AI Chatbots &amp; Assistants</h3>
           <p data-i18n="svc.chatbot.desc">Custom AI assistants for WhatsApp, Instagram, websites, and internal tools. Answer questions, qualify leads, and support customers 24/7 automatically.</p>
           <div class="service-tags"><span>WhatsApp</span><span>Instagram</span><span>Web Chat</span></div>
@@ -315,7 +353,7 @@
 
         <div class="portfolio-card reveal">
           <div class="portfolio-thumb thumb-studysnap">
-            <span class="portfolio-emoji">⚡</span>
+            <img class="portfolio-img" src="assets/portfolio/studysnap.png" alt="StudySnap landing page — AI study assistant Chrome extension" loading="lazy" width="1280" height="800">
             <div class="portfolio-thumb-glow"></div>
           </div>
           <div class="portfolio-info">
@@ -328,20 +366,20 @@
 
         <div class="portfolio-card reveal reveal-delay-1">
           <div class="portfolio-thumb thumb-clarity">
-            <span class="portfolio-emoji">🔍</span>
+            <img class="portfolio-img" src="assets/portfolio/clarity.png" alt="Clarity Chrome extension popup — screen time, meeting cost, and dark pattern detection" loading="lazy" width="340" height="620">
             <div class="portfolio-thumb-glow glow-purple"></div>
           </div>
           <div class="portfolio-info">
-            <div class="portfolio-tags"><span>Chrome Extension</span><span>Dark Patterns</span></div>
+            <div class="portfolio-tags"><span>Chrome Extension</span><span>Screen Time</span></div>
             <h3 data-i18n="proj.clarity.title">Clarity Extension</h3>
-            <p data-i18n="proj.clarity.desc">Browser extension that detects and highlights dark patterns on websites in real time — protecting users from manipulative UX tricks while browsing.</p>
+            <p data-i18n="proj.clarity.desc">All-in-one Chrome extension that tracks social media screen time, calculates the real cost of meetings, and detects dark patterns on websites — live, private, and free.</p>
             <div class="portfolio-tech"><span>Manifest V3</span><span>Content Scripts</span><span>JavaScript</span></div>
           </div>
         </div>
 
         <div class="portfolio-card reveal reveal-delay-2">
           <div class="portfolio-thumb thumb-fotoexpress">
-            <span class="portfolio-emoji">📸</span>
+            <img class="portfolio-img" src="assets/portfolio/fotoexpress.png" alt="FotoExpress Peru website — professional photo printing business" loading="lazy" width="1280" height="800">
             <div class="portfolio-thumb-glow glow-orange"></div>
           </div>
           <div class="portfolio-info">
@@ -377,7 +415,7 @@
       <div class="pricing-grid">
 
         <div class="pricing-card reveal">
-          <div class="pricing-icon">🎨</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor" stroke="none"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
           <h3 data-i18n="price.web.title">Web Design</h3>
           <div class="price">From <strong>$500</strong></div>
           <ul class="pricing-list">
@@ -390,7 +428,7 @@
         </div>
 
         <div class="pricing-card reveal reveal-delay-1">
-          <div class="pricing-icon">🔄</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div>
           <h3 data-i18n="price.auto.title">Automation</h3>
           <div class="price">From <strong>$400</strong></div>
           <ul class="pricing-list">
@@ -404,7 +442,7 @@
 
         <div class="pricing-card featured-pricing reveal reveal-delay-2">
           <div class="pricing-badge" data-i18n="badge.mostPopular">Most Popular</div>
-          <div class="pricing-icon">⚡</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
           <h3 data-i18n="price.ai.title">AI Integration</h3>
           <div class="price">From <strong>$800</strong></div>
           <ul class="pricing-list">
@@ -417,7 +455,7 @@
         </div>
 
         <div class="pricing-card reveal reveal-delay-3">
-          <div class="pricing-icon">🧩</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 20.39a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 9.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg></div>
           <h3 data-i18n="price.chrome.title">Chrome Extension</h3>
           <div class="price">From <strong>$600</strong></div>
           <ul class="pricing-list">
@@ -430,7 +468,7 @@
         </div>
 
         <div class="pricing-card reveal">
-          <div class="pricing-icon">📱</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div>
           <h3 data-i18n="price.social.title">Social Automation</h3>
           <div class="price">From <strong>$350</strong></div>
           <ul class="pricing-list">
@@ -443,7 +481,7 @@
         </div>
 
         <div class="pricing-card reveal reveal-delay-1">
-          <div class="pricing-icon">🤖</div>
+          <div class="pricing-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
           <h3 data-i18n="price.chatbot.title">AI Chatbot</h3>
           <div class="price">From <strong>$600</strong></div>
           <ul class="pricing-list">
@@ -507,19 +545,19 @@
           <p data-i18n="contact.p">Tell us what you're building or what problem you need solved. We'll respond within 24 hours with a clear path forward — no commitment required.</p>
           <div class="contact-details">
             <div class="contact-detail">
-              <span class="detail-icon">📍</span>
+              <span class="detail-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
               <span data-i18n="contact.loc">Utah, USA</span>
             </div>
             <div class="contact-detail">
-              <span class="detail-icon">🌎</span>
+              <span class="detail-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
               <span data-i18n="contact.world">Available worldwide</span>
             </div>
             <div class="contact-detail">
-              <span class="detail-icon">⏱</span>
+              <span class="detail-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></svg></span>
               <span data-i18n="contact.time">Response within 24 hours</span>
             </div>
             <div class="contact-detail">
-              <span class="detail-icon">📞</span>
+              <span class="detail-icon"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
               <span data-i18n="contact.call">Free discovery call included</span>
             </div>
           </div>
@@ -623,7 +661,7 @@
       'step3.title': 'Launch', 'step3.desc': 'We ship, hand over full ownership, and support you post-launch. Your success is the only metric we care about.',
       'portfolio.label': 'Our work', 'portfolio.h2': 'Recent Projects', 'portfolio.sub': 'Real products, shipped and working.',
       'proj.studysnap.title': 'StudySnap', 'proj.studysnap.desc': 'AI-powered Chrome extension that captures any on-screen question and delivers instant answers with explanations and a confidence score — powered by Claude Vision API.',
-      'proj.clarity.title': 'Clarity Extension', 'proj.clarity.desc': 'Browser extension that detects and highlights dark patterns on websites in real time — protecting users from manipulative UX tricks while browsing.',
+      'proj.clarity.title': 'Clarity Extension', 'proj.clarity.desc': 'All-in-one Chrome extension that tracks social media screen time, calculates the real cost of meetings, and detects dark patterns on websites — live, private, and free.',
       'proj.foto.title': 'FotoExpress Peru', 'proj.foto.desc': 'Full business website for a photography services company in Peru — modern design, service showcase, and contact flow built for local and international clients.',
       'proj.yours.title': 'Could be yours', 'proj.yours.desc': "We're actively taking new projects. Your solution could be featured here next. Let's build something that makes a difference.", 'proj.yours.cta': 'Start a conversation →',
       'pricing.label': 'Investment', 'pricing.h2': 'Transparent Pricing', 'pricing.sub': 'Every project is scoped and quoted individually. These are starting points — complex work is quoted after a free discovery call.',
@@ -669,7 +707,7 @@
       'step3.title': 'Lanzamiento', 'step3.desc': 'Lanzamos, entregamos la propiedad completa y te apoyamos después del lanzamiento. Tu éxito es la única métrica que nos importa.',
       'portfolio.label': 'Nuestro trabajo', 'portfolio.h2': 'Proyectos Recientes', 'portfolio.sub': 'Productos reales, entregados y funcionando.',
       'proj.studysnap.title': 'StudySnap', 'proj.studysnap.desc': 'Extensión de Chrome con IA que captura preguntas en pantalla y entrega respuestas instantáneas con explicaciones — impulsada por Claude Vision API.',
-      'proj.clarity.title': 'Clarity Extension', 'proj.clarity.desc': 'Extensión de navegador que detecta y resalta patrones oscuros en sitios web en tiempo real — protegiendo a los usuarios mientras navegan.',
+      'proj.clarity.title': 'Clarity Extension', 'proj.clarity.desc': 'Extensión de Chrome todo en uno que mide el tiempo en redes sociales, calcula el costo real de las reuniones y detecta patrones oscuros en sitios web — en vivo, privada y gratis.',
       'proj.foto.title': 'FotoExpress Peru', 'proj.foto.desc': 'Sitio web completo para empresa de fotografía en Perú — diseño moderno, showcase de servicios y flujo de contacto para clientes locales e internacionales.',
       'proj.yours.title': 'Podría ser el tuyo', 'proj.yours.desc': 'Estamos tomando nuevos proyectos. Tu solución podría aparecer aquí. Construyamos algo que marque la diferencia.', 'proj.yours.cta': 'Iniciar una conversación →',
       'pricing.label': 'Inversión', 'pricing.h2': 'Precios Transparentes', 'pricing.sub': 'Cada proyecto se cotiza individualmente. Estos son puntos de partida — el trabajo complejo se cotiza después de una llamada gratuita.',
