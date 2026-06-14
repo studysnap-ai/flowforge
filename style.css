@@ -360,12 +360,17 @@ p  { color: var(--muted); font-size: 1rem; line-height: 1.75; }
   border: none;
   cursor: pointer;
   background: transparent;
+  color: var(--muted);
   font-family: inherit;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
   line-height: 1;
 }
+.theme-seg-btn:hover { color: var(--text); }
+.theme-seg-btn:focus { outline: none; }
+.theme-seg-btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 .theme-seg-btn.active {
   background: var(--surface);
+  color: var(--blue);
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 

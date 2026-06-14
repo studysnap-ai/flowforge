@@ -18,8 +18,38 @@
   <meta property="og:url" content="https://flowforge.com/slc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
   <!-- FIXED: absolute path so /slc route finds the CSS correctly -->
+    <link rel="canonical" href="https://flowforge-iota-umber.vercel.app/slc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Web Design for Salt Lake City Service Businesses — FlowForge">
+  <meta name="twitter:description" content="FlowForge builds high-converting websites for Salt Lake City contractors, gyms, and Latino-owned businesses. Mobile-first, bilingual, and built to get you customers.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Web design for Salt Lake City service businesses",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "FlowForge",
+      "telephone": "+1-603-205-9425",
+      "areaServed": "Salt Lake City, UT",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Salt Lake City",
+        "addressRegion": "UT",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Salt Lake City"
+    },
+    "url": "https://flowforge-iota-umber.vercel.app/slc",
+    "description": "FlowForge builds high-converting websites for Salt Lake City contractors, gyms, and Latino-owned businesses. Mobile-first, bilingual, and built to get you customers."
+  }
+  </script>
   <link rel="stylesheet" href="/style.css">
 
 <style>
@@ -349,6 +379,10 @@
 .trust-check{color:var(--blue);font-weight:800;}
 .trust-div{width:1px;height:18px;background:var(--border);flex-shrink:0;}
 
+/* ── NICHE HUB GRID ── */
+.niche-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+@media(max-width:768px){.niche-hub-grid{grid-template-columns:1fr;}}
+
 /* ── NICHE CARDS ── */
 .niche-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .niche-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;}
@@ -363,7 +397,7 @@
 .niche-result span{color:var(--blue);}
 
 /* ── DELIVERABLES ── */
-.deliverables-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.deliverables-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:0 auto;}
 .del-block{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 32px;}
 .del-block.addon{border-color:rgba(168,85,247,0.2);background:linear-gradient(145deg,rgba(168,85,247,0.04),rgba(56,189,248,0.03));}
 .del-tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.25);padding:3px 10px;border-radius:100px;margin-bottom:16px;}
@@ -911,9 +945,9 @@
       </div>
       <!-- Theme desktop -->
       <div class="theme-seg" id="theme-seg">
-        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" aria-label="Light">☀️</button>
-        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" aria-label="Auto">💻</button>
-        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" aria-label="Dark">🌙</button>
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')" aria-label="Light"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')" aria-label="Auto"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')" aria-label="Dark"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       </div>
       <!-- Mobile: EN/ES + theme + hamburger -->
       <div class="nav-lang-toggle nav-lang-mobile">
@@ -921,9 +955,9 @@
         <button class="nav-lang-btn" id="nav-btn-es-m" onclick="setLang('es')">ES</button>
       </div>
       <div class="theme-seg theme-seg-mobile" id="theme-seg-mobile">
-        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
-        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
-        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -936,6 +970,7 @@
 <section class="hero">
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
+  <canvas class="hero-waves" aria-hidden="true"></canvas>
   <div class="hero-grid"></div>
   <div class="container hero-layout">
     <div class="hero-text">
@@ -1027,29 +1062,29 @@
       <p data-i18n="niches.p">Pick your industry — each page is built specifically for you, not a generic version.</p>
     </div>
     <!-- Hub cards linking to sub-pages -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;" class="reveal">
+    <div class="niche-hub-grid reveal">
       <a href="/slc/contractors" style="text-decoration:none;">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
           <div style="font-size:2rem;">🔧</div>
-          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Contractors</h3>
-          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Roofers, HVAC, plumbers, landscapers, electricians. A site that gets you found on Google and generates quote requests 24/7.</p>
-          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">See the contractor page →</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;" data-i18n="hub.c.h3">Contractors</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;" data-i18n="hub.c.p">Roofers, HVAC, plumbers, landscapers, electricians. A site that gets you found on Google and generates quote requests 24/7.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;" data-i18n="hub.c.cta">See the contractor page →</div>
         </div>
       </a>
       <a href="/slc/fitness" style="text-decoration:none;">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
           <div style="font-size:2rem;">💪</div>
-          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Fitness & Gyms</h3>
-          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Gyms, personal trainers, yoga studios, wellness. A site with trial offers, booking flows, and class schedules that converts visitors into members.</p>
-          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">See the fitness page →</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;" data-i18n="hub.f.h3">Fitness & Gyms</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;" data-i18n="hub.f.p">Gyms, personal trainers, yoga studios, wellness. A site with trial offers, booking flows, and class schedules that converts visitors into members.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;" data-i18n="hub.f.cta">See the fitness page →</div>
         </div>
       </a>
       <a href="/slc/latino" style="text-decoration:none;">
         <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:border-color .3s,transform .3s,box-shadow .3s;height:100%;" onmouseenter="this.style.borderColor='rgba(124,58,237,0.4)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 20px 60px rgba(124,58,237,0.12)'" onmouseleave="this.style.borderColor='';this.style.transform='';this.style.boxShadow=''">
           <div style="font-size:2rem;">🌎</div>
-          <h3 style="font-size:1.15rem;color:var(--text);margin:0;">Latino-Owned Businesses</h3>
-          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;">Restaurantes, salones, servicios, retail. A fully bilingual site (EN + ES) that speaks to both communities and brings in customers from both.</p>
-          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;">Ver la página para latinos →</div>
+          <h3 style="font-size:1.15rem;color:var(--text);margin:0;" data-i18n="hub.l.h3">Latino-Owned Businesses</h3>
+          <p style="font-size:.85rem;line-height:1.65;margin:0;flex:1;" data-i18n="hub.l.p">Restaurantes, salones, servicios, retail. A fully bilingual site (EN + ES) that speaks to both communities and brings in customers from both.</p>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent);margin-top:4px;" data-i18n="hub.l.cta">Ver la página para latinos →</div>
         </div>
       </a>
     </div>
@@ -1064,84 +1099,86 @@
       <h2 data-i18n="del.h2">No mystery. Here's exactly what you get.</h2>
       <p data-i18n="del.p">Three plans. Clear prices. No upsells.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:960px;margin:0 auto;" class="deliverables-grid">
+    <div class="deliverables-grid">
 
       <!-- FlowFrame Launch -->
       <div class="del-block reveal" style="margin:0;">
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
           <h3 style="margin:0;">🔧 FlowFrame Launch</h3>
-          <div style="font-size:1.2rem;font-weight:800;"><span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">$1,800</span> <span style="font-size:.72rem;font-weight:600;opacity:.7;color:var(--muted);">one-time</span></div>
+          <div style="font-size:1.2rem;font-weight:800;"><span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">$1,800</span> <span style="font-size:.72rem;font-weight:600;opacity:.7;color:var(--muted);" data-i18n="pkg.onetime">one-time</span></div>
         </div>
-        <p class="del-desc">Your site, built and delivered. Fast, mobile-first, and built to convert — not just look good.</p>
+        <p class="del-desc" data-i18n="pkg.launch.desc">Your site, built and delivered. Fast, mobile-first, and built to convert — not just look good.</p>
         <ul class="del-list">
-          <li>5–7 page mobile-first site</li>
-          <li>Local SEO optimized for SLC</li>
-          <li>Google Business Profile connected</li>
-          <li>Contact + conversion forms</li>
-          <li>Done in 2–3 weeks</li>
-          <li>50% upfront · 50% on delivery</li>
+          <li data-i18n="pkg.launch.f1">5–7 page mobile-first site</li>
+          <li data-i18n="pkg.launch.f2">Local SEO optimized for SLC</li>
+          <li data-i18n="pkg.launch.f3">Google Business Profile connected</li>
+          <li data-i18n="pkg.launch.f4">Contact + conversion forms</li>
+          <li data-i18n="pkg.launch.f5">Done in 2–3 weeks</li>
+          <li data-i18n="pkg.launch.f6">50% upfront · 50% on delivery</li>
         </ul>
+        <div style="display:inline-block;font-size:.75rem;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:3px 10px;margin-bottom:12px;" data-i18n="pkg.launch.badge">✓ Includes 30 days of automation setup & monitoring</div>
         <div class="del-always">
-          <div class="del-always-title">Included in every project</div>
+          <div class="del-always-title" data-i18n="pkg.launch.always.title">Included in every project</div>
           <ul>
-            <li>Full ownership — code, domain, accounts</li>
-            <li>30 days of post-launch support</li>
-            <li>Niche-specific extras per page →</li>
+            <li data-i18n="pkg.launch.always.1">Full ownership — code, domain, accounts</li>
+            <li data-i18n="pkg.launch.always.2">30 days of post-launch support</li>
+            <li data-i18n="pkg.launch.always.3">Niche-specific extras per page →</li>
           </ul>
         </div>
       </div>
 
       <!-- FlowFrame Automation -->
       <div class="del-block addon reveal reveal-delay-1" style="margin:0;">
-        <div class="del-tag">⚡ Subscription</div>
+        <div class="del-tag" data-i18n="pkg.auto.tag">⚡ Subscription</div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
           <h3 style="margin:0;">FlowFrame Automation</h3>
-          <div style="text-align:right;"><div style="font-size:1.2rem;font-weight:800;color:var(--purple);">$249<span style="font-size:.72rem;font-weight:600;opacity:.7;">/mo</span></div><div style="font-size:.68rem;color:var(--muted);">+ $199 Setup & Integration</div></div>
+          <div style="text-align:right;"><div style="font-size:1.2rem;font-weight:800;color:var(--purple);">$249<span style="font-size:.72rem;font-weight:600;opacity:.7;">/mo</span></div><div style="font-size:.68rem;color:var(--muted);" data-i18n="pkg.auto.setup">+ $199 Setup & Integration</div></div>
         </div>
-        <p class="del-desc">Your leads never go cold. Set it once, runs forever — works on any existing website.</p>
+        <p class="del-desc" data-i18n="pkg.auto.desc">Your leads never go cold. Set it once, runs forever — works on any existing website.</p>
         <ul class="del-list">
-          <li>Lead SMS within 2 min of form fill</li>
-          <li>3-touch follow-up (SMS + email)</li>
-          <li>Automated review requests</li>
-          <li>WhatsApp follow-up</li>
-          <li>Weekly performance report</li>
-          <li>1 site update/month</li>
+          <li data-i18n="pkg.auto.f1">Lead SMS within 2 min of form fill</li>
+          <li data-i18n="pkg.auto.f2">3-touch follow-up (SMS + email)</li>
+          <li data-i18n="pkg.auto.f3">Automated review requests</li>
+          <li data-i18n="pkg.auto.f4">WhatsApp follow-up</li>
+          <li data-i18n="pkg.auto.f5">Weekly performance report</li>
+          <li data-i18n="pkg.auto.f6">1 site update/month</li>
         </ul>
         <div class="del-always" style="border-color:rgba(168,85,247,0.2);background:rgba(168,85,247,0.04);">
-          <div class="del-always-title" style="color:var(--purple);">Works on any site</div>
+          <div class="del-always-title" style="color:var(--purple);" data-i18n="pkg.auto.works">Works on any site</div>
           <ul>
-            <li>Your existing website</li>
-            <li>Wix, Squarespace, WordPress</li>
-            <li>6-month minimum · Same price</li>
+            <li data-i18n="pkg.auto.works.1">Your existing website</li>
+            <li data-i18n="pkg.auto.works.2">Wix, Squarespace, WordPress</li>
           </ul>
         </div>
+        <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);" data-i18n="pkg.auto.note">First 30 days included with Launch · then $249/mo · cancel anytime</p>
       </div>
 
       <!-- FlowFrame AutoPilot -->
       <div class="del-block addon reveal reveal-delay-2" style="margin:0;border-color:rgba(236,72,153,0.35);position:relative;">
-        <div style="position:absolute;top:-12px;left:24px;background:linear-gradient(135deg,#7c3aed,#ec4899);color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;padding:3px 12px;border-radius:100px;white-space:nowrap;">⭐ MOST POPULAR</div>
-        <div class="del-tag" style="background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(236,72,153,0.1));border-color:rgba(236,72,153,0.3);color:var(--text);">🚀 Pro Subscription</div>
+        <div style="position:absolute;top:-12px;left:24px;background:linear-gradient(135deg,#7c3aed,#ec4899);color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;padding:3px 12px;border-radius:100px;white-space:nowrap;" data-i18n="pkg.ap.popular">⭐ MOST POPULAR</div>
+        <div class="del-tag" style="background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(236,72,153,0.1));border-color:rgba(236,72,153,0.3);color:var(--text);" data-i18n="pkg.ap.tag">🚀 Pro Subscription</div>
         <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px;">
           <h3 style="margin:0;">FlowFrame AutoPilot</h3>
-          <div style="text-align:right;"><div style="font-size:1.2rem;font-weight:800;"><span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">$449</span><span style="font-size:.72rem;font-weight:600;opacity:.7;color:var(--muted);">/mo</span></div><div style="font-size:.68rem;color:var(--muted);">+ $299 Setup &amp; Integration</div></div>
+          <div style="text-align:right;"><div style="font-size:1.2rem;font-weight:800;"><span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">$449</span><span style="font-size:.72rem;font-weight:600;opacity:.7;color:var(--muted);">/mo</span></div><div style="font-size:.68rem;color:var(--muted);" data-i18n="pkg.ap.setup">+ $299 Setup &amp; Integration</div></div>
         </div>
-        <p class="del-desc">Your marketing runs itself — social, SEO, AI chat, and more. On any existing website.</p>
+        <p class="del-desc" data-i18n="pkg.ap.desc">Your marketing runs itself — social, SEO, AI chat, and more. On any existing website.</p>
         <ul class="del-list">
-          <li>Everything in Automation</li>
-          <li>5 social posts/week (IG + FB)</li>
-          <li>Google Business Profile updates</li>
-          <li>AI chat widget on your site</li>
-          <li>Missed call text-back</li>
-          <li>Unlimited site updates</li>
-          <li>Monthly strategy call</li>
-          <li>SEO progress report</li>
-          <li>Priority support</li>
+          <li data-i18n="pkg.ap.f1">Everything in Automation</li>
+          <li data-i18n="pkg.ap.f2">5 social posts/week (IG + FB)</li>
+          <li data-i18n="pkg.ap.f3">Google Business Profile updates</li>
+          <li data-i18n="pkg.ap.f4">AI chat widget on your site</li>
+          <li data-i18n="pkg.ap.f5">Missed call text-back</li>
+          <li data-i18n="pkg.ap.f6">Unlimited site updates</li>
+          <li data-i18n="pkg.ap.f7">Monthly strategy call</li>
+          <li data-i18n="pkg.ap.f8">SEO progress report</li>
+          <li data-i18n="pkg.ap.f9">Priority support</li>
         </ul>
+        <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);" data-i18n="pkg.ap.note">First 30 days included with Launch · then $449/mo · cancel anytime</p>
       </div>
 
     </div>
     <!-- Bottom note -->
-    <p class="reveal" style="text-align:center;font-size:.88rem;color:var(--muted);margin-top:36px;">Same prices across every niche — pick yours above to see what's built specifically for your business.</p>
+    <p class="reveal" style="text-align:center;font-size:.88rem;color:var(--muted);margin-top:36px;" data-i18n="del.bottom">Same prices across every niche — pick yours above to see what's built specifically for your business.</p>
   </div>
 </section>
 
@@ -1376,7 +1413,7 @@
       <!-- Header row -->
       <div class="cmp-row cmp-header">
         <div class="cmp-col-feature"></div>
-        <div class="cmp-col-them">Local Agency</div>
+        <div class="cmp-col-them" data-i18n="cmp.header.them">Local Agency</div>
         <div class="cmp-col-us">
           <span class="cmp-us-logo">Flow<span>Forge</span></span>
         </div>
@@ -1384,75 +1421,93 @@
 
       <!-- Rows -->
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Price</div>
-        <div class="cmp-col-them"><span class="cmp-badge-bad">$3,000–$5,000+</span></div>
-        <div class="cmp-col-us"><span class="cmp-badge-good">$1,800 flat</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r1.feat">Price</div>
+        <div class="cmp-col-them"><span class="cmp-badge-bad" data-i18n="cmp.r1.them">$3,000–$5,000+</span></div>
+        <div class="cmp-col-us"><span class="cmp-badge-good" data-i18n="cmp.r1.us">$1,800 flat</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Contract / lock-in</div>
-        <div class="cmp-col-them"><span class="cmp-badge-bad">12-month contract</span></div>
-        <div class="cmp-col-us"><span class="cmp-badge-good">$1,800 flat · Add-ons optional</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r2.feat">Contract / lock-in</div>
+        <div class="cmp-col-them"><span class="cmp-badge-bad" data-i18n="cmp.r2.them">12-month contract</span></div>
+        <div class="cmp-col-us"><span class="cmp-badge-good" data-i18n="cmp.r2.us">No contract · Add-ons optional</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">You own 100% from day one</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">After contract ends</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r3.feat">You own 100% from day one</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r3.them">After contract ends</span></div>
         <div class="cmp-col-us"><span class="cmp-check">✓</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Conversion-focused design</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">Looks good, rarely converts</span></div>
-        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note">Built to get you customers</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r4.feat">Conversion-focused design</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r4.them">Looks good, rarely converts</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r4.us">Built to get you customers</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Ranks on Google locally</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">Basic / extra cost</span></div>
-        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note">Built for SLC local SEO</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r5.feat">Ranks on Google locally</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r5.them">Basic / extra cost</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r5.us">Built for SLC local SEO</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Mobile-first, loads fast</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">Not always prioritized</span></div>
-        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note">Under 3s load time</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r6.feat">Mobile-first, loads fast</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r6.them">Not always prioritized</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r6.us">Under 3s load time</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Done in 2–3 weeks</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">6–12 weeks typical</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r7.feat">Done in 2–3 weeks</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r7.them">6–12 weeks typical</span></div>
         <div class="cmp-col-us"><span class="cmp-check">✓</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Talk directly to the builder</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">Account manager</span></div>
-        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note">Always</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r8.feat">Talk directly to the builder</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r8.them">Account manager</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r8.us">Always</span></div>
       </div>
 
       <div class="cmp-row reveal">
-        <div class="cmp-col-feature">Looks like a $10k site</div>
-        <div class="cmp-col-them"><span class="cmp-badge-meh">Overpriced for what you get</span></div>
+        <div class="cmp-col-feature" data-i18n="cmp.r9.feat">Looks like a $10k site</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r9.them">Overpriced for what you get</span></div>
         <div class="cmp-col-us"><span class="cmp-check">✓</span></div>
+      </div>
+
+      <div class="cmp-row reveal">
+        <div class="cmp-col-feature" data-i18n="cmp.r10.feat">Lead automation included</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r10.them">Extra cost</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r10.us">30 days included in Launch</span></div>
+      </div>
+
+      <div class="cmp-row reveal">
+        <div class="cmp-col-feature" data-i18n="cmp.r11.feat">WhatsApp integration</div>
+        <div class="cmp-col-them"><span class="cmp-x">✗</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r11.us">Built in from day one</span></div>
+      </div>
+
+      <div class="cmp-row reveal">
+        <div class="cmp-col-feature" data-i18n="cmp.r12.feat">Bilingual (EN + ES)</div>
+        <div class="cmp-col-them"><span class="cmp-badge-meh" data-i18n="cmp.r12.them">Extra cost / rarely done right</span></div>
+        <div class="cmp-col-us"><span class="cmp-check">✓</span><span class="cmp-us-note" data-i18n="cmp.r12.us">Real Spanish, not a translation</span></div>
       </div>
 
       <!-- CTA row -->
       <div class="cmp-row cmp-cta-row">
         <div class="cmp-col-feature"></div>
         <div class="cmp-col-them">
-          <span class="cmp-total-label">$3,000–$5,000+ · 12-month contract</span>
+          <span class="cmp-total-label" data-i18n="cmp.cta.them">$3,000–$5,000+ · 12-month contract</span>
         </div>
         <div class="cmp-col-us">
-          <span class="cmp-total-label" style="color:var(--accent);font-size:.72rem;">$1,800 flat · Done in 2–3 weeks</span><br>
-          <a href="#contact" class="btn-primary" style="font-size:.85rem;padding:12px 20px;margin-top:8px;">Get started →</a>
+          <span class="cmp-total-label" style="color:var(--accent);font-size:.72rem;" data-i18n="cmp.cta.us">$1,800 flat · Done in 2–3 weeks</span><br>
+          <a href="#contact" class="btn-primary" style="font-size:.85rem;padding:12px 20px;margin-top:8px;" data-i18n="cmp.cta.btn">Get started →</a>
         </div>
       </div>
 
     </div><!-- /cmp-table -->
 
     <!-- Bottom note -->
-    <p class="cmp-footnote reveal" data-i18n="cmp.footnote">AutoPilot is an add-on for FlowForge website clients. Pricing starts after your site is live. No setup fees, no long-term contracts.</p>
+    <p class="cmp-footnote reveal" data-i18n="cmp.footnote">FlowFrame Launch includes 30 days of automation setup & monitoring. Continue at $249/mo or $449/mo — cancel anytime. No long-term commitment.</p>
 
   </div>
 </section>
@@ -1518,7 +1573,16 @@ const T = {
     'trust.1':'Utah-based team','trust.2':'10+ sites shipped','trust.3':'English & Spanish','trust.4':'Reply in < 24h','trust.5':'You own everything',
     'niches.label':'Who we work with',
     'niches.h2':'Built for the businesses<br>that keep Salt Lake City running.',
-    'niches.p':'We\'re not for everyone. We work with service businesses that are serious about growth — and done with websites that do nothing.',
+    'niches.p':'Pick your industry — each page is built specifically for you, not a generic version.',
+    'hub.c.h3':'Contractors',
+    'hub.c.p':'Roofers, HVAC, plumbers, landscapers, electricians. A site that gets you found on Google and generates quote requests 24/7.',
+    'hub.c.cta':'See the contractor page →',
+    'hub.f.h3':'Fitness & Gyms',
+    'hub.f.p':'Gyms, personal trainers, yoga studios, wellness. A site with trial offers, booking flows, and class schedules that converts visitors into members.',
+    'hub.f.cta':'See the fitness page →',
+    'hub.l.h3':'Latino-Owned Businesses',
+    'hub.l.p':'Restaurantes, salones, servicios, retail. A fully bilingual site (EN + ES) that speaks to both communities and brings in customers from both.',
+    'hub.l.cta':'See the Latino page →',
     'niche.c.h3':'Home Service Contractors','niche.c.sub':'Roofers · HVAC · Plumbers · Landscapers · Electricians',
     'niche.c.p1':'Your customers Google you before they call. If your website is slow, ugly, or nowhere to be found — they\'re calling your competitor instead.',
     'niche.c.p2':'We build contractor sites that show up on Google, load fast on any phone, and make it dead simple for someone to request a quote in under 30 seconds.',
@@ -1534,7 +1598,32 @@ const T = {
     'niche.l.p2':'We build bilingual websites (English + Spanish) that represent your business the right way and bring in customers from both audiences.',
     'niche.l.result':'<span>What you get:</span> A site that speaks your language — literally. More customers, more trust, more calls.',
     'niche.l.cta':'Hablemos / Let\'s talk →',
-    'del.label':'Deliverables','del.h2':'No mystery. Here\'s exactly what you get.','del.p':'Most agencies keep it vague so they can upsell you later. We don\'t do that.',
+    'del.label':'Deliverables','del.h2':'No mystery. Here\'s exactly what you get.','del.p':'Three plans. Clear prices. No upsells.',
+    'del.bottom':'Same prices across every niche — pick yours above to see what\'s built specifically for your business.',
+    'pkg.onetime':'one-time',
+    'pkg.launch.desc':'Your site, built and delivered. Fast, mobile-first, and built to convert — not just look good.',
+    'pkg.launch.f1':'5–7 page mobile-first site','pkg.launch.f2':'Local SEO optimized for SLC',
+    'pkg.launch.f3':'Google Business Profile connected','pkg.launch.f4':'Contact + conversion forms',
+    'pkg.launch.f5':'Done in 2–3 weeks','pkg.launch.f6':'50% upfront · 50% on delivery',
+    'pkg.launch.badge':'✓ Includes 30 days of automation setup & monitoring',
+    'pkg.launch.always.title':'Included in every project',
+    'pkg.launch.always.1':'Full ownership — code, domain, accounts',
+    'pkg.launch.always.2':'30 days of post-launch support',
+    'pkg.launch.always.3':'Niche-specific extras per page →',
+    'pkg.auto.tag':'⚡ Subscription','pkg.auto.setup':'+ $199 Setup & Integration',
+    'pkg.auto.desc':'Your leads never go cold. Set it once, runs forever — works on any existing website.',
+    'pkg.auto.f1':'Lead SMS within 2 min of form fill','pkg.auto.f2':'3-touch follow-up (SMS + email)',
+    'pkg.auto.f3':'Automated review requests','pkg.auto.f4':'WhatsApp follow-up',
+    'pkg.auto.f5':'Weekly performance report','pkg.auto.f6':'1 site update/month',
+    'pkg.auto.works':'Works on any site','pkg.auto.works.1':'Your existing website','pkg.auto.works.2':'Wix, Squarespace, WordPress',
+    'pkg.auto.note':'First 30 days included with Launch · then $249/mo · cancel anytime',
+    'pkg.ap.popular':'⭐ MOST POPULAR','pkg.ap.tag':'🚀 Pro Subscription','pkg.ap.setup':'+ $299 Setup & Integration',
+    'pkg.ap.desc':'Your marketing runs itself — social, SEO, AI chat, and more. On any existing website.',
+    'pkg.ap.f1':'Everything in Automation','pkg.ap.f2':'5 social posts/week (IG + FB)',
+    'pkg.ap.f3':'Google Business Profile updates','pkg.ap.f4':'AI chat widget on your site',
+    'pkg.ap.f5':'Missed call text-back','pkg.ap.f6':'Unlimited site updates',
+    'pkg.ap.f7':'Monthly strategy call','pkg.ap.f8':'SEO progress report','pkg.ap.f9':'Priority support',
+    'pkg.ap.note':'First 30 days included with Launch · then $449/mo · cancel anytime',
     'del.web.h3':'🌐 Your Website','del.web.desc':'A fast, mobile-first site built to convert visitors into customers — not just look pretty.',
     'del.web.1':'Mobile-first design — looks great on any phone',
     'del.web.2':'5–8 pages: Home, Services, About, Contact + niche-specific pages',
@@ -1623,29 +1712,23 @@ const T = {
     'cta.micro':'No commitment. No sales pitch. Just a straight look at your online presence.',
     'cta.cities':'📍 Serving Salt Lake City and surrounding areas<br>West Valley City · Murray · Sandy · Draper · South Salt Lake · Millcreek · Provo · Ogden',
     'footer.copy':'© 2025 FlowForge · Utah, USA · Globally delivered.','footer.services':'Services','footer.work':'Work','footer.pricing':'Pricing','footer.contact':'Contact',
-    'cmp.label':'Why FlowForge AutoPilot',
-    'cmp.h2':'$449/mo vs. the typical<br>Utah marketing agency.',
-    'cmp.p':'Most agencies lock you into 12-month contracts and charge $1,200+/mo for a package that doesn\'t speak Spanish and doesn\'t do real automations. Here\'s the difference.',
-    'cmp.them.label':'Typical Utah Agency','cmp.cost.them':'$1,200','cmp.mo':'/mo',
-    'cmp.them.note':'12-month contract · English only · No real automations',
-    'cmp.us.label':'FlowForge AutoPilot','cmp.cost.us':'$449','cmp.mo2':'/mo',
-    'cmp.us.note':'Works on any site · Real lead automations · No long-term commitment',
-    'cmp.col.them':'Typical Agency','cmp.col.ap':'AutoPilot',
-    'cmp.r1.feat':'Monthly price','cmp.r1.them':'$1,200/mo','cmp.r1.us':'$449/mo',
-    'cmp.r2.feat':'Contract length','cmp.r2.them':'12 months minimum','cmp.r2.us':'6 months only',
-    'cmp.r3.feat':'Bilingual (EN + ES)',
-    'cmp.r4.feat':'New lead SMS in 60 seconds',
-    'cmp.r5.feat':'Auto follow-up sequence',
-    'cmp.r6.feat':'WhatsApp integration',
-    'cmp.r7.feat':'Social posts (IG + FB)','cmp.r7.them':'Blog posts only','cmp.r7.us':'5 posts/week',
-    'cmp.r8.feat':'Google review requests','cmp.r8.us':'Automatic after every job',
-    'cmp.r9.feat':'Weekly lead report','cmp.r9.them':'Monthly only','cmp.r9.us':'Every Monday morning',
-    'cmp.r10.feat':'You own the website','cmp.r10.them':'After 12 months','cmp.r10.us':'From day one',
-    'cmp.r11.feat':'Talk directly to the builder','cmp.r11.them':'Account manager','cmp.r11.us':'Always',
-    'cmp.total.them':'$14,400 minimum · 12 months',
-    'cmp.total.us':'$2,694 · 6 months',
-    'cmp.cta':'Get started →',
-    'cmp.footnote':'AutoPilot works on any existing website. $299 one-time setup. No long-term commitment.',
+    'cmp.header.them':'Local Agency',
+    'cmp.r1.feat':'Price','cmp.r1.them':'$3,000–$5,000+','cmp.r1.us':'$1,800 flat',
+    'cmp.r2.feat':'Contract / lock-in','cmp.r2.them':'12-month contract','cmp.r2.us':'No contract · Add-ons optional',
+    'cmp.r3.feat':'You own 100% from day one','cmp.r3.them':'After contract ends',
+    'cmp.r4.feat':'Conversion-focused design','cmp.r4.them':'Looks good, rarely converts','cmp.r4.us':'Built to get you customers',
+    'cmp.r5.feat':'Ranks on Google locally','cmp.r5.them':'Basic / extra cost','cmp.r5.us':'Built for SLC local SEO',
+    'cmp.r6.feat':'Mobile-first, loads fast','cmp.r6.them':'Not always prioritized','cmp.r6.us':'Under 3s load time',
+    'cmp.r7.feat':'Done in 2–3 weeks','cmp.r7.them':'6–12 weeks typical',
+    'cmp.r8.feat':'Talk directly to the builder','cmp.r8.them':'Account manager','cmp.r8.us':'Always',
+    'cmp.r9.feat':'Looks like a $10k site','cmp.r9.them':'Overpriced for what you get',
+    'cmp.r10.feat':'Lead automation included','cmp.r10.them':'Extra cost','cmp.r10.us':'30 days included in Launch',
+    'cmp.r11.feat':'WhatsApp integration','cmp.r11.us':'Built in from day one',
+    'cmp.r12.feat':'Bilingual (EN + ES)','cmp.r12.them':'Extra cost / rarely done right','cmp.r12.us':'Real Spanish, not a translation',
+    'cmp.cta.them':'$3,000–$5,000+ · 12-month contract',
+    'cmp.cta.us':'$1,800 flat · Done in 2–3 weeks',
+    'cmp.cta.btn':'Get started →',
+    'cmp.footnote':'FlowFrame Launch includes 30 days of automation setup & monitoring. Continue at $249/mo or $449/mo — cancel anytime. No long-term commitment.',
   },
   es: {
     'nav.who':'A quién servimos','nav.what':'Qué construimos','nav.pricing':'Precios','nav.cta':'Auditoría Gratis',
@@ -1664,7 +1747,16 @@ const T = {
     'trust.1':'Equipo en Utah','trust.2':'10+ sitios entregados','trust.3':'Inglés y Español','trust.4':'Respuesta en < 24h','trust.5':'Tú eres dueño de todo',
     'niches.label':'A quién servimos',
     'niches.h2':'Construido para los negocios<br>que mantienen Salt Lake City en marcha.',
-    'niches.p':'No somos para todos. Trabajamos con negocios de servicio serios sobre el crecimiento — y hartos de sitios web que no hacen nada.',
+    'niches.p':'Elige tu industria — cada página está construida específicamente para ti, no es una versión genérica.',
+    'hub.c.h3':'Contratistas',
+    'hub.c.p':'Techadores, HVAC, plomeros, jardineros, electricistas. Un sitio que te hace aparecer en Google y genera solicitudes de presupuesto las 24 horas.',
+    'hub.c.cta':'Ver la página de contratistas →',
+    'hub.f.h3':'Fitness y Gimnasios',
+    'hub.f.p':'Gimnasios, entrenadores personales, estudios de yoga, bienestar. Un sitio con ofertas de prueba, flujos de reserva y horarios que convierten visitantes en miembros.',
+    'hub.f.cta':'Ver la página de fitness →',
+    'hub.l.h3':'Negocios Latinos',
+    'hub.l.p':'Restaurantes, salones, servicios, retail. Un sitio completamente bilingüe (EN + ES) que habla con ambas comunidades y atrae clientes de las dos.',
+    'hub.l.cta':'Ver la página para latinos →',
     'niche.c.h3':'Contratistas de Servicios del Hogar','niche.c.sub':'Techadores · HVAC · Plomeros · Jardineros · Electricistas',
     'niche.c.p1':'Tus clientes te buscan en Google antes de llamar. Si tu sitio web es lento, feo o no aparece — están llamando a tu competencia.',
     'niche.c.p2':'Construimos sitios para contratistas que aparecen en Google, cargan rápido en cualquier teléfono y hacen muy fácil solicitar un presupuesto en menos de 30 segundos.',
@@ -1680,7 +1772,32 @@ const T = {
     'niche.l.p2':'Construimos sitios web bilingües (inglés + español) que representan tu negocio de la manera correcta y atraen clientes de ambas audiencias.',
     'niche.l.result':'<span>Lo que obtienes:</span> Un sitio que habla tu idioma — literalmente. Más clientes, más confianza, más llamadas.',
     'niche.l.cta':'Hablemos →',
-    'del.label':'Entregables','del.h2':'Sin misterios. Esto es exactamente lo que obtienes.','del.p':'La mayoría de las agencias son vagas para poder cobrarte más después. Nosotros no hacemos eso.',
+    'del.label':'Entregables','del.h2':'Sin misterios. Esto es exactamente lo que obtienes.','del.p':'Tres planes. Precios claros. Sin extras ocultos.',
+    'del.bottom':'Los mismos precios en cada nicho — elige el tuyo arriba para ver qué está construido específicamente para tu negocio.',
+    'pkg.onetime':'única vez',
+    'pkg.launch.desc':'Tu sitio, construido y entregado. Rápido, mobile-first, y hecho para convertir — no solo para verse bien.',
+    'pkg.launch.f1':'Sitio mobile-first de 5–7 páginas','pkg.launch.f2':'SEO local optimizado para SLC',
+    'pkg.launch.f3':'Perfil de Google Business conectado','pkg.launch.f4':'Formularios de contacto y conversión',
+    'pkg.launch.f5':'Listo en 2–3 semanas','pkg.launch.f6':'50% al inicio · 50% al entregar',
+    'pkg.launch.badge':'✓ Incluye 30 días de configuración y monitoreo de automatización',
+    'pkg.launch.always.title':'Incluido en cada proyecto',
+    'pkg.launch.always.1':'Propiedad completa — código, dominio, cuentas',
+    'pkg.launch.always.2':'30 días de soporte post-lanzamiento',
+    'pkg.launch.always.3':'Extras específicos del nicho por página →',
+    'pkg.auto.tag':'⚡ Suscripción','pkg.auto.setup':'+ $199 Configuración e Integración',
+    'pkg.auto.desc':'Tus leads nunca se enfrían. Configúralo una vez, funciona para siempre — en cualquier sitio web.',
+    'pkg.auto.f1':'SMS al lead en menos de 2 min del formulario','pkg.auto.f2':'Seguimiento de 3 toques (SMS + email)',
+    'pkg.auto.f3':'Solicitudes de reseña automáticas','pkg.auto.f4':'Seguimiento por WhatsApp',
+    'pkg.auto.f5':'Reporte semanal de resultados','pkg.auto.f6':'1 actualización del sitio/mes',
+    'pkg.auto.works':'Funciona en cualquier sitio','pkg.auto.works.1':'Tu sitio web existente','pkg.auto.works.2':'Wix, Squarespace, WordPress',
+    'pkg.auto.note':'Primeros 30 días incluidos con Launch · luego $249/mes · cancela cuando quieras',
+    'pkg.ap.popular':'⭐ MÁS POPULAR','pkg.ap.tag':'🚀 Pro Suscripción','pkg.ap.setup':'+ $299 Configuración e Integración',
+    'pkg.ap.desc':'Tu marketing se maneja solo — redes sociales, SEO, chat IA, y más. En cualquier sitio web.',
+    'pkg.ap.f1':'Todo lo de Automation','pkg.ap.f2':'5 publicaciones/semana (IG + FB)',
+    'pkg.ap.f3':'Actualizaciones del Perfil de Google Business','pkg.ap.f4':'Chat con IA en tu sitio',
+    'pkg.ap.f5':'Texto automático si no contestas','pkg.ap.f6':'Actualizaciones ilimitadas del sitio',
+    'pkg.ap.f7':'Llamada mensual de estrategia','pkg.ap.f8':'Reporte de progreso SEO','pkg.ap.f9':'Soporte prioritario',
+    'pkg.ap.note':'Primeros 30 días incluidos con Launch · luego $449/mes · cancela cuando quieras',
     'del.web.h3':'🌐 Tu Sitio Web','del.web.desc':'Un sitio rápido, optimizado para móvil, construido para convertir visitantes en clientes.',
     'del.web.1':'Diseño mobile-first — se ve bien en cualquier teléfono',
     'del.web.2':'5–8 páginas: Inicio, Servicios, Nosotros, Contacto + páginas de nicho',
@@ -1753,7 +1870,7 @@ const T = {
     'faq.6.q':'¿Realmente escriben en español o solo traducen?','faq.6.a':'Lo escribimos. Hay una diferencia real entre el español corporativo traducido y el texto que suena natural para la comunidad hispanohablante en Utah. Somos bilingües — lo sabemos.',
     'ap.badge':'Nuevo · FlowForge AutoPilot','ap.h2':'Tu marketing en piloto automático.<br>$449/mes. <span style="font-size:.45em;font-weight:600;opacity:.6;">+ $299 configuración única</span>',
     'ap.p':'Una vez que tu sitio esté en vivo, agrega AutoPilot y tu marketing se maneja solo — publicaciones, seguimiento de leads, actualizaciones de Google, solicitudes de reseñas y un reporte cada lunes. Funciona en cualquier sitio web.',
-    'ap.f1':'5 publicaciones/semana — Instagram + Facebook, bilingüe','ap.f2':'Nuevo lead → SMS a ti en 60 segundos + respuesta automática al prospecto',
+    'ap.f1':'5 publicaciones/semana — Instagram + Facebook','ap.f2':'Nuevo lead → SMS a ti en 60 segundos + respuesta automática al prospecto',
     'ap.f3':'Perfil de Google Business actualizado semanalmente','ap.f4':'Solicitudes de reseña enviadas automáticamente después de cada trabajo',
     'ap.f5':'Reporte semanal cada lunes por la mañana','ap.f6':'Agente de chat en el sitio — captura leads 24/7',
     'ap.vs':'vs $1,200/mes en un contrato de 12 meses — solo inglés, sin automatizaciones reales, sin WhatsApp',
@@ -1769,29 +1886,23 @@ const T = {
     'cta.micro':'Sin compromiso. Sin presión de ventas. Solo una mirada honesta a tu presencia online.',
     'cta.cities':'📍 Sirviendo Salt Lake City y áreas circundantes<br>West Valley City · Murray · Sandy · Draper · South Salt Lake · Millcreek · Provo · Ogden',
     'footer.copy':'© 2025 FlowForge · Utah, USA · Entregado globalmente.','footer.services':'Servicios','footer.work':'Trabajo','footer.pricing':'Precios','footer.contact':'Contacto',
-    'cmp.label':'Por qué FlowForge AutoPilot',
-    'cmp.h2':'$449/mes vs. la agencia web<br>típica de Utah.',
-    'cmp.p':'La mayoría de las agencias te encierran en contratos de 12 meses y cobran $1,200/mes por un paquete que no habla español y no hace automatizaciones reales. Aquí está la diferencia.',
-    'cmp.them.label':'Agencia Típica de Utah','cmp.cost.them':'$1,200','cmp.mo':'/mes',
-    'cmp.them.note':'Contrato de 12 meses · Solo inglés · Sin automatizaciones reales',
-    'cmp.us.label':'FlowForge AutoPilot','cmp.cost.us':'$449','cmp.mo2':'/mes',
-    'cmp.us.note':'Funciona en cualquier sitio · Automatizaciones reales · Sin compromiso a largo plazo',
-    'cmp.col.them':'Agencia Típica','cmp.col.ap':'AutoPilot',
-    'cmp.r1.feat':'Precio mensual','cmp.r1.them':'$1,200/mes','cmp.r1.us':'$449/mes',
-    'cmp.r2.feat':'Duración del contrato','cmp.r2.them':'12 meses mínimo','cmp.r2.us':'Solo 6 meses',
-    'cmp.r3.feat':'Bilingüe (EN + ES)',
-    'cmp.r4.feat':'SMS de nuevo lead en 60 segundos',
-    'cmp.r5.feat':'Secuencia de seguimiento automático',
-    'cmp.r6.feat':'Integración de WhatsApp',
-    'cmp.r7.feat':'Publicaciones sociales (IG + FB)','cmp.r7.them':'Solo blogs','cmp.r7.us':'5 posts/semana',
-    'cmp.r8.feat':'Solicitudes de reseña de Google','cmp.r8.us':'Automático después de cada trabajo',
-    'cmp.r9.feat':'Reporte semanal de leads','cmp.r9.them':'Solo mensual','cmp.r9.us':'Cada lunes por la mañana',
-    'cmp.r10.feat':'Tú eres dueño del sitio','cmp.r10.them':'Después de 12 meses','cmp.r10.us':'Desde el primer día',
-    'cmp.r11.feat':'Hablas directamente con el constructor','cmp.r11.them':'Gestor de cuenta','cmp.r11.us':'Siempre',
-    'cmp.total.them':'$14,400 mínimo · 12 meses',
-    'cmp.total.us':'$2,694 · 6 meses',
-    'cmp.cta':'Comenzar →',
-    'cmp.footnote':'AutoPilot funciona en cualquier sitio web existente. $299 de configuración única. Sin compromiso a largo plazo.',
+    'cmp.header.them':'Agencia Local',
+    'cmp.r1.feat':'Precio','cmp.r1.them':'$3,000–$5,000+','cmp.r1.us':'$1,800 fijo',
+    'cmp.r2.feat':'Contrato / compromiso','cmp.r2.them':'Contrato de 12 meses','cmp.r2.us':'Sin contrato · Extras opcionales',
+    'cmp.r3.feat':'100% tuyo desde el día uno','cmp.r3.them':'Al terminar el contrato',
+    'cmp.r4.feat':'Diseño enfocado en conversiones','cmp.r4.them':'Se ve bien, rara vez convierte','cmp.r4.us':'Hecho para traerte clientes',
+    'cmp.r5.feat':'Aparece en Google localmente','cmp.r5.them':'Básico / costo extra','cmp.r5.us':'SEO local optimizado para SLC',
+    'cmp.r6.feat':'Mobile-first, carga rápido','cmp.r6.them':'No siempre es prioridad','cmp.r6.us':'Menos de 3s de carga',
+    'cmp.r7.feat':'Listo en 2–3 semanas','cmp.r7.them':'6–12 semanas típicamente',
+    'cmp.r8.feat':'Hablas con el constructor directamente','cmp.r8.them':'Gestor de cuenta','cmp.r8.us':'Siempre',
+    'cmp.r9.feat':'Parece un sitio de $10k','cmp.r9.them':'Cobran de más por lo que dan',
+    'cmp.r10.feat':'Automatización de leads incluida','cmp.r10.them':'Costo extra','cmp.r10.us':'30 días incluidos con Launch',
+    'cmp.r11.feat':'Integración de WhatsApp','cmp.r11.us':'Incluido desde el primer día',
+    'cmp.r12.feat':'Bilingüe (EN + ES)','cmp.r12.them':'Costo extra / rara vez bien hecho','cmp.r12.us':'Español real, no una traducción',
+    'cmp.cta.them':'$3,000–$5,000+ · Contrato de 12 meses',
+    'cmp.cta.us':'$1,800 fijo · Listo en 2–3 semanas',
+    'cmp.cta.btn':'Comenzar →',
+    'cmp.footnote':'FlowFrame Launch incluye 30 días de configuración y monitoreo de automatización. Continúa a $249/mes o $449/mes — cancela cuando quieras. Sin compromiso a largo plazo.',
   }
 };
 

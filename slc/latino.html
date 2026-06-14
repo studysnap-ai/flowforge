@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="auto">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CK4HRK4L4M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CK4HRK4L4M');
+  </script>
   <script>(function(){var t=localStorage.getItem('ff_theme')||'auto';document.documentElement.setAttribute('data-theme',t);})();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +16,41 @@
   <meta name="description" content="FlowForge construye páginas web bilingües (inglés y español) para negocios latinos en Salt Lake City, Utah. Restaurantes, salones, servicios de limpieza y más.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <link rel="canonical" href="https://flowforge-iota-umber.vercel.app/slc/latino">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Páginas Web para Negocios Latinos en Salt Lake City — FlowForge">
+  <meta property="og:description" content="FlowForge construye páginas web bilingües (inglés y español) para negocios latinos en Salt Lake City, Utah. Restaurantes, salones, servicios de limpieza y más.">
+  <meta property="og:url" content="https://flowforge-iota-umber.vercel.app/slc/latino">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Páginas Web para Negocios Latinos en Salt Lake City — FlowForge">
+  <meta name="twitter:description" content="FlowForge construye páginas web bilingües (inglés y español) para negocios latinos en Salt Lake City, Utah. Restaurantes, salones, servicios de limpieza y más.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Bilingual website design for Latino-owned businesses",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "FlowForge",
+      "telephone": "+1-603-205-9425",
+      "areaServed": "Salt Lake City, UT",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Salt Lake City",
+        "addressRegion": "UT",
+        "addressCountry": "US"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Salt Lake City"
+    },
+    "url": "https://flowforge-iota-umber.vercel.app/slc/latino",
+    "description": "FlowForge construye páginas web bilingües (inglés y español) para negocios latinos en Salt Lake City, Utah. Restaurantes, salones, servicios de limpieza y más."
+  }
+  </script>
   <link rel="stylesheet" href="/style.css">
 <style>
 :root {
@@ -191,18 +233,18 @@ html[lang="en"] .en-content { display:block; }
         <button class="nav-lang-btn active" id="nav-btn-es" onclick="setLang('es')">ES</button>
       </div>
       <div class="theme-seg" id="theme-seg">
-        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
-        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
-        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       </div>
       <div class="nav-lang-toggle nav-lang-mobile">
         <button class="nav-lang-btn" id="nav-btn-en-m" onclick="setLang('en')">EN</button>
         <button class="nav-lang-btn active" id="nav-btn-es-m" onclick="setLang('es')">ES</button>
       </div>
       <div class="theme-seg theme-seg-mobile" id="theme-seg-mobile">
-        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')">☀️</button>
-        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')">💻</button>
-        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')">🌙</button>
+        <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+        <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
+        <button class="theme-seg-btn" data-theme-key="dark" onclick="setTheme('dark')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -213,6 +255,7 @@ html[lang="en"] .en-content { display:block; }
 <section class="hero">
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
+  <canvas class="hero-waves" aria-hidden="true"></canvas>
   <div class="container hero-layout">
     <div class="hero-text">
       <div class="breadcrumb">
@@ -399,6 +442,7 @@ html[lang="en"] .en-content { display:block; }
           <li class="es-content">50% al inicio · 50% al entregar</li>
           <li class="en-content">50% upfront · 50% on delivery</li>
         </ul>
+        <div style="display:inline-block;font-size:.75rem;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:3px 10px;margin-bottom:12px;"><span class="es-content">✓ Incluye 30 días de configuración y monitoreo de automatización</span><span class="en-content">✓ Includes 30 days of automation setup & monitoring</span></div>
         <!-- Latino-specific extras -->
         <div style="margin-top:16px;padding:14px 16px;background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(236,72,153,0.05));border:1px solid rgba(124,58,237,0.22);border-radius:10px;">
           <div style="font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;">
@@ -442,7 +486,7 @@ html[lang="en"] .en-content { display:block; }
         </ul>
         <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
           <a href="#contact" class="btn-primary" style="text-align:center;display:block;"><span class="es-content">Iniciar Automation</span><span class="en-content">Start Automation</span></a>
-          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;"><span class="es-content">Mínimo 6 meses · Funciona en cualquier sitio</span><span class="en-content">6-month minimum · Works on any site</span></p>
+          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;"><span class="es-content">Primeros 30 días incluidos con Launch · luego $249/mes · cancela cuando quieras</span><span class="en-content">First 30 days included with Launch · then $249/mo · cancel anytime</span></p>
         </div>
       </div>
 
@@ -478,7 +522,7 @@ html[lang="en"] .en-content { display:block; }
         </ul>
         <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
           <a href="#contact" class="btn-primary" style="text-align:center;display:block;"><span class="es-content">Iniciar AutoPilot</span><span class="en-content">Start AutoPilot</span></a>
-          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;"><span class="es-content">Funciona en cualquier sitio</span><span class="en-content">Works on any site</span></p>
+          <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:10px;"><span class="es-content">Primeros 30 días incluidos con Launch · luego $449/mes · cancela cuando quieras</span><span class="en-content">First 30 days included with Launch · then $449/mo · cancel anytime</span></p>
         </div>
       </div>
 
