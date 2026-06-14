@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://flowforge-iota-umber.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://flowforge-iota-umber.vercel.app/slc</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://flowforge-iota-umber.vercel.app/slc/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://flowforge-iota-umber.vercel.app/slc/contractors</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc/contractors"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es/contractors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc/contractors"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flowforge-iota-umber.vercel.app/slc/fitness</loc>
+    <loc>https://flowforge-iota-umber.vercel.app/slc/es/contractors</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc/contractors"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es/contractors"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc/contractors"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://flowforge-iota-umber.vercel.app/slc/fitness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc/fitness"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es/fitness"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc/fitness"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flowforge-iota-umber.vercel.app/slc/es/fitness</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flowforge-iota-umber.vercel.app/slc/fitness"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flowforge-iota-umber.vercel.app/slc/es/fitness"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flowforge-iota-umber.vercel.app/slc/fitness"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://flowforge-iota-umber.vercel.app/slc/latino</loc>
     <changefreq>monthly</changefreq>
