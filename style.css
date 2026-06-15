@@ -813,6 +813,39 @@ p  { color: var(--muted); font-size: 1rem; line-height: 1.75; }
   object-position: top center;
   display: block;
 }
+
+/* ── SLC LOCAL CALLOUT ── */
+.slc-callout-section { padding-top: 0; }
+.slc-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 40px 44px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(56,189,248,0.06), rgba(168,85,247,0.08));
+  border: 1px solid var(--border-h);
+}
+.slc-callout-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.slc-callout-badge .svg-icon { width: 15px; height: 15px; }
+.slc-callout h3 { font-size: 1.5rem; color: var(--text); margin: 0 0 8px; }
+.slc-callout p { color: var(--muted); margin: 0; max-width: 560px; line-height: 1.6; }
+.slc-callout-btn { white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 768px) {
+  .slc-callout { padding: 32px 24px; }
+  .slc-callout h3 { font-size: 1.3rem; }
+}
 .portfolio-emoji { font-size: 4rem; }
 .portfolio-thumb-glow {
   position: absolute;
