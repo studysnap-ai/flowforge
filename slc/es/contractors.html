@@ -237,10 +237,17 @@
       <li><a href="/slc/es">← Inicio SLC</a></li>
       <li><a href="/slc/es/fitness">Fitness</a></li>
       <li><a href="/slc/latino">Latino</a></li>
-      <li><a href="/slc/contractors">EN</a></li>
       <li><a href="#contact" class="btn-nav">Auditoría Gratis</a></li>
     </ul>
     <div class="nav-utils">
+      <div class="nav-lang-toggle" id="nav-lang-desktop">
+        <button class="nav-lang-btn" id="nav-btn-en" onclick="location.href='/slc/contractors'">EN</button>
+        <button class="nav-lang-btn active" id="nav-btn-es" onclick="location.href='/slc/es/contractors'">ES</button>
+      </div>
+      <div class="nav-lang-toggle nav-lang-mobile">
+        <button class="nav-lang-btn" id="nav-btn-en-m" onclick="location.href='/slc/contractors'">EN</button>
+        <button class="nav-lang-btn active" id="nav-btn-es-m" onclick="location.href='/slc/es/contractors'">ES</button>
+      </div>
       <div class="theme-seg" id="theme-seg">
         <button class="theme-seg-btn" data-theme-key="light" onclick="setTheme('light')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
         <button class="theme-seg-btn active" data-theme-key="auto" onclick="setTheme('auto')"><svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></button>
@@ -407,7 +414,8 @@
       <div class="price-single reveal" style="margin:0;max-width:none;">
         <div class="price-tag">🔧 Pago Único</div>
         <div class="price-name">FlowFrame Launch</div>
-        <div style="margin:16px 0;"><span class="price-amount">$1,800</span><span class="price-period"> pago único</span></div>
+        <div style="margin:16px 0 0;"><span class="price-amount">$1,199</span><span class="price-period"> pago único</span></div>
+        <div style="font-size:.82rem;color:var(--muted);margin:6px 0 12px;">o <strong style="color:var(--text);font-weight:700;">$199.90/mes</strong> durante 6 meses</div>
         <div style="display:inline-block;font-size:.75rem;font-weight:700;color:#22c55e;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:3px 10px;margin-bottom:12px;">✓ Incluye 30 días de configuración y monitoreo de automatización</div>
         <div class="price-desc">"Un sitio para contratistas que te hace aparecer en Google y convierte visitantes en solicitudes de presupuesto en menos de 30 segundos."</div>
         <ul class="del-list-simple">
@@ -632,7 +640,7 @@ function setLang(lang) {
     if (el) el.classList.toggle('active', lang === 'es');
   });
 }
-setLang(currentLang);
+// active state is fixed per page (separate EN/ES URLs); no localStorage override
 
 // Magnetic button
 (function() {

@@ -166,6 +166,11 @@
 .en-content { display:none; }
 html[lang="en"] .es-content { display:none; }
 html[lang="en"] .en-content { display:block; }
+/* When used as inline child spans (pills, links, badges), keep them inline */
+span.es-content { display:inline; }
+span.en-content { display:none; }
+html[lang="en"] span.es-content { display:none; }
+html[lang="en"] span.en-content { display:inline; }
 
 .final-cta{text-align:center;position:relative;overflow:hidden;}
 .final-cta-glow{position:absolute;width:1000px;height:600px;background:radial-gradient(ellipse,rgba(124,58,237,0.10) 0%,rgba(236,72,153,0.05) 50%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
@@ -225,7 +230,7 @@ html[lang="en"] .en-content { display:block; }
       <li><a href="/slc/es">← SLC Hub</a></li>
       <li><a href="/slc/es/contractors">Contractors</a></li>
       <li><a href="/slc/es/fitness">Fitness</a></li>
-      <li><a href="#contact" class="btn-nav">Hablemos / Contact</a></li>
+      <li><a href="#contact" class="btn-nav"><span class="es-content">Hablemos</span><span class="en-content">Contact</span></a></li>
     </ul>
     <div class="nav-utils">
       <div class="nav-lang-toggle" id="nav-lang-desktop">
@@ -260,9 +265,9 @@ html[lang="en"] .en-content { display:block; }
     <div class="hero-text">
       <div class="breadcrumb">
         <a href="/slc/es">SLC</a>
-        <span>/ Negocios Latinos</span>
+        <span><span class="es-content">/ Negocios Latinos</span><span class="en-content">/ Latino Businesses</span></span>
       </div>
-      <div class="bilingual-badge">🌎 EN · ES — Bilingüe</div>
+      <div class="bilingual-badge"><span class="es-content">🌎 EN · ES — Bilingüe</span><span class="en-content">🌎 EN · ES — Bilingual</span></div>
       <div class="badge reveal"><span class="badge-dot"></span><span>Utah-based · Salt Lake City</span></div>
       <div class="urgency-badge reveal"><span class="urgency-dot"></span>
         <span class="es-content">Aceptando <strong>2 proyectos latinos</strong> — cupos llenándose</span>
@@ -292,7 +297,7 @@ html[lang="en"] .en-content { display:block; }
       <div id="latino-card" style="background:#0d0d1a;border:1px solid rgba(255,255,255,0.09);border-radius:16px;width:100%;max-width:400px;box-shadow:0 24px 80px rgba(0,0,0,0.5);overflow:hidden;font-family:inherit;">
         <!-- header -->
         <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,0.07);background:rgba(255,255,255,0.02);">
-          <span style="font-size:.75rem;color:#64748b;font-weight:600;letter-spacing:.04em;">FlowForge · Negocios Latinos SLC</span>
+          <span style="font-size:.75rem;color:#64748b;font-weight:600;letter-spacing:.04em;"><span class="es-content">FlowForge · Negocios Latinos SLC</span><span class="en-content">FlowForge · Latino Businesses SLC</span></span>
           <span style="display:flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:#22c55e;">
             <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;box-shadow:0 0 6px #22c55e;display:inline-block;animation:pulse-dot 1.5s ease infinite;flex-shrink:0;"></span>Live
           </span>
@@ -304,36 +309,36 @@ html[lang="en"] .en-content { display:block; }
             <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🍽️</div>
             <div style="flex:1;min-width:0;">
               <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">La Cocina de Mama</div>
-              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">Reservación · West Valley</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;"><span class="es-content">Reservación · West Valley</span><span class="en-content">Reservation · West Valley</span></div>
             </div>
-            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3);">Reservado</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3);"><span class="es-content">Reservado</span><span class="en-content">Booked</span></span>
           </div>
           <!-- row 2 -->
           <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
             <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">💇</div>
             <div style="flex:1;min-width:0;">
               <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Salon Belleza Latina</div>
-              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">Cita · South Salt Lake</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;"><span class="es-content">Cita · South Salt Lake</span><span class="en-content">Appointment · South Salt Lake</span></div>
             </div>
-            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);">Nueva cita</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><span class="es-content">Nueva cita</span><span class="en-content">New booking</span></span>
           </div>
           <!-- row 3 -->
           <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
             <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🧹</div>
             <div style="flex:1;min-width:0;">
               <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Limpiezas Hernández</div>
-              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">Cotización · Murray</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;"><span class="es-content">Cotización · Murray</span><span class="en-content">Quote · Murray</span></div>
             </div>
-            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(168,85,247,0.15);color:#a855f7;border:1px solid rgba(168,85,247,0.3);">Cotización</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(168,85,247,0.15);color:#a855f7;border:1px solid rgba(168,85,247,0.3);"><span class="es-content">Cotización</span><span class="en-content">Quote</span></span>
           </div>
           <!-- row 4 -->
           <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;">
             <div style="font-size:1rem;width:32px;height:32px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🛒</div>
             <div style="flex:1;min-width:0;">
               <div style="font-size:.8rem;font-weight:700;color:#f1f5f9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Tienda El Ranchero</div>
-              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;">Consulta · Millcreek</div>
+              <div style="font-size:.68rem;color:#94a3b8;margin-top:2px;"><span class="es-content">Consulta · Millcreek</span><span class="en-content">Inquiry · Millcreek</span></div>
             </div>
-            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3);">Confirmado</span>
+            <span style="font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:100px;flex-shrink:0;background:rgba(34,197,94,0.15);color:#22c55e;border:1px solid rgba(34,197,94,0.3);"><span class="es-content">Confirmado</span><span class="en-content">Confirmed</span></span>
           </div>
         </div>
         <!-- footer -->
@@ -344,15 +349,15 @@ html[lang="en"] .en-content { display:block; }
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
             <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">EN+ES</span>
-            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;">Bilingüe</span>
+            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;"><span class="es-content">Bilingüe</span><span class="en-content">Bilingual</span></span>
           </div>
           <div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
             <span style="font-size:1rem;font-weight:800;background:linear-gradient(135deg,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">100%</span>
-            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;">Tuyo</span>
+            <span style="font-size:.62rem;color:#64748b;font-weight:600;text-transform:uppercase;letter-spacing:.07em;"><span class="es-content">Tuyo</span><span class="en-content">Yours</span></span>
           </div>
         </div>
       </div>
-      <div class="hv-badge hv-badge-1" style="top:auto;right:auto;bottom:-16px;left:-20px;">✓ Sitio bilingüe en 3 semanas</div>
+      <div class="hv-badge hv-badge-1" style="top:auto;right:auto;bottom:-16px;left:-20px;"><span class="es-content">✓ Sitio bilingüe en 3 semanas</span><span class="en-content">✓ Bilingual site in 3 weeks</span></div>
     </div>
   </div>
 </section>
@@ -360,15 +365,15 @@ html[lang="en"] .en-content { display:block; }
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="container trust-inner">
-    <div class="trust-item"><span class="trust-check">✓</span><span>Utah-based · Bilingüe</span></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span class="es-content">Utah-based · Bilingüe</span><span class="en-content">Utah-based · Bilingual</span></div>
     <div class="trust-div"></div>
-    <div class="trust-item"><span class="trust-check">✓</span><span>Español real, no traducción</span></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span class="es-content">Español real, no traducción</span><span class="en-content">Real Spanish, not translation</span></div>
     <div class="trust-div"></div>
-    <div class="trust-item"><span class="trust-check">✓</span><span>2 sitios en vivo · Creciendo</span></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span class="es-content">2 sitios en vivo · Creciendo</span><span class="en-content">2 sites live · Growing</span></div>
     <div class="trust-div"></div>
-    <div class="trust-item"><span class="trust-check">✓</span><span>Integración WhatsApp</span></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span class="es-content">Integración WhatsApp</span><span class="en-content">WhatsApp integration</span></div>
     <div class="trust-div"></div>
-    <div class="trust-item"><span class="trust-check">✓</span><span>100% tuyo desde el día uno</span></div>
+    <div class="trust-item"><span class="trust-check">✓</span><span class="es-content">100% tuyo desde el día uno</span><span class="en-content">100% yours from day one</span></div>
   </div>
 </div>
 
@@ -376,24 +381,34 @@ html[lang="en"] .en-content { display:block; }
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">El problema real</span>
-      <h2>Por qué tu negocio<br>está perdiendo clientes en línea.</h2>
+      <span class="label es-content">El problema real</span><span class="label en-content">The real problem</span>
+      <h2 class="es-content">Por qué tu negocio<br>está perdiendo clientes en línea.</h2>
+      <h2 class="en-content">Why your business<br>is losing customers online.</h2>
     </div>
     <div class="pain-grid">
       <div class="pain-card reveal">
-        <h3>🔤 Tu sitio está solo en inglés</h3>
-        <p>Tu comunidad busca en español. Si tu sitio no los recibe en su idioma, van a buscar a alguien más — alguien que sí los habla.</p>
-        <div class="pain-fix">Lo que hacemos: Sitio completo en inglés y español</div>
+        <h3 class="es-content">🔤 Tu sitio está solo en inglés</h3>
+        <h3 class="en-content">🔤 Your site is English-only</h3>
+        <p class="es-content">Tu comunidad busca en español. Si tu sitio no los recibe en su idioma, van a buscar a alguien más — alguien que sí los habla.</p>
+        <p class="en-content">Your community searches in Spanish. If your site doesn't greet them in their language, they'll go find someone else — someone who does speak it.</p>
+        <div class="pain-fix es-content">Lo que hacemos: Sitio completo en inglés y español</div>
+        <div class="pain-fix en-content">What we do: A full site in English and Spanish</div>
       </div>
       <div class="pain-card reveal">
-        <h3>📵 No tienes WhatsApp en tu sitio</h3>
-        <p>En la comunidad latina, WhatsApp es cómo se comunica la gente. Si tienes que llenar un formulario largo, muchos no lo hacen. Un botón de WhatsApp cambia todo.</p>
-        <div class="pain-fix">Lo que hacemos: Botón flotante + integración completa de WhatsApp</div>
+        <h3 class="es-content">📵 No tienes WhatsApp en tu sitio</h3>
+        <h3 class="en-content">📵 No WhatsApp on your site</h3>
+        <p class="es-content">En la comunidad latina, WhatsApp es cómo se comunica la gente. Si tienes que llenar un formulario largo, muchos no lo hacen. Un botón de WhatsApp cambia todo.</p>
+        <p class="en-content">In the Latino community, WhatsApp is how people communicate. If they have to fill out a long form, many won't. A WhatsApp button changes everything.</p>
+        <div class="pain-fix es-content">Lo que hacemos: Botón flotante + integración completa de WhatsApp</div>
+        <div class="pain-fix en-content">What we do: Floating button + full WhatsApp integration</div>
       </div>
       <div class="pain-card reveal">
-        <h3>👻 No apareces en Google en español</h3>
-        <p>Cuando alguien busca "restaurante mexicano West Valley City" en Google, tu negocio no aparece. Eso es SEO local en español — y lo podemos arreglar.</p>
-        <div class="pain-fix">Lo que hacemos: SEO local en inglés y español para SLC</div>
+        <h3 class="es-content">👻 No apareces en Google en español</h3>
+        <h3 class="en-content">👻 You don't show up on Google in Spanish</h3>
+        <p class="es-content">Cuando alguien busca "restaurante mexicano West Valley City" en Google, tu negocio no aparece. Eso es SEO local en español — y lo podemos arreglar.</p>
+        <p class="en-content">When someone searches "Mexican restaurant West Valley City" on Google, your business doesn't appear. That's local SEO in Spanish — and we can fix it.</p>
+        <div class="pain-fix es-content">Lo que hacemos: SEO local en inglés y español para SLC</div>
+        <div class="pain-fix en-content">What we do: Local SEO in English and Spanish for SLC</div>
       </div>
     </div>
   </div>
@@ -424,7 +439,8 @@ html[lang="en"] .en-content { display:block; }
         <div class="price-tag es-content">🔧 Único Pago</div>
         <div class="price-tag en-content">🔧 One-Time</div>
         <div class="price-name">FlowFrame Launch</div>
-        <div style="margin:16px 0;"><span class="price-amount">$1,800</span><span class="price-period es-content"> una sola vez</span><span class="price-period en-content"> one-time</span></div>
+        <div style="margin:16px 0 0;"><span class="price-amount">$1,199</span><span class="price-period es-content"> una sola vez</span><span class="price-period en-content"> one-time</span></div>
+        <div style="font-size:.82rem;color:var(--muted);margin:6px 0 12px;"><span class="es-content">o <strong style="color:var(--text);font-weight:700;">$199.90/mes</strong> durante 6 meses</span><span class="en-content">or <strong style="color:var(--text);font-weight:700;">$199.90/mo</strong> for 6 months</span></div>
         <div class="price-desc es-content">"Un sitio bilingüe que trae clientes de ambas comunidades. Tuyo para siempre desde el día uno."</div>
         <div class="price-desc en-content">"A bilingual site that brings clients from both communities. Yours forever from day one."</div>
         <!-- General features -->
@@ -534,29 +550,36 @@ html[lang="en"] .en-content { display:block; }
 <section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">El proceso</span>
-      <h2>Simple. Rápido. Sin sorpresas.</h2>
+      <span class="label es-content">El proceso</span><span class="label en-content">The process</span>
+      <h2 class="es-content">Simple. Rápido. Sin sorpresas.</h2>
+      <h2 class="en-content">Simple. Fast. No surprises.</h2>
     </div>
     <div class="steps" style="max-width:960px;margin:48px auto 0;">
       <div class="step reveal">
         <div class="step-num">01</div>
         <div class="step-content">
-          <h3 class="step-title">Auditoría Gratuita</h3>
-          <p class="step-desc">Revisamos tu sitio actual, tu Google Business Profile, y tus competidores. Te decimos exactamente qué está faltando y cómo lo arreglamos. Sin presión, sin compromiso.</p>
+          <h3 class="step-title es-content">Auditoría Gratuita</h3>
+          <h3 class="step-title en-content">Free Audit</h3>
+          <p class="step-desc es-content">Revisamos tu sitio actual, tu Google Business Profile, y tus competidores. Te decimos exactamente qué está faltando y cómo lo arreglamos. Sin presión, sin compromiso.</p>
+          <p class="step-desc en-content">We review your current site, your Google Business Profile, and your competitors. We tell you exactly what's missing and how we fix it. No pressure, no commitment.</p>
         </div>
       </div>
       <div class="step reveal">
         <div class="step-num">02</div>
         <div class="step-content">
-          <h3 class="step-title">Lo Construimos</h3>
-          <p class="step-desc">Apruebas el plan. Diseñamos, construimos y probamos tu sitio en 2–3 semanas. Actualizaciones de progreso cada pocos días. Sin cambios de alcance ni sorpresas.</p>
+          <h3 class="step-title es-content">Lo Construimos</h3>
+          <h3 class="step-title en-content">We Build It</h3>
+          <p class="step-desc es-content">Apruebas el plan. Diseñamos, construimos y probamos tu sitio en 2–3 semanas. Actualizaciones de progreso cada pocos días. Sin cambios de alcance ni sorpresas.</p>
+          <p class="step-desc en-content">You approve the plan. We design, build, and test your site in 2–3 weeks. Progress updates every few days. No scope creep, no surprises.</p>
         </div>
       </div>
       <div class="step reveal">
         <div class="step-num">03</div>
         <div class="step-content">
-          <h3 class="step-title">Llegan los Clientes</h3>
-          <p class="step-desc">Tu sitio sale al aire. Los clientes empiezan a llegar — en inglés y español. Nos quedamos 30 días y luego te entregamos la propiedad total. El sitio es tuyo, para siempre.</p>
+          <h3 class="step-title es-content">Llegan los Clientes</h3>
+          <h3 class="step-title en-content">Customers Arrive</h3>
+          <p class="step-desc es-content">Tu sitio sale al aire. Los clientes empiezan a llegar — en inglés y español. Nos quedamos 30 días y luego te entregamos la propiedad total. El sitio es tuyo, para siempre.</p>
+          <p class="step-desc en-content">Your site goes live. Customers start coming in — in English and Spanish. We stay 30 days, then hand you full ownership. The site is yours, forever.</p>
         </div>
       </div>
     </div>
@@ -567,21 +590,27 @@ html[lang="en"] .en-content { display:block; }
 <section class="section">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Nuestro trabajo</span>
-      <h2>Sitios que hemos entregado.</h2>
+      <span class="label es-content">Nuestro trabajo</span><span class="label en-content">Our work</span>
+      <h2 class="es-content">Sitios que hemos entregado.</h2>
+      <h2 class="en-content">Sites we've delivered.</h2>
     </div>
     <div class="proof-card reveal">
       <div class="proof-emoji">📸</div>
       <div>
-        <div class="proof-type">Negocio Local · Huancayo, Perú</div>
-        <div class="proof-title">FotoExpress Peru — Impresión de Fotos</div>
-        <p class="proof-desc">Sitio de e-commerce bilingüe para una tienda local de impresión de fotos en Perú. Pedidos en línea, integración con WhatsApp, flujo de entrega local, pagos con Yape y Plin. Construido para un mercado de habla hispana — exactamente lo que hacemos para negocios latinos en Utah.</p>
-        <a href="https://fotoexpress-peru.vercel.app/" target="_blank" rel="noopener" class="proof-link">Ver el sitio →</a>
+        <div class="proof-type es-content">Negocio Local · Huancayo, Perú</div>
+        <div class="proof-type en-content">Local Business · Huancayo, Peru</div>
+        <div class="proof-title es-content">FotoExpress Peru — Impresión de Fotos</div>
+        <div class="proof-title en-content">FotoExpress Peru — Photo Printing</div>
+        <p class="proof-desc es-content">Sitio de e-commerce bilingüe para una tienda local de impresión de fotos en Perú. Pedidos en línea, integración con WhatsApp, flujo de entrega local, pagos con Yape y Plin. Construido para un mercado de habla hispana — exactamente lo que hacemos para negocios latinos en Utah.</p>
+        <p class="proof-desc en-content">A bilingual e-commerce site for a local photo-printing shop in Peru. Online ordering, WhatsApp integration, local delivery flow, payments via Yape and Plin. Built for a Spanish-speaking market — exactly what we do for Latino businesses in Utah.</p>
+        <a href="https://fotoexpress-peru.vercel.app/" target="_blank" rel="noopener" class="proof-link es-content">Ver el sitio →</a>
+        <a href="https://fotoexpress-peru.vercel.app/" target="_blank" rel="noopener" class="proof-link en-content">View the site →</a>
       </div>
     </div>
     <div style="text-align:center;margin-top:32px;" class="reveal">
-      <p style="font-size:.95rem;color:var(--muted);margin-bottom:16px;">¿Quieres ser nuestro primer caso de estudio en Utah?</p>
-      <a href="#contact" class="btn-ghost">Reserva tu lugar →</a>
+      <p style="font-size:.95rem;color:var(--muted);margin-bottom:16px;"><span class="es-content">¿Quieres ser nuestro primer caso de estudio en Utah?</span><span class="en-content">Want to be our first Utah case study?</span></p>
+      <a href="#contact" class="btn-ghost es-content">Reserva tu lugar →</a>
+      <a href="#contact" class="btn-ghost en-content">Reserve your spot →</a>
     </div>
   </div>
 </section>
@@ -590,25 +619,34 @@ html[lang="en"] .en-content { display:block; }
 <section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="container">
     <div class="section-header reveal">
-      <span class="label">Preguntas frecuentes</span>
-      <h2>Lo que nos preguntan<br>los dueños de negocios.</h2>
+      <span class="label es-content">Preguntas frecuentes</span><span class="label en-content">Frequently asked</span>
+      <h2 class="es-content">Lo que nos preguntan<br>los dueños de negocios.</h2>
+      <h2 class="en-content">What business owners<br>ask us.</h2>
     </div>
     <div class="faq-list" style="margin-top:48px;">
       <div class="faq-item reveal">
-        <div class="faq-q">¿Escriben el español ustedes o usan una traducción automática?</div>
-        <div class="faq-a">Lo escribimos nosotros. Hay una gran diferencia entre el español corporativo traducido y el copy que suena natural para una comunidad latina en Utah. Somos bilingües — sabemos la diferencia, y se nota en cada página.</div>
+        <div class="faq-q es-content">¿Escriben el español ustedes o usan una traducción automática?</div>
+        <div class="faq-q en-content">Do you write the Spanish yourselves or use machine translation?</div>
+        <div class="faq-a es-content">Lo escribimos nosotros. Hay una gran diferencia entre el español corporativo traducido y el copy que suena natural para una comunidad latina en Utah. Somos bilingües — sabemos la diferencia, y se nota en cada página.</div>
+        <div class="faq-a en-content">We write it ourselves. There's a big difference between translated corporate Spanish and copy that sounds natural to a Latino community in Utah. We're bilingual — we know the difference, and it shows on every page.</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q">¿Cuánto tiempo tarda el proyecto?</div>
-        <div class="faq-a">2–3 semanas desde que apruebas el plan. Un solo punto de contacto — hablas directamente con la persona que está construyendo tu sitio. Sin gerentes de cuenta, sin esperas.</div>
+        <div class="faq-q es-content">¿Cuánto tiempo tarda el proyecto?</div>
+        <div class="faq-q en-content">How long does the project take?</div>
+        <div class="faq-a es-content">2–3 semanas desde que apruebas el plan. Un solo punto de contacto — hablas directamente con la persona que está construyendo tu sitio. Sin gerentes de cuenta, sin esperas.</div>
+        <div class="faq-a en-content">2–3 weeks from when you approve the plan. A single point of contact — you talk directly with the person building your site. No account managers, no waiting.</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q">¿Tengo que pagar todo por adelantado?</div>
-        <div class="faq-a">No. 50% al inicio, 50% cuando entregamos. Aceptamos transferencia bancaria, PayPal, Stripe, y Zelle.</div>
+        <div class="faq-q es-content">¿Tengo que pagar todo por adelantado?</div>
+        <div class="faq-q en-content">Do I have to pay everything upfront?</div>
+        <div class="faq-a es-content">No. 50% al inicio, 50% cuando entregamos. Aceptamos transferencia bancaria, PayPal, Stripe, y Zelle.</div>
+        <div class="faq-a en-content">No. 50% upfront, 50% on delivery. We accept bank transfer, PayPal, Stripe, and Zelle.</div>
       </div>
       <div class="faq-item reveal">
-        <div class="faq-q">¿Qué pasa si ya tengo un sitio solo en inglés?</div>
-        <div class="faq-a">Te decimos honestamente en la auditoría gratuita: si vale la pena arreglarlo o empezar de cero. A veces con algunos cambios clave y agregar el contenido en español es suficiente. Lo sabemos en 20 minutos.</div>
+        <div class="faq-q es-content">¿Qué pasa si ya tengo un sitio solo en inglés?</div>
+        <div class="faq-q en-content">What if I already have an English-only site?</div>
+        <div class="faq-a es-content">Te decimos honestamente en la auditoría gratuita: si vale la pena arreglarlo o empezar de cero. A veces con algunos cambios clave y agregar el contenido en español es suficiente. Lo sabemos en 20 minutos.</div>
+        <div class="faq-a en-content">We'll tell you honestly in the free audit: whether it's worth fixing or starting fresh. Sometimes a few key changes plus adding the Spanish content is enough. We'll know in 20 minutes.</div>
       </div>
     </div>
   </div>
@@ -619,16 +657,19 @@ html[lang="en"] .en-content { display:block; }
   <div class="final-cta-glow"></div>
   <div class="container">
     <div class="final-cta-inner reveal">
-      <span class="label">Hablemos</span>
-      <h2 style="margin:16px 0 20px;">¿Listo para un sitio que<br>hable con tu comunidad?</h2>
-      <p style="font-size:1rem;margin-bottom:36px;">Empezamos con una auditoría gratuita de 20 minutos. Revisamos tu presencia en línea y te damos un plan claro — en español y en inglés. Sin compromiso.</p>
+      <span class="label es-content">Hablemos</span><span class="label en-content">Let's talk</span>
+      <h2 class="es-content" style="margin:16px 0 20px;">¿Listo para un sitio que<br>hable con tu comunidad?</h2>
+      <h2 class="en-content" style="margin:16px 0 20px;">Ready for a site that<br>speaks to your community?</h2>
+      <p class="es-content" style="font-size:1rem;margin-bottom:36px;">Empezamos con una auditoría gratuita de 20 minutos. Revisamos tu presencia en línea y te damos un plan claro — en español y en inglés. Sin compromiso.</p>
+      <p class="en-content" style="font-size:1rem;margin-bottom:36px;">We start with a free 20-minute audit. We review your online presence and give you a clear plan — in Spanish and English. No commitment.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
-        <a href="mailto:hello@flowforge.com?subject=Auditoría Gratuita — Negocio Latino SLC" class="btn-primary">Auditoría gratuita / Free Audit</a>
-        <a href="https://wa.me/16032059425?text=Hola%20FlowForge!%20Tengo%20un%20negocio%20latino%20en%20SLC%20y%20me%20gustar%C3%ADa%20una%20auditor%C3%ADa%20gratuita." target="_blank" rel="noopener" class="btn-ghost">Escríbenos por WhatsApp →</a>
+        <a href="mailto:hello@flowforge.com?subject=Auditoría Gratuita — Negocio Latino SLC" class="btn-primary"><span class="es-content">Auditoría gratuita</span><span class="en-content">Get a Free Audit</span></a>
+        <a href="https://wa.me/16032059425?text=Hola%20FlowForge!%20Tengo%20un%20negocio%20latino%20en%20SLC%20y%20me%20gustar%C3%ADa%20una%20auditor%C3%ADa%20gratuita." target="_blank" rel="noopener" class="btn-ghost"><span class="es-content">Escríbenos por WhatsApp →</span><span class="en-content">Message us on WhatsApp →</span></a>
       </div>
-      <p class="final-micro">Sin compromiso. Sin presión de ventas. Solo una mirada honesta a tu presencia en línea.</p>
+      <p class="final-micro es-content">Sin compromiso. Sin presión de ventas. Solo una mirada honesta a tu presencia en línea.</p>
+      <p class="final-micro en-content">No commitment. No sales pressure. Just an honest look at your online presence.</p>
       <div style="margin-top:32px;padding-top:32px;border-top:1px solid var(--border);font-size:.78rem;color:rgba(148,163,184,0.4);letter-spacing:.04em;line-height:1.8;text-align:center;">
-        📍 Sirviendo negocios latinos en todo Salt Lake City<br>
+        <span class="es-content">📍 Sirviendo negocios latinos en todo Salt Lake City</span><span class="en-content">📍 Serving Latino businesses across Salt Lake City</span><br>
         West Valley City · Murray · South Salt Lake · Millcreek · Sandy · Draper · Taylorsville · Kearns
       </div>
     </div>
@@ -643,7 +684,7 @@ html[lang="en"] .en-content { display:block; }
       <a href="/slc/es">SLC Hub</a>
       <a href="/slc/es/contractors">Contractors</a>
       <a href="/slc/es/fitness">Fitness</a>
-      <a href="#contact">Contacto</a>
+      <a href="#contact"><span class="es-content">Contacto</span><span class="en-content">Contact</span></a>
     </div>
   </div>
 </footer>
@@ -664,7 +705,8 @@ function setTheme(key) {
 }
 setTheme(savedTheme);
 
-var currentLang = localStorage.getItem('ff_lang') || 'es';
+// Spanish-first page: default to ES on load, ignore the cross-page ff_lang key
+var currentLang = 'es';
 function setLang(lang) {
   localStorage.setItem('ff_lang', lang);
   currentLang = lang;
